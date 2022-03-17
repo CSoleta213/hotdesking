@@ -16,13 +16,14 @@
    ```
     git clone https://github.com/CSoleta213/hotdesking.git
    ```
-2. Install the latest xampp (if you dont have)
+2. Install composer (if you dont have)
+3. Install the latest xampp (if you dont have)
     - if errors such as 'php is not recognized' arise
-3. Install the dependencies
+4. Install the dependencies
    ```
    npm install
    ```
-4. Start the project
+5. Start the project
    ```
    php artisan serve
    ```
