@@ -22,6 +22,7 @@
    ```
 3. Install the latest xampp (if you dont have)
     - if errors such as 'php is not recognized' arise
+    
 4. Install the dependencies
    ```
    npm install
