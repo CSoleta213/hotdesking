@@ -17,6 +17,9 @@
     git clone https://github.com/CSoleta213/hotdesking.git
    ```
 2. Install composer (if you dont have)
+    ```
+   composer install
+   ```
 3. Install the latest xampp (if you dont have)
     - if errors such as 'php is not recognized' arise
 4. Install the dependencies
