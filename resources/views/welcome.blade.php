@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+
 <div class="navbar">
   <a href="/">Logo</a>
   <a href="/">Home</a>

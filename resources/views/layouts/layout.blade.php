@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sora&display=swap" rel="stylesheet">
-
   <title>Desktiny</title>
 </head>
 
@@ -21,5 +20,4 @@
     Copyright 2022 Group 3 Hot Desking
   </footer> -->
 </body>
-
 </html>
