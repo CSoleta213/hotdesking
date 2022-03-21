@@ -44,7 +44,7 @@
     <button type="button">Manage Schedule</button>
     <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
       aspernatur et eligendi esse quo esse odit et sequi internos
-      eos molestiae nesciunt quo quibusdam velit.</p>
+      eos molestiae nesciunt quo quibusdam velit. sdsdsd</p>
   </div>
 </div>
 @endsection
