@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Sora', sans-serif;
+    display: block;
 }
 
 h1, h2 {
@@ -20,6 +21,7 @@ h3, h4 {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10000;
 }
 
 .navbar a {
@@ -35,26 +37,24 @@ h3, h4 {
     color: black;
 }
 
-footer {
+/* footer {
     background: #eee;
     padding: 20px;
     text-align: center;
-    bottom: 0;
-    position: absolute;
-}
+} */
 
 /* END OF GLOBAL CSS */
 
 /* HOMEPAGE */
+/* BRAND */
 .home {
-  display: flex;
+  /* display: flex; */
   height: 500px;
-  flex-direction: row;
   padding: 100px;
 }
 .brand {
   display: flex;
-  /* background-color: aquamarine; */
+  flex-direction: row;
   flex: 1;
   justify-content: center;
 }
@@ -72,7 +72,7 @@ footer {
   background-color: #4484FF;
   height: 45px;
   width: 250px;
-  border-radius: 10px;
+  border-radius: 5px;
   align-items: center;
   justify-content: center;
 }
@@ -84,7 +84,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: black; */
   flex: 2;
 }
 .blob { 
@@ -104,3 +103,31 @@ footer {
   position: absolute;
   z-index: 2;
 }
+/* END BRAND */
+
+/* COUNT */
+.count{
+  flex: 1;
+  padding: 100px;
+}
+.count-1, .count-2, .count-3{
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #a4c4ff;
+  justify-content: center;
+  align-items: center;
+}
+.count-subtitle{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* END COUNT */

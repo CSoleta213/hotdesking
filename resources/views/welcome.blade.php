@@ -36,7 +36,26 @@
   </div>
 
   <!-- COUNT -->
-  
+  <div class="count">
+    <div class="count-subtitle">
+      <h1>Let's get Countin'</h1>
+    </div>
+    <div class="box-count">
+      <div class="count-1">
+        <h1>3</h1>
+        <p>Offices Available</p>
+      </div>
+      <div class="count-2">
+        <h1>75</h1>
+        <p>Seats Available</p>
+      </div>
+      <div class="count-3">
+        <h1>25</h1>
+        <p>Occupied Desks</p>
+      </div>
+    </div>
+
+  </div>
 
 </div>
 

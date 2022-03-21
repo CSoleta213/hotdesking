@@ -17,9 +17,9 @@
 <body>
   @yield('content')
 
-  <footer>
+  <!-- <footer>
     Copyright 2022 Group 3 Hot Desking
-  </footer>
+  </footer> -->
 </body>
 
 </html>
