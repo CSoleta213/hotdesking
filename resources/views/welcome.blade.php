@@ -2,17 +2,21 @@
 
 @section('content')
     <div class="navbar">
-      <a href="/">Logo</a>
-      <a href="/">Home</a>
-      <a href="/features">Features</a>
-      <a href="/faqs">FAQs</a>
-      <a href="/demo">Demo</a>
+      <div class="logo">
+        <a href="/">Logo</a>
+      </div>
+      <div class="menu">
+        <div><a class="active" href="/">Home</a></div>
+        <div><a href="/features">Features</a></div>
+        <div><a href="/faqs">FAQs</a></div>
+        <div><a href="/demo">Demo</a></div>
       @if(Session::get('booker'))
-      <a href="http://">Welcome, {{Session::get('booker')}}</a>
+      <div><a href="http://">Welcome, {{Session::get('booker')}}</a></div>
       @else
-      <a href="/log-in">Log in</a>
-      <a href="/sign-up" >Sign up</a>
+      <a href="/log-in"><div class="login">Log in</div></a>
+      <div><a href="/sign-up" >Sign up</a></div>
       @endif
+      </div>
     </div>
 
     <div class="main">

@@ -3,42 +3,78 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Sign up</title>
+    <title>Desktiny</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <style>
       body {margin:0;}
 
       .navbar {
         overflow: hidden;
-        background-color: #333;
+        background-color: #FFFFFF;
         position: fixed;
         top: 0;
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+      }
+
+      .logo {
+        width: 35%;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        justify-content: space-around;
+        text-align: center;
       }
 
       .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
+        color: #2E2E33;
         text-align: center;
-        padding: 14px 16px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
         text-decoration: none;
-        font-size: 17px;
       }
 
-      .navbar a:hover {
-        background: #ddd;
-        color: black;
+      .navbar a:hover, a.active {
+        color: #343799;
+      }
+
+      .menu .login {
+        background: #4484FF;
+        color: #FFFFFF;
+        border-radius: 10px;
+        width: 93px;
+        font-weight: 700;
+        align-content: center;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
+      }
+
+      .menu div {
+        background: #FFFFFF;
+        border-radius: 10px;
+        width: 93px;
+        font-weight: 700;
+        align-content: center;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
       }
 
       .main {
         padding: 16px;
-        margin-top: 30px;
+        margin-top: 50px;
         height: 1500px; /* Used in this example to enable scrolling */
       }
 
       footer{
-        background: #eee;
+        background: #343799;
+        color: #FFFFFF;
         padding: 20px;
         text-align: center;
       }
@@ -46,6 +82,7 @@
 
   </head>
   <body>
+
     @yield('content')
 
     <footer>
