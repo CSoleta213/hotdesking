@@ -46,11 +46,11 @@
         <p>Offices Available</p>
       </div>
       <div class="count-2">
-        <h1>75</h1>
+        <h1>100</h1>
         <p>Seats Available</p>
       </div>
       <div class="count-3">
-        <h1>25</h1>
+        <h1>50</h1>
         <p>Occupied Desks</p>
       </div>
     </div>
