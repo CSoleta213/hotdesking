@@ -18,7 +18,7 @@
 <div class="home">
   <!-- BRAND -->
   <div class="brand">
-    <div class="tagContainer">
+    <div class="tag-fluid">
       <div class="title">
         <h1>The desk that is <span class="span-destined"> destined </span>to work with you</h1>
       </div>
@@ -29,14 +29,14 @@
         <a href="/log-in">Reserve a seat</a>
       </div>
     </div>
-    <div class="pictureContainer">
-      <div class="blob"></div>
+    <div class="picture-fluid">
+      <div class="blob-1"></div>
       <img src="{{ asset('/perspective_matte.png') }}" class="img-desk">
     </div>
   </div>
 
   <!-- COUNT -->
-  <div class="count">
+  <div class="count-fluid">
     <div class="count-subtitle">
       <h1>Let's get Countin'</h1>
     </div>
@@ -46,15 +46,32 @@
         <p>Offices Available</p>
       </div>
       <div class="count-2">
-        <h1>100</h1>
+        <h1>75</h1>
         <p>Seats Available</p>
       </div>
       <div class="count-3">
-        <h1>50</h1>
+        <h1>25</h1>
         <p>Occupied Desks</p>
       </div>
     </div>
+  </div>
 
+  <!-- OUR APP -->
+  <div class="app-fluid">
+    <div class="app-desc-fluid">
+      <div class="app-subtitle">
+        <h1>Our App</h1>
+      </div>
+      <div class="app-desc">
+        <p>
+          Desktiny is a workspace booking software that allows employees to book their workspace from any device, anywhere, and at any time. Our App is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
+        </p>
+      </div>
+    </div>
+    <div class="app-picture">
+      <div class="blob-2"></div>
+      <img src="{{ asset('/desktiny-logo.png') }}" class="app-logo">
+    </div>
   </div>
 
 </div>
