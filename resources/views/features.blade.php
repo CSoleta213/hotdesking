@@ -2,13 +2,17 @@
 
 @section('content')
     <div class="navbar">
-      <a href="/">Logo</a>
-      <a href="/">Home</a>
-      <a href="/features">Features</a>
-      <a href="/faqs">FAQs</a>
-      <a href="/demo">Demo</a>
-      <a href="/log-in">Log in</a>
-      <a href="/sign-up" >Sign up</a>
+      <div class="logo">
+        <a href="/">Logo</a>
+      </div>
+      <div class="menu">
+        <div><a href="/">Home</a></div>
+        <div><a class="active" href="/features">Features</a></div>
+        <div><a href="/faqs">FAQs</a></div>
+        <div><a href="/demo">Demo</a></div>
+        <div><a href="/log-in">Log in</a></div>
+        <div><a href="/sign-up" >Sign up</a></div>
+      </div>
     </div>
 
     <div class="main">
