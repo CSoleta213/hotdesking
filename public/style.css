@@ -178,3 +178,54 @@ h3, h4 {
 }
 /* END OF OUR APP */
 
+/* FEATURE PAGE CSS*/
+
+.section-container{
+  display: flex;
+  padding: 0px 70px 20px 100px;
+  flex: 1;
+}
+.section-container .columns {
+  flex:0 0 auto;
+  width:50%;
+}
+.section-container .columns.image {
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 473px;
+  height: 356px;
+}
+.columns.image{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.section-container .columns.content .content-container {
+  padding:40px 50px;
+}
+.section-container .columns.content .content-container h5 {
+  font-weight:700;
+  font-size: 25px;
+  margin-bottom:20px;
+  text-align: center;
+}
+.section-container .columns.content .content-container p {
+  font-weight:400;
+  font-size: 16px;
+  text-align:justify;
+} 
+.content-title{
+  text-align: center; 
+  color: #4484FF;
+  margin-top: 50px;
+  font-weight: 700, bold;
+  font-size: 28px;
+}
+.title-desc{
+  text-align: center; 
+  color: #3D3D42;
+  margin-top:-20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+/* END OF FEATURE PAGE */
