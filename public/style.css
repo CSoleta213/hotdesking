@@ -294,7 +294,7 @@ h3, h4 {
 
 .section-container{
   display: flex;
-  padding: 0px 70px 20px 100px;
+  padding: 0px 70px 20px 50px;
   flex: 1;
 }
 .section-container .columns {
@@ -313,7 +313,7 @@ h3, h4 {
   margin-left: 50px;
 }
 .section-container .columns.content .content-container {
-  padding:40px 50px;
+  padding: 40px 50px;
 }
 .section-container .columns.content .content-container h5 {
   font-weight:700;
