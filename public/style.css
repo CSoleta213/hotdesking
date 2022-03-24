@@ -96,7 +96,7 @@ h3, h4 {
 
 /* HOMEPAGE */
 /* BRAND */
-.home {
+.home, .features, .faqs, .demo {
   display: flex;
   padding: 100px;
   align-items: center;

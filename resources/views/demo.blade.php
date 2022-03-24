@@ -18,7 +18,7 @@
     @endif
   </div>
 </div>
-    <div class="main">
-      <h1>Demo</h1>
-    </div>
+  <div class="demo">
+    <h1>Demo</h1>
+  </div>
 @endsection

@@ -20,7 +20,7 @@
 </div>
 
 
-    <div class="main">
+    <div class="features">
       <h1 class="content-title">Features</h1>
       <p class="title-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
    
