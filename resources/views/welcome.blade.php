@@ -123,9 +123,6 @@
     </div>
 
     <div class="dm">
-      <div class="dm-faq">
-        FAQ
-      </div>
       <div class="dm-us">
         <form action="mailto:andreamauricedeguzman@student.laverdad.edu.ph" method="POST" enctype="multipart/form-data" name="EmailForm">
           <input type="text" name="dm-email" class="dm-email" placeholder="Enter Email"/>
