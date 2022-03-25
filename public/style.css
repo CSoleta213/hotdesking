@@ -86,11 +86,45 @@ h3, h4 {
   width: 150px;
 }
 
-/* footer {
-    background: #eee;
+footer {
+    display: flex;
+    flex-direction: row;
+    background: #343799;
+    color: #FFFFFF;
     padding: 20px;
-    text-align: center;
-} */
+}
+
+footer .logo {
+  width: 20%;
+  /* align-items: center;
+  align-content: center; */
+}
+
+footer .logo img {
+  width: 150px;
+}
+
+footer .center {
+  width: 40%;
+}
+
+footer .right {
+  width: 40%;
+}
+
+footer .center .soc-med {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .center .soc-med div  {
+  width: 50px;
+}
+
+footer .right .location .office {
+  text-indent: 30px;
+}
 
 /* END OF GLOBAL CSS */
 

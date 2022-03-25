@@ -13,6 +13,7 @@
     <div><a href="/demo">Demo</a></div>
     @if(Session::get('booker'))
     <div><a href="http://">Welcome, {{Session::get('booker')}}</a></div>
+    <div><a href="/logout">Logout</a></div>
     @else
     <div class="login-button"><a href="/log-in">Log in</a></div>
     <div><a href="/sign-up">Sign up</a></div>

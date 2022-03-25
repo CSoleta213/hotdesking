@@ -22,10 +22,28 @@ Route::view('/faqs', 'faqs');
 
 Route::view('/demo', 'demo');
 
-Route::view('/log-in', 'log-in');
+Route::view('/dashboard', 'dashboard');
+
+// Route::view('/log-in', 'log-in');
 
 Route::view('/sign-up', 'sign-up');
 
 Route::post('/signed-up', [BookerController::class, 'store']);
 
 Route::post('/logged-in', [BookerController::class, 'login']);
+
+Route::get('/logout', function() {
+  if(session()->has('email'))
+  {
+    session()->pull('email', null);
+  }
+  return redirect('/log-in');
+});
+
+Route::get('/log-in', function() {
+    if(session()->has('email'))
+    {
+      return redirect('/dashboard');
+    }
+    return view('/log-in');
+  });
