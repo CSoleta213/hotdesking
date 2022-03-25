@@ -47,4 +47,11 @@
       eos molestiae nesciunt quo quibusdam velit. sdsdsd</p>
   </div>
 </div>
+<style>
+  h1 {
+    color: #4484ff;
+    text-align: center;
+    font-family: Poppins;
+  }
+</style>
 @endsection

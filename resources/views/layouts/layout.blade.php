@@ -1,55 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Sign up</title>
 
-    <style>
-      body {margin:0;}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{{ url('/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sora&display=swap" rel="stylesheet">
 
-      .navbar {
-        overflow: hidden;
-        background-color: #333;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
+  <title>Desktiny</title>
+</head>
 
-      .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
+<body>
+  @yield('content')
 
-      .navbar a:hover {
-        background: #ddd;
-        color: black;
-      }
+  <!-- <footer>
+    Copyright 2022 Group 3 Hot Desking
+  </footer> -->
+</body>
 
-      .main {
-        padding: 16px;
-        margin-top: 30px;
-        height: 1500px; /* Used in this example to enable scrolling */
-      }
-
-      footer{
-        background: #eee;
-        padding: 20px;
-        text-align: center;
-      }
-    </style>
-
-  </head>
-  <body>
-    @yield('content')
-
-    <footer>
-      Copyright 2022 Group 3 Hot Desking
-    </footer>
-  </body>
 </html>

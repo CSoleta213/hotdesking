@@ -22,12 +22,15 @@
    ```
 3. Install the latest xampp (if you dont have)
     - if errors such as 'php is not recognized' arise
+
+4. Rename .env.example to .env
     
-4. Install the dependencies
+5. Install the dependencies
    ```
    npm install
    ```
-5. Start the project
+6. Start the project
    ```
    php artisan serve
    ```
+   

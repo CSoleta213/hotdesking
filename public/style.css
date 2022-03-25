@@ -1,0 +1,133 @@
+/* GLOBAL CSS */
+
+body {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+    display: block;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.navbar a {
+    display: inline;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* footer {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+} */
+
+/* END OF GLOBAL CSS */
+
+/* HOMEPAGE */
+/* BRAND */
+.home {
+  /* display: flex; */
+  height: 500px;
+  padding: 100px;
+}
+.brand {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+}
+.tagContainer{
+  flex: 3;
+  padding: 20px;
+  
+}
+.title h1{
+  font-size: 72px;
+   line-height: 110%;
+}
+.button-reserve{
+  display: flex;
+  background-color: #4484FF;
+  height: 45px;
+  width: 250px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.button-reserve a {
+  text-decoration: none;
+  color: #ffff;
+}
+.pictureContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+}
+.blob { 
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M883.5%2C622Q836%2C744%2C722%2C788.5Q608%2C833%2C482%2C888Q356%2C943%2C247%2C853Q138%2C763%2C129%2C631.5Q120%2C500%2C176.5%2C403Q233%2C306%2C295%2C183.5Q357%2C61%2C486.5%2C102.5Q616%2C144%2C753%2C180.5Q890%2C217%2C910.5%2C358.5Q931%2C500%2C883.5%2C622Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22none%22 stroke=%22%23c1c5ff%22 stroke-width=%2220%22 d=%22M883.5%2C622Q836%2C744%2C722%2C788.5Q608%2C833%2C482%2C888Q356%2C943%2C247%2C853Q138%2C763%2C129%2C631.5Q120%2C500%2C176.5%2C403Q233%2C306%2C295%2C183.5Q357%2C61%2C486.5%2C102.5Q616%2C144%2C753%2C180.5Q890%2C217%2C910.5%2C358.5Q931%2C500%2C883.5%2C622Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+.span-destined {
+  color: #4484FF;
+}
+
+.img-desk{
+  width: 400px;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+/* END BRAND */
+
+/* COUNT */
+.count{
+  flex: 1;
+  padding: 100px;
+}
+.count-1, .count-2, .count-3{
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #a4c4ff;
+  justify-content: center;
+  align-items: center;
+}
+.count-subtitle{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* END COUNT */
