@@ -130,4 +130,8 @@ h3, h4 {
   flex-direction: row;
   justify-content: space-around;
 }
+/* DEMO */
+.main-demo{
+  text-align: center;
+}
 /* END COUNT */
