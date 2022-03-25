@@ -30,7 +30,8 @@ class BookerController extends Controller
 
   function login(Request $req) {
 
-    $booker = Booker::where('email',$req->email)->get();
-    return Crypt::decrypt($booker[0]->password);
+    $data = $req->input('email');
+    $req->session()->put('booker',$data);
+    return redirect('/dashboard');
   }
 }

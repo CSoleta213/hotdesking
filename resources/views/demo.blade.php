@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="main-demo">
+<div class="demo">
   <header>
     <div>
       <h1>Demo</h1>
