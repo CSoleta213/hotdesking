@@ -13,7 +13,10 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
-h3,
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
 h4 {
     font-family: "Poppins", sans-serif;
     font-weight: normal;
@@ -387,4 +390,46 @@ footer .right .location .office {
 .demo {
     text-align: center;
 }
+.demo-h1 {
+  color: #4484ff;
+}
+.demo-h2 {
+  color: #2E2E33;
+}
+.demo-desc {
+  color: #2E2E33;
+}
+.Add-Reservation {
+  background-color: #F2A645;
+  width: 680px;
+  height: 427px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Cancel-Reservation {
+  background-color: #FF4269;
+  width: 680px;
+  height: 427px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.View-Dashboard {
+  background-color: #06BB87;
+  width: 680px;
+  height: 427px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Manage-Schedule {
+  background-color: #F26849;
+  width: 680px;
+  height: 427px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* END OF FEATURE PAGE */

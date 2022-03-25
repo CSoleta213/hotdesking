@@ -21,41 +21,47 @@
 
 <div class="demo">
   <header>
-    <div>
+    <div class="demo-h1">
       <h1>Demo</h1>
     </div>
   </header>
-  <div>
-    <h2>Lorem ipsum dolor sit amet. Ea molestiae
-      explicabo a dignissimos quia qui ratione voluptatem</h2>
+  <div class="demo-h2">
+      <h2>Lorem ipsum dolor sit amet. Ea molestiae
+        explicabo a dignissimos quia qui ratione voluptatem</h2>
   </div>
-  <!-- embed -->
-  <div>
-    <button type="button">Add Reservation</button>
-    <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
-      aspernatur et eligendi esse quo esse odit et sequi internos
-      eos molestiae nesciunt quo quibusdam velit.</p>
-  </div>
-  <!-- embed -->
-  <div>
-    <button type="button">Cancel Reservation</button>
-    <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
-      aspernatur et eligendi esse quo esse odit et sequi internos
-      eos molestiae nesciunt quo quibusdam velit.</p>
-  </div>
-  <!-- embed -->
-  <div>
-    <button type="button">View Dashboard</button>
-    <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
-      aspernatur et eligendi esse quo esse odit et sequi internos
-      eos molestiae nesciunt quo quibusdam velit.</p>
-  </div>
-  <!-- embed -->
-  <div>
-    <button type="button">Manage Schedule</button>
-    <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
-      aspernatur et eligendi esse quo esse odit et sequi internos
-      eos molestiae nesciunt quo quibusdam velit. sdsdsd</p>
+  <div class="demo-desc">
+    <div>
+      <!-- embed --> 
+      <div class="Add-Reservation"></div>
+        <h3>Add a reservation</h3>
+        <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
+            aspernatur et eligendi esse quo esse odit et sequi internos
+            eos molestiae nesciunt quo quibusdam velit.</p>
+    </div>
+    <div>
+      <!-- embed --> 
+      <div class="Cancel-Reservation"></div>
+        <h3>Cancel reservation</h3>
+        <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
+          aspernatur et eligendi esse quo esse odit et sequi internos
+          eos molestiae nesciunt quo quibusdam velit.</p>
+    </div>
+    <div>
+      <!-- embed -->
+      <div class="View-Dashboard"></div>
+        <h3>View dashboard</h3>
+        <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
+          aspernatur et eligendi esse quo esse odit et sequi internos
+          eos molestiae nesciunt quo quibusdam velit.</p>
+    </div>
+    <div>
+      <!-- embed -->
+      <div class="Manage-Schedule"></div>
+        <h3>Manage schedule</h3>
+        <p>Lorem ipsum dolor sit amet. Aut eveniet explicabo aut culpa
+          aspernatur et eligendi esse quo esse odit et sequi internos
+          eos molestiae nesciunt quo quibusdam velit. sdsdsd</p>
+    </div>
   </div>
 </div>
 
