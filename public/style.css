@@ -387,6 +387,8 @@ footer .right .location .office {
     font-weight: 700;
     font-size: 30px;
 }
+/* END OF FEATURE PAGE */
+/* DEMO PAGE CSS */
 .demo {
     text-align: center;
 }
@@ -431,5 +433,5 @@ footer .right .location .office {
   margin-left: auto;
   margin-right: auto;
 }
+/* END OF DEMO PAGE */
 
-/* END OF FEATURE PAGE */
