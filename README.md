@@ -33,4 +33,31 @@
    ```
    php artisan serve
    ```
+
+## MIGRATION
+
+1. Make migration file using this command:
+   ```
+   php artisan make:migration create_nameOfTable_table
+   ```
+
+    - Ex. php artisan make:migration create_bookers_table
+
+2. Open the migration file located in this path: Database\Migrations
    
+3. Setup the structure of the table inside the public function up()
+   ```
+    public function up()
+    {
+        Schema::create('booker', function (Blueprint $table){
+           $table->id();
+           <!-- You can add you code here to setup the table columns -->
+           $table->timestamps();
+           <!-- Or here-->
+        });
+    }
+   ```
+4. Run the migration using this command:
+   ```
+   php artisan migrate
+   ```
