@@ -47,15 +47,15 @@
    ```
 2. Open the migration file located in this path: Database\Migrations
    
-3. Setup the structure of the table inside the public function up()
+3. Setup the columns of the table inside the public function up()
    ```
     public function up()
     {
         Schema::create('booker', function (Blueprint $table){
            $table->id();
-           <!-- You can add you code here to setup the table columns -->
+           <!-- You can add your code here to setup the table columns -->
            $table->timestamps();
-           <!-- Or here-->
+           <!-- Or here -->
         });
     }
    ```
