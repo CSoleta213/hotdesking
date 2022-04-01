@@ -41,8 +41,10 @@
    php artisan make:migration create_nameOfTable_table
    ```
 
-    - Ex. php artisan make:migration create_bookers_table
-
+    - Example:
+   ```
+   php artisan make:migration create_bookers_table
+   ```
 2. Open the migration file located in this path: Database\Migrations
    
 3. Setup the structure of the table inside the public function up()
