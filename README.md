@@ -34,7 +34,14 @@
    php artisan serve
    ```
 
-## Migration
+## Migration from scratch (w/out db)
+1. Open XAMPP and start Apache and Mysql
+2. Open phpmyadmin: http://localhost/phpmyadmin
+3. Press New from left side navigation
+4. Enter database name as hotdesking
+5. Then proceed to the #4 on Migrations with existing db
+
+## Migration from scratch (w/out db)
 
 1. Make migration file using this command:
    ```
