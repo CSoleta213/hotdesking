@@ -1,4 +1,4 @@
-# Desktiny Hotdesking App 2022
+<span class="material-icons">dashboard</span> # Desktiny Hotdesking App 2022
 
 ## Pages
 - Homepage
@@ -39,9 +39,9 @@
 2. Open phpmyadmin: http://localhost/phpmyadmin
 3. Press New from left side navigation
 4. Enter database name as hotdesking
-5. Then proceed to the #4 on Migrations with existing db
+5. If 2022 migrations are present and available, then proceed to the #4 on Migrations with existing db, if not, proceed to #1.
 
-## Migration from scratch (w/out db)
+## Migration with existing db
 
 1. Make migration file using this command:
    ```
