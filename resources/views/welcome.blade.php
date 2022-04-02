@@ -7,17 +7,12 @@
     <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
   </div>
   <div class="menu">
-    <div><a class="active" href="/">Home</a></div>
+    <!-- <div><a class="active" href="/">Home</a></div>
     <div><a href="/features">Features</a></div>
     <div><a href="/faqs">FAQs</a></div>
-    <div><a href="/demo">Demo</a></div>
-    @if(Session::get('booker'))
-    <div><a href="http://">Welcome, {{Session::get('booker')}}</a></div>
-    <div><a href="/logout">Logout</a></div>
-    @else
+    <div><a href="/demo">Demo</a></div> -->
     <div class="login-button"><a href="/log-in">Log in</a></div>
     <div><a href="/sign-up">Sign up</a></div>
-    @endif
   </div>
 </div>
 
@@ -37,12 +32,12 @@
     </div>
     <div class="picture-fluid">
       <div class="blob-1"></div>
-      <img src="{{ asset('/perspective_matte.png') }}" class="img-desk">
+      <img src="{{ asset('/worker.png') }}" class="img-worker">
     </div>
   </div>
 
   <!-- COUNT -->
-  <div class="count-fluid">
+  <!-- <div class="count-fluid">
     <div class="count-subtitle">
       <h1>Let's get Countin'</h1>
     </div>
@@ -60,17 +55,17 @@
         <p>Occupied Desks</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- OUR APP -->
   <div class="our-fluid">
     <div class="our-desc-fluid">
       <div class="our-subtitle">
-        <h1>Our App</h1>
+        <h1>eMachines' Desktiny</h1>
       </div>
       <div class="our-desc">
         <p>
-          Desktiny is a workspace booking software that allows employees to book their workspace from any device, anywhere, and at any time. Our App is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desktiny is a workspace booking software that allows employees from eMachines to book their workspace from any device, anywhere, and at any time. It is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
         </p>
       </div>
     </div>
@@ -84,16 +79,16 @@
   <div class="our-fluid">
     <div class="our-picture">
       <div class="blob-2"></div>
-      <img src="{{ asset('/team.png') }}" class="our-logo">
+      <img src="{{ asset('/valve.png') }}" class="our-logo">
     </div>
     <div class="our-desc-fluid">
       <div class="our-subtitle">
-        <h1>Our Team</h1>
+        <h1>eMachines Company</h1>
       </div>
       <div class="our-desc">
         <p>
-          We are a team of aspiring managers, designers, and developers that want to take part in this digital era by focusing on building a user-friendly desk booking system. We wanted to create something that is helpful and significant as to post-pandemic in every workspace. Our product plays as a fate-maker for every employee's desired desk in an actual office.
-        </p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As  global innovators, we have a deep legacy of solving the most complex challenges of modern life. We combine advanced technology, industry-leading expertise, and  insatiable curiosity about the world around us to create sustainable solutions for the major customers we serve. To do. Our method is complicated, but the reason is simple and for a unified global purpose. We drive innovations that make the world healthier, safer, smarter and more sustainable.     
+      </p>
       </div>
     </div>
   </div>
@@ -102,17 +97,17 @@
   <div class="our-fluid">
     <div class="our-desc-fluid">
       <div class="our-subtitle">
-        <h1>Our Offices</h1>
+        <h1>eMachine Office Locations</h1>
       </div>
       <div class="our-desc">
         <p>
-          Make a reservation at the nearest office to your location. Our Main office is located at 4th Ave, Bonifacio Global City 1634 Taguig City. The other 2 offices where at Gueco Street, Pulung Maragul, Angeles City, Pampanga and 143 St. MacArthur Hi-way, Malolos, Bulacan.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make a reservation at eMachines' nearest office to your location. Our Main office is located at 201 Elizabeth Street Sydney NSW 2000, Australia. The other 2 offices where at 27 Alick Road, Tottenham Victoria, Australia and 60 Edward Street, Brisbane City QLD 4000, Australia.
         </p>
       </div>
     </div>
     <div class="our-picture">
       <div class="blob-2"></div>
-      <img src="{{ asset('/Building.png') }}" class="our-logo">
+      <img src="{{ asset('/desk.png') }}" class="our-logo">
     </div>
   </div>
 

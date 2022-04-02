@@ -19,27 +19,13 @@
   @yield('content')
 
   <footer>
-    <div class="logo"><img src="/desktiny-logo.png" alt="Desktiny Logo"></div>
     <div class="center">
-      <div class="contact">
-        Phone Numbers<br>
-        Email Address<br><br>
-        Follow us on:
-      </div>
-      <div class="soc-med">
-        <div><i class="fa-brands fa-facebook"></i></div>
-        <div><i class="fa-brands fa-twitter"></i></div>
-        <div><i class="fa-brands fa-linkedin"></i></div>
-        <div><i class="fa-brands fa-google"></i></div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="location">
-        <div>Locations:</div>
-        <div class="office">Office #1</div>
-        <div class="office">Office #2</div>
-        <div class="office">Office #3</div>
-      </div>
+      <p>
+        &#169; 2022 eMachines' Desktiny. All rights reserved.
+      </p>
+      <p>
+      <a href="/privacy">Privacy Statement</a>&nbsp;and&nbsp;<a href="/terms">Terms & Conditions</a>
+      </p>
     </div>
   </footer>
 </body>

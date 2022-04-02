@@ -24,6 +24,9 @@ Route::view('/demo', 'demo');
 
 Route::view('/dashboard', 'dashboard');
 
+Route::view('/privacy', 'privacy/privacy');
+Route::view('/terms', 'privacy/terms');
+
 // Route::view('/log-in', 'log-in');
 
 Route::view('/sign-up', 'sign-up');

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Log in</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{{ url('/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url('/desktiny-d.png') }}">
+  <script src="https://kit.fontawesome.com/80a2a00cbd.js" crossorigin="anonymous"></script>
+  <title>Log in to Desktiny</title>
+
+    <!-- <title>Log in</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Sora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Sora&display=swap" rel="stylesheet"> -->
 
     <style>
       html, body {
         height: 100%;
         margin: 0;
-        font-family: 'Sora', sans-serif;
       }
       h2 {
         font-family: 'Poppins';
-        margin: 5%;
       }
       .container {
         display: flex;
@@ -52,16 +62,28 @@
         padding: 12px 20px;
         border: 1px solid #C4C4C4;
         box-sizing: border-box;
+        border-radius: 5px;
       }
       .button input {
         background: #4484FF;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 0;
-        width: 93px;
-        height: 40px;
+        width: 150px;
+        height: 45px;
         font-weight: 700;
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        align-items: center;
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
@@ -73,7 +95,8 @@
         </div>
       </div>
       <div class="right">
-        <h2 style="text-align:center;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <h2 style="text-align:center;">Welcome back baby!</h2>
+        <p>Join in reserving the best destined seat for you</p>
         <form action="/logged-in" method="POST">
           @csrf
           <label for="email">Email:</label><br>
@@ -82,11 +105,10 @@
           <label for="pword">Password:</label><br>
           <input type="password" id="pword" name="pword"><br>
 
-          <a href="http://" style="self-align:right;"><div style="text-align: right;">Forgot Password?</div></a><br><br>
+          <a href="http://"><div style="text-align: right;"><p>Forgot Password?</p></div></a><br>
           
           <div class="button">
-            <center><input type="submit" value="Log in"></center><br>
-            <a href="/sign-up"><div style="text-align:center;">Create account</div></a>
+            <input type="submit" value="Log in">
           </div>
         </form> 
       </div>

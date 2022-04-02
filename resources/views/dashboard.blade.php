@@ -4,10 +4,10 @@
 
 <div class="navbar">
   <div class="logo">
-    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
+    <div><a href="/dashboard"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
   </div>
   <div class="menu">
-    <div><a class="active" href="/">Home</a></div>
+    <div><a class="active" href="/dashboard">Dashboard</a></div>
     <div><a href="/features">Features</a></div>
     <div><a href="/faqs">FAQs</a></div>
     <div><a href="/demo">Demo</a></div>
@@ -20,5 +20,6 @@
     @endif
   </div>
 </div>
+
 
 @endsection

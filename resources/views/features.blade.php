@@ -3,10 +3,10 @@
 @section('content')
 <div class="navbar">
   <div class="logo">
-    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
+    <div><a href="/dashboard"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
   </div>
   <div class="menu">
-    <div><a href="/">Home</a></div>
+    <div><a href="/dashboard">Dashboard</a></div>
     <div><a class="active" href="/features">Features</a></div>
     <div><a href="/faqs">FAQs</a></div>
     <div><a href="/demo">Demo</a></div>
@@ -45,7 +45,7 @@
           
           <div class="columns content" >
               <div class="content-container" style="margin-right:-70px;">
-              <h5 style="color: #F2A645">Calendar</h5>
+              <h5 style="color: #F2A645">Office View</h5>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
@@ -59,7 +59,7 @@
       <div class="section-container">
           <div class="columns content">
               <div class="content-container" style="margin-right: -50px;">
-                <h5 style="color: #06BB87;">Calendar</h5>
+                <h5 style="color: #06BB87;">Desk View</h5>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
@@ -76,7 +76,7 @@
           
           <div class="columns content">
               <div class="content-container" style="margin-right:-70px;">
-              <h5 style="color: #F26849">Calendar</h5>
+              <h5 style="color: #F26849">Reservation Listings</h5>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
