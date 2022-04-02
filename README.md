@@ -34,7 +34,7 @@
    php artisan serve
    ```
 
-## MIGRATION
+## Migration
 
 1. Make migration file using this command:
    ```
