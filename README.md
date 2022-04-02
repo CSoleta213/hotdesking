@@ -39,7 +39,8 @@
 2. Open phpmyadmin: http://localhost/phpmyadmin
 3. Press New from left side navigation
 4. Enter database name as hotdesking
-5. If 2022 migrations are present and available, then proceed to the #4 on Migrations with existing db, if not, proceed to #1.
+5. Open your env file and edit to DB_DATABASE=hotdesking
+6. If 2022 migrations are present and available, then proceed to the #4 on Migrations with existing db, if not, proceed to #1.
 
 ## 🪛 Migration with existing db
 
