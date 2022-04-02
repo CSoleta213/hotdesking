@@ -34,6 +34,8 @@
    php artisan serve
    ```
 
+7. Run migrations (#4 on existing db)
+
 ## 🔧 Migration from scratch (w/out db)
 1. Open XAMPP and start Apache and Mysql
 2. Open phpmyadmin: http://localhost/phpmyadmin
