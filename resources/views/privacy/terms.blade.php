@@ -39,13 +39,13 @@
         <ol>
         <li>ACCEPTANCE
             <ol>
-                <li>These Terms and Conditions (Terms) are between CNCNA PTY. LTD. (ABN 63 129 795 339) trading as eCompanies.com.au, its
+                <li>These Terms and Conditions (Terms) are between CNCNA PTY. LTD. (ABN 63 129 795 339) trading as eMachines' Desktiny, its
                     successors and assignees (referred to as “we”, “us” or “our”) and you, the person, organisation or entity that wishes to:
                     access our platform to download pro-forma documents; access our registered tax agent, domain registration, email hosting
                     and other related services (Services) and purchase such Services from us (referred to as “you” or “your”), and collectively
                     the Parties. These Terms apply to all sales made by us to you.</li>
                 <li>
-                    Our Services are available at <a href="https://www.ecompanies.com.au">www.ecompanies.com.au</a> (Site).
+                    Our Services are available at <a href="/">eMachines' Desktiny</a> (Site).
                 </li>
                 <li>
                     <strong>You agree that these Terms form the agreement under which we will supply our Services to you. Please read these Terms
@@ -94,7 +94,7 @@
                     <ol>
                         <li>
                             By making the Declaration at the end of the company incorporation order form / questionnaire, you authorise and consent to
-                            CNCNA Pty Ltd ABN 63 129 795 339&nbsp;(t/as eCompanies.com.au)&nbsp;submitting / lodging the application for registration as an Australian
+                            CNCNA Pty Ltd ABN 63 129 795 339&nbsp;(t/as eMachines' Desktiny)&nbsp;submitting / lodging the application for registration as an Australian
                             company (Form 201) to ASIC and warrant that the information contained therein is not false or misleading in any way.
                         </li>
                         <li>your application to register a company is subject to the decision of the Australian Securities and Investments Commission (ASIC);</li>
@@ -107,7 +107,7 @@
                         </li>
                         <li>
                             By making the Declaration at the end of the company incorporation
-                            order form / questionnaire, you authorise and consent to  CNCNA Pty Ltd ABN 63 129 795 339 (t/as eCompanies) submitting / lodging
+                            order form / questionnaire, you authorise and consent to  CNCNA Pty Ltd ABN 63 129 795 339 (t/as eMachines' Desktiny) submitting / lodging
                             the application for registration as an Australian company (Form 201) to ASIC and warrant that the information contained
                             therein is not false or misleading in any way.
                         </li>
@@ -115,7 +115,7 @@
                     <br>
                     <em><strong>For Company Registration Services lodged via the API (Application Programming Interface)</strong></em>
                     <ol>
-                        <li>By lodging a company application through the eCompanies.com.au API you warrant that you have obtained consent from the end
+                        <li>By lodging a company application through the eMachines' Desktiny API you warrant that you have obtained consent from the end
                             user that CNCNA PTY. LTD. has authority to submit/lodge the application with ASIC (form 201) and have included the following
                             on your website as part of your application process;</li>
                         <li>
@@ -158,7 +158,7 @@
                     <br>
                     <em><strong>For Domain registration</strong></em>
                     <ol>
-                    <li>eCompanies is a reseller of TPP Wholesale Pty Ltd who will appear as the registrar of record for your domains; and</li>
+                    <li>eMachines' Desktiny is a reseller of TPP Wholesale Pty Ltd who will appear as the registrar of record for your domains; and</li>
                     <li>Once submitted, modifications or alterations to an order are not possible unless rejected by the registrar; and</li>
                     <li>Both the registration of the domain name and its ongoing use are subject to the relevant naming authority's terms and
                         conditions of use and you are responsible for ensuring that you are aware of those terms and conditions and can and do comply
@@ -167,7 +167,7 @@
                     <em><strong>For Company Registration API (Application Programming Interface) Providers</strong></em>
                     <ol>
                         <li>
-                            By Lodging companies through the eCompanies.com.au API you warrant you have obtained authority and consent from your client
+                            By Lodging companies through the eMachines' Desktiny API you warrant you have obtained authority and consent from your client
                             that CNCNA PTY. LTD.   ABN 63 129 795 339
 
                         </li>
@@ -270,7 +270,7 @@
             <ol>
                 <li>We, including our employees and contractors, agree not to disclose your Confidential Information to any third party (other than as
                     required under law or with your prior consent). If the Confidential Information relates to your personal information, we will
-                    only disclose it in accordance with our <a href="/privacy-statement/">Privacy Policy</a>, which is available on the Site; to use all reasonable endeavours to
+                    only disclose it in accordance with our <a href="/privacy">Privacy Policy</a>, which is available on the Site; to use all reasonable endeavours to
                     protect Confidential Information from any unauthorised disclosure; only to use the Confidential Information for the purpose for
                     which it was disclosed by you, to provide better quality services to you, and not for any other purpose.</li>
                 <li>You, including your employees and contractors, agree not to disclose our Confidential Information to any third party; to use all

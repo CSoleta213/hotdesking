@@ -30,13 +30,14 @@ h4 {
     top: 0;
     width: 100%;
     z-index: 100;
+    align-items: center;
 }
 
 .navbar .logo,
 .navbar .menu {
     display: flex;
     flex-direction: row;
-    margin: 2%;
+    padding: 20px;
 }
 
 .navbar .logo {
@@ -89,7 +90,7 @@ h4 {
 .login-button a {
     background: #4484ff;
     border-radius: 5px;
-    width: 93px;
+    width: 100px;
     font-weight: 700;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
