@@ -4,15 +4,20 @@
 
 <div class="navbar">
   <div class="logo">
-    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}"></a></div>
+    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="150px"></a></div>
   </div>
   <div class="menu">
-    <!-- <div><a class="active" href="/">Home</a></div>
-    <div><a href="/features">Features</a></div>
-    <div><a href="/faqs">FAQs</a></div>
-    <div><a href="/demo">Demo</a></div> -->
-    <div class="login-button"><a href="/log-in">Log in</a></div>
-    <div><a href="/sign-up">Sign up</a></div>
+    @if (Route::has('login'))
+      @auth
+        <div class="menu-option"><a href="{{ url('/home') }}">Home</a></div>
+      @else
+        <div class="menu-option login-button"><a href="{{ route('login') }}">Log in</a></div>
+
+        @if (Route::has('register'))
+          <div class="menu-option"><a href="{{ route('register') }}">Register</a></div>
+        @endif
+      @endauth
+    @endif
   </div>
 </div>
 
@@ -134,5 +139,4 @@
   </div>
 
 </div>
-
 @endsection
