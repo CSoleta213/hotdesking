@@ -351,6 +351,25 @@ footer a:hover{
     margin-top: 50px;
     margin-left: 50px;
 }
+#calendar{
+    margin-top: 50px;
+    margin-left: 50px;
+    background: #FF4269;
+}
+
+#office-view{
+    margin-top: 50px;
+    margin-left: 50px;
+    background: #F2A645;
+}
+.office-view h5{
+  color: #F2A645;
+}
+#desk-view{
+  margin-top: 50px;
+  margin-left: 50px;
+  background: #06BB87;
+}
 .section-container .columns.content .content-container {
     padding: 40px 50px;
 }
