@@ -58,8 +58,8 @@
 
       <div class="section-container">
           <div class="columns content">
-              <div class="content-container" style="margin-right: -50px;">
-                <h5 style="color: #06BB87;">Desk View</h5>
+              <div class="content-container desk-view" style="margin-right: -50px;">
+                <h5>Desk View</h5>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
@@ -72,11 +72,11 @@
         </div>
 
         <div class="section-container">
-          <div class="columns image" style="background: #F26849"></div>
+          <div class="columns image" id="reservation"></div>
           
           <div class="columns content">
-              <div class="content-container" style="margin-right:-70px;">
-              <h5 style="color: #F26849">Reservation Listings</h5>
+              <div class="content-container reservation" style="margin-right:-70px;">
+              <h5>Reservation Listings</h5>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
