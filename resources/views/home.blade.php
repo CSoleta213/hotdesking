@@ -55,5 +55,25 @@
         {{ session('status') }}
       </div>
     @endif
+    <!-- COUNT -->
+    <div class="count-fluid">
+      <div class="count-subtitle">
+        <h1>Let's get Countin'</h1>
+      </div>
+      <div class="box-count">
+        <!-- <div class="count-1">
+          <h1>3</h1>
+          <p>Offices Available</p>
+        </div> -->
+        <!-- <div class="count-2">
+          <h1>75</h1>
+          <p>Seats Available</p>
+        </div> -->
+        <div class="count-3">
+          <h1>{{ $number_of_books }}</h1>
+          <p>Occupied Desks</p>
+        </div>
+      </div>
+    </div>
   </div>
 @endsection

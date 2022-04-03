@@ -19,11 +19,6 @@ class BookController extends Controller
 
         $book->save();
 
-        return redirect('/');
-    }
-
-    public function index() {
-        $number_of_books = DB::table('books')->count();
-        return view('welcome',compact('number_of_books'));
+        return redirect('/home');
     }
 }
