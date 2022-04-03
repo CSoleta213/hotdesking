@@ -69,13 +69,13 @@
           <a href="#"><div class="columns image" style="background: #FF4269"> </div></a>
        </div>
 
-        <div class="section-container">
+        <!-- <div class="section-container">
           <a href="#"><div class="columns image" style="background: #F2A645"></div></a>
           <div class="columns image" id="calendar"> </div>
-       </div>
+       </div> -->
 
         <div class="section-container">
-          <div class="columns image" id="office-view"></div>
+          <a href="#"><div class="columns image" id="office-view"></div></a>
           
           <div class="columns content" >
               <div class="content-container office-view" style="margin-right:-70px;">
@@ -106,12 +106,7 @@
         </div>
 
         <div class="section-container">
-          <a href="#"><div class="columns image" style="background: #F26849"></div></a>
-          <div class="columns image" id="desk-view"> </div>
-        </div>
-
-        <div class="section-container">
-          <div class="columns image" id="reservation"></div>
+          <a href="#"><div class="columns image" id="reservation"></div></a>
           
           <div class="columns content">
               <div class="content-container reservation" style="margin-right:-70px;">
