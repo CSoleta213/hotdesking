@@ -22,10 +22,37 @@ h4 {
     font-weight: normal;
 }
 
+.button button {
+    background: #4484FF;
+    border-radius: 10px;
+    border: 0;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  form input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+  }
+
+  .checkbox-with-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+
 .navbar {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     width: 100%;
@@ -36,8 +63,8 @@ h4 {
 .navbar .logo,
 .navbar .menu {
     display: flex;
-    flex-direction: row;
-    padding: 20px;
+    /* justify-content: space-between; */
+    margin: 3%;
 }
 
 .navbar .logo {
@@ -46,7 +73,7 @@ h4 {
 
 .navbar .menu {
     flex: 2;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .navbar .menu .active {
@@ -65,44 +92,79 @@ h4 {
 }
 
 /* .navbar .logo div:hover,
-.navbar .menu div:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    /* -webkit-transform: scale(1.1); Safari 3-8 */
-    /* transform: scale(1.1); */
-    /* transition-duration: 0.5s; */
-    /* transition-timing-function: ease-out; */
-    /* color: #343799; */
-/* }  */
+.navbar .menu .menu-option:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #343799;
+} */
 
-.navbar .logo div,
+.navbar .logo div a,
 .navbar .menu div a {
     display: inline;
+    color: #3d3d42;
     text-align: center;
     padding: 10px 25px;
     text-decoration: none;
     transition: transform 0.2s;
 }
 
-.navbar a:hover{
+.navbar .menu .menu-option a:hover{
     color: #80acff;
 }
 
-.login-button a {
+.navbar .menu .login-button a {
     background: #4484ff;
-    border-radius: 5px;
-    width: 100px;
+    border-radius: 10px;
+    border: 0;
+    width: 93px;
     font-weight: 700;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
 }
-.login-button a:hover{
+
+.navbar .menu .login-button a:hover{
     background-color: #80acff;
     color: #ffff;
 }
 
-.navbar .logo div img {
+/* footer {
+    display: flex;
+    flex-direction: row;
+    background: #343799;
+    color: #ffffff;
+    padding: 20px;
+}
+
+footer .logo {
+    width: 20%;
+}
+
+footer .logo img {
     width: 150px;
 }
+
+footer .center {
+    width: 40%;
+}
+
+footer .right {
+    width: 40%;
+}
+
+footer .center .soc-med {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .center .soc-med div {
+    width: 50px;
+}
+
+footer .right .location .office {
+    text-indent: 30px;
+} */
 
 footer {
     display: flex;
@@ -124,7 +186,44 @@ footer a{
 footer a:hover{
     color: #4484ff;
 }
+
 /* END OF GLOBAL CSS */
+
+/* DROPDOWN */
+.dropdown-container {
+  color: #3d3d42;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 8px 16px;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {background-color: #f1f1f1;}
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* END OF DROPDOWN */  
 
 /* HOMEPAGE */
 /* BRAND */
