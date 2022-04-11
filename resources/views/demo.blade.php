@@ -54,8 +54,7 @@
     </div>
   </header>
   <div class="demo-h2">
-    <h2>Lorem ipsum dolor sit amet. Ea molestiae
-      explicabo a dignissimos quia qui ratione voluptatem</h2>
+    <h2>Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</h2>
   </div>
   <div class="demo-desc">
     <div class="Add-Reservation">
