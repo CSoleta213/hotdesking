@@ -97,9 +97,9 @@
       <div class="content-container desk-view" style="margin-right: -50px;">
         <h5>Desk View</h5>
         <p>
-          Don’t know what desk to reserve? Our desk view provides an unbeatable overview of available and occupied desks
+          Don&apos;t know what desk to reserve? Our desk view provides an unbeatable overview of available and occupied desks
           in the office. Making it easier to find the right desk for you or a free desk next to your team member.
-          Once you’ve spotted a space you like, simply click on the desk and book it.
+          Once you&apos;ve spotted a space you like, simply click on the desk and book it.
         </p>
       </div>
     </div>
