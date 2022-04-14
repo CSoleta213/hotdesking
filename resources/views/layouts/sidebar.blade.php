@@ -95,7 +95,7 @@
               <img src="{{ asset('/avatar.png') }}" alt="profileImg">
             </div>
             <div class="name-job">
-              <div class="profile_name">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</div>
+              <div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div>
               <div class="job">Project Manager</div>
             </div>
             <a href="{{ route('logout') }}"
