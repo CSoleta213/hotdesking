@@ -32,7 +32,7 @@
         <h3>Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
       </div>
       <div class="button-reserve">
-        <a href="{{ route('login') }}">Reserve a seat</a>
+        <a href="/features/desk-map">Reserve a seat</a>
       </div>
     </div>
     <div class="picture-fluid">
