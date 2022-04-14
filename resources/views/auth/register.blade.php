@@ -65,6 +65,13 @@
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
       }
+
+      #office {
+        width: 100%;
+        padding: 12px 20px;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
