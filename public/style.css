@@ -468,10 +468,10 @@ footer a:hover{
   text-align: center;
 }
 .demo-h1 {
-  color: #4484ff;
+    color: #4484ff;
 }
 .demo-h2 {
-  color: #2E2E33;
+    color: #2E2E33;
 }
 .demo-desc {
   display: flex;
@@ -483,36 +483,16 @@ footer a:hover{
   margin-top: 50px;
 }
 .Add-Reservation {
-  background-color: #F2A645;
-  width: 680px;
-  height: 427px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 70px;
 }
 .Cancel-Reservation {
-  background-color: #FF4269;
-  width: 680px;
-  height: 427px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 70px;
 }
 .View-Dashboard {
-  background-color: #06BB87;
-  width: 680px;
-  height: 427px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 70px;
 }
 .Manage-Schedule {
-  background-color: #F26849;
-  width: 680px;
-  height: 427px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 70px;
 }
 /* END OF DEMO PAGE */
 

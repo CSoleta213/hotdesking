@@ -32,6 +32,7 @@
           <div class="columns image" id="calendar"> </div>
         </div> -->
 
+<<<<<<< HEAD
         <div class="section-container">
           <a href="#"><div class="columns image" id="office-view"></div></a>
           
@@ -81,4 +82,60 @@
       </div>
     </div>
   </section>
+=======
+  <div class="section-container">
+    <a href="#">
+      <div class="columns image" id="office-view"></div>
+    </a>
+
+    <div class="columns content">
+      <div class="content-container office-view" style="margin-right:-70px;">
+        <h5>Office View</h5>
+        <p>
+          Want to explore the office? Our intuitive floor plan maps will give you an instant overview of the entire
+          office and space availability – all in one single screen, anytime and anywhere. View office amenities such
+          as pantry area, restroom, meeting rooms, as well as the entrance and exit. Making your trip to the office
+          a familiar one.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="columns content">
+      <div class="content-container desk-view" style="margin-right: -50px;">
+        <h5>Desk View</h5>
+        <p>
+          Don&apos;t know what desk to reserve? Our desk view provides an unbeatable overview of available and occupied desks
+          in the office. Making it easier to find the right desk for you or a free desk next to your team member.
+          Once you&apos;ve spotted a space you like, simply click on the desk and book it.
+        </p>
+      </div>
+    </div>
+    <a href="{{ url('/features/desk-map') }}">
+      <div class="columns image" style="background: #06BB87;"> </div>
+    </a>
+  </div>
+
+  <div class="section-container">
+    <a href="#">
+      <div class="columns image" id="reservation"></div>
+    </a>
+
+    <div class="columns content">
+      <div class="content-container reservation" style="margin-right:-70px;">
+        <h5>Reservation Listings</h5>
+        <p>
+          Our reservation Listing is where you can view and manage your booked/reserved desk for the next few days,
+          weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings
+          if you like.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+>>>>>>> 3cd91f891fda2fe5b0f2f42f785f4fb63c2b60df
 @endsection
