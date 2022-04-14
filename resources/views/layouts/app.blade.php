@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url('/style.css') }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="{{ url('/desktiny-d.png') }}">
   <script src="https://kit.fontawesome.com/80a2a00cbd.js" crossorigin="anonymous"></script>
   <title>Desktiny</title>
