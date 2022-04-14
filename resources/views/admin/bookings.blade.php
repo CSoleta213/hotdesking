@@ -3,7 +3,6 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <i class='bx bx-menu' ></i>
       <span class="text">Bookings</span>
     </div>
     <div class="body-content">

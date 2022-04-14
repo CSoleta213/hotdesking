@@ -22,12 +22,12 @@
     <div class="sidebar close">
       <div class="logo-details">
         <div class="logo-d">
-          <a href="{{ url('/') }}"><img src="{{ asset('/desktiny-d.png') }}" width="40px"></a>
+          <a href="{{ url('/') }}"><img src="{{ asset('/desktiny-d.png') }}" width="30px"></a>
         </div>
-        <!-- <span class="logo_name">CodingLab</span> -->
         <span class="logo_name">
           <a href="{{ url('/') }}"><img src="{{ asset('/desktiny-logo.png') }}" width="150px"></a>
         </span>
+        <i class='bx bx-chevron-right toggle'></i>
       </div>
       <ul class="menu-links">
         <li class="nav-link">
@@ -121,7 +121,7 @@
       });
     }
     let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
+    let sidebarBtn = document.querySelector(".toggle");
     console.log(sidebarBtn);
     sidebarBtn.addEventListener("click", ()=>{
       sidebar.classList.toggle("close");
