@@ -1,10 +1,15 @@
-@extends('layouts.layout')
+@extends('layouts.sidebar')
 
 @section('content')
-
-<div class="home">
-  <h1>Book a desk</h1>
-  <a href="{{ url('/features/desk-map/book-a-desk') }}">1</a>
-</div>
-
+  <section class="body-section">
+    <div class="body-header">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Book a desk</span>
+    </div>
+    <div class="body-content">
+      <div class="desk-map">
+        <a href="{{ url('/features/desk-map/book-a-desk') }}">1</a>
+      </div>
+    </div>
+  </section>
 @endsection
