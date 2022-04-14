@@ -9,7 +9,7 @@
     <div class="body-content">
       <div class="features">
         <h1 class="content-title">Features</h1><br>
-        <p class="title-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+        <p class="title-desc">The simplest and most configurable application for booking and managing your desks and meeting rooms.</p>
    
     
         <div class="section-container">
@@ -17,10 +17,9 @@
             <div class="content-container calendar" style="margin-right: -50px;">
               <h5>Calendar</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Emachine’s Desktiny calendar provides you with an overview of all bookings in the days, weeks or even months ahead. 
+                It is where you can see other employees booking, as well as the date and duration of the booking. 
+                You can also click over other bookings for more information.
               </p>        
             </div>
           </div>
