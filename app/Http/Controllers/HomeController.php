@@ -28,10 +28,42 @@ class HomeController extends Controller
         return view('home',compact('number_of_books'));
     }
 
+    public function my_profile()
+    {
+        return view('my_profile');
+    }
+
+    // Calendar
+
+    public function my_bookings()
+    {
+        // $my_bookings = \App\Models\Book::all();
+
+        // $firstname = DB::table('users')->get('firstname');
+        // $lastname = DB::table('users')->get('lastname');
+        // $fullname = $firstname." ".$lastname;
+
+        // Hidden search bar
+
+        $my_bookings = DB::table('books')
+        ->where('name','=','Carlo Soleta') // Dapat magawa natin itong dynamic
+        ->get();
+
+        // SELECT * FROM `books` WHERE name = {{ Auth::user()->firstname }} {{ Auth::user()->lastname }};
+        return view('features.my_bookings',compact('my_bookings'));
+    }
+
+    public function demo()
+    {
+        return view('demo');
+    }
+
     public function features()
     {
         return view('features');
     }
+
+    // Office View
 
     public function desk_map()
     {
@@ -43,28 +75,14 @@ class HomeController extends Controller
         return view('features.forms.book_a_desk');
     }
 
-    public function demo()
-    {
-        return view('demo');
-    }
-
-    public function profile()
-    {
-        return view('profile');
-    }
-
-    public function privacy()
-    {
-        return view('privacy.privacy');
-    }
-
-    public function terms()
-    {
-        return view('privacy.terms');
-    }
-
     public function adminHome()
     {
-        return view('admin');
+        return view('admin.admin');
+    }
+
+    public function adminBookings()
+    {
+        $bookings = \App\Models\Book::all();
+        return view('admin.bookings',compact('bookings'));
     }
 }
