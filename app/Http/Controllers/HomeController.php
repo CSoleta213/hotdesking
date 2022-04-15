@@ -77,7 +77,9 @@ class HomeController extends Controller
 
     public function adminUsersList()
     {
-        return view('admin.users_list');
+        $users = \App\Models\User::all();
+        return view('admin.users_list',compact('users'));
+        // return view('admin.users_list');
     }
 
     public function adminBookings()
