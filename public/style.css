@@ -401,6 +401,8 @@ footer a:hover{
   display: flex;
   padding: 0px 70px 20px 50px;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 .section-container .columns {
   flex: 0 0 auto;
@@ -415,11 +417,12 @@ footer a:hover{
 }
 .columns.image {
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #calendar{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #FF4269;
 }
 .calendar h5{
@@ -427,7 +430,7 @@ footer a:hover{
 }
 #office-view{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #F2A645;
 }
 .office-view h5{
@@ -435,7 +438,7 @@ footer a:hover{
 }
 #desk-view{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #06BB87;
 }
 .desk-view h5{
@@ -443,7 +446,7 @@ footer a:hover{
 }
 #reservation {
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #F26849;
 }
 .reservation h5{
@@ -601,6 +604,7 @@ footer a:hover{
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
+  border-radius: 6px;  
 }
 .sidebar .menu-links li:hover{
   background: #80acff;
