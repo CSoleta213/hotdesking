@@ -75,6 +75,11 @@ class HomeController extends Controller
         return view('admin.admin');
     }
 
+    public function adminUsersList()
+    {
+        return view('admin.users_list');
+    }
+
     public function adminBookings()
     {
         $bookings = \App\Models\Book::all();
