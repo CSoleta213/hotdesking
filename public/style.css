@@ -882,18 +882,19 @@ footer a:hover{
     transform: translate(-50%, -50%);
     height: 20px;
     width: 20px;
-    background-color: #bbb;
+    color: #FFF;
+    background-color: #4484FF;
     border-radius: 50%;
     display: inline-block;
     border: none;
   }
   #dot1 {
     top: 41%;
-    left: 61.5%;
+    left: 36.2%;
   }
   #dot2 {
     top: 41%;
-    left: 54.8%;
+    left: 42.25%;
   }
   #dot3 {
     top: 41%;
@@ -901,10 +902,10 @@ footer a:hover{
   }
   #dot4 {
     top: 41%;
-    left: 42.25%;
+    left: 54.8%;
   }
   #dot5 {
     top: 41%;
-    left: 36.2%;
+    left: 61.5%;
   }
-/* END OF MODAL */
+  /* END OF MODAL */
