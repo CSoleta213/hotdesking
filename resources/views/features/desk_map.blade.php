@@ -3,7 +3,7 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Book a desk</span>
+      <span class="text">Desk View</span>
     </div>
     <div class="body-content">
       <div class="desk-map">

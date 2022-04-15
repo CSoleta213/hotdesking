@@ -31,8 +31,6 @@ Route::get('/features', [App\Http\Controllers\HomeController::class, 'features']
 
 Route::get('/features/desk-map', [App\Http\Controllers\HomeController::class, 'desk_map'])->name('desk_map');
 
-Route::get('/features/desk-map/book-a-desk', [App\Http\Controllers\HomeController::class, 'book_a_desk'])->name('book_a_desk');
-
 Route::post('/book-a-desk', [App\Http\Controllers\BookController::class, 'save_book']);
 
 Route::get('/demo', [App\Http\Controllers\HomeController::class, 'demo'])->name('demo');

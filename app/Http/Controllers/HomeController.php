@@ -70,11 +70,6 @@ class HomeController extends Controller
         return view('features.desk_map');
     }
 
-    public function book_a_desk()
-    {
-        return view('features.forms.book_a_desk');
-    }
-
     public function adminHome()
     {
         return view('admin.admin');
