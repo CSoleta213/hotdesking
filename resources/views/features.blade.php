@@ -15,7 +15,7 @@
           <div class="content-container calendar">
             <h5>Calendar</h5>
             <p>
-              Emachine’s Desktiny calendar provides you with an overview of all bookings in the days, weeks or even months ahead. 
+              Emachine&apos;s Desktiny calendar provides you with an overview of all bookings in the days, weeks or even months ahead. 
               It is where you can see other employees booking, as well as the date and duration of the booking. 
               You can also click over other bookings for more information.
             </p>        
@@ -59,7 +59,7 @@
           </div>
         </div>
         <a href="{{ url('/features/desk-map') }}">
-          <div class="columns image"><img src="{{ asset('/desk-view.jpg') }}" alt="Desk View" width="100%"></div>
+          <div class="columns image"><img src="{{ asset('/floor-plan.jpg') }}" alt="Desk View" width="100%"></div>
         </a>
       </div>
     
