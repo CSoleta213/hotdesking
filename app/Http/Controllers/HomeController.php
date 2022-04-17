@@ -33,7 +33,15 @@ class HomeController extends Controller
         return view('my_profile');
     }
 
-    // Calendar
+    public function my_calendar_monthly()
+    {
+        return view('my_calendar.monthly');
+    }
+
+    public function my_calendar_daily()
+    {
+        return view('my_calendar.daily');
+    }
 
     public function my_bookings()
     {

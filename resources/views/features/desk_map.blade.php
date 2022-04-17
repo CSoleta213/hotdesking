@@ -7,6 +7,7 @@
     </div>
     <div class="body-content">
       <div class="desk-map">
+        <a class="btn btn-primary" href="{{ route('books.index') }}"> Back</a>
         <!-- <a href="{{ url('/features/desk-map/book-a-desk') }}">1</a> -->
         <img src="{{ asset('/desk-view.jpg') }}" alt="Desk View" width="100%">
         <div class="dots"></div>
@@ -27,7 +28,7 @@
         <span class="close">&times;</span>
         <h3>Book a Desk</h3>
       </div>
-      <form action="{{ url('/book-a-desk') }}" method="POST">
+      <form action="{{ route('books.store') }}" method="POST">
       @csrf
         <div class="modal-body">
           <label for="name">Your Name:</label>
@@ -38,6 +39,7 @@
 
           <label for="desk_number">Your Chosen Desk:</label>
           <select name="desk_number" id="desk_number">
+            <option value="5">5</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
             <option value="A3">A3</option>

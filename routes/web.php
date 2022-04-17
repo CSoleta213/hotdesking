@@ -25,7 +25,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/my-profile', [App\Http\Controllers\HomeController::class, 'my_profile'])->name('my_profile');
 
-Route::get('/my-bookings', [App\Http\Controllers\HomeController::class, 'my_bookings'])->name('my_bookings');
+Route::get('/my-calendar/monthly', [App\Http\Controllers\HomeController::class, 'my_calendar_monthly'])->name('my_calendar_monthly');
+
+Route::get('/my-calendar/daily', [App\Http\Controllers\HomeController::class, 'my_calendar_daily'])->name('my_calendar_daily');
 
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
 
@@ -40,3 +42,5 @@ Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHom
 Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'adminUsersList'])->name('admin.users_list')->middleware('is_admin');
 
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'adminBookings'])->name('admin.bookings')->middleware('is_admin');
+
+Route::resource('books', App\Http\Controllers\BookController::class);
