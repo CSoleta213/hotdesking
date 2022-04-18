@@ -8,7 +8,7 @@
     <div class="body-content">
       <center>
         <a href="/my-calendar/monthly">Per Month</a>
-        <a href="#daily">Per Day</a>
+        <a href="/my-calendar/weekly">Per Week</a>
         <a href="/books">List of Books</a>
       </center>
     </div>

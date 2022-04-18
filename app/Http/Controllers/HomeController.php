@@ -38,9 +38,9 @@ class HomeController extends Controller
         return view('my_calendar.monthly');
     }
 
-    public function my_calendar_daily()
+    public function my_calendar_weekly()
     {
-        return view('my_calendar.daily');
+        return view('my_calendar.weekly');
     }
 
     public function my_bookings()

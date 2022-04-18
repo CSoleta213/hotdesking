@@ -27,7 +27,7 @@ Route::get('/my-profile', [App\Http\Controllers\HomeController::class, 'my_profi
 
 Route::get('/my-calendar/monthly', [App\Http\Controllers\HomeController::class, 'my_calendar_monthly'])->name('my_calendar_monthly');
 
-Route::get('/my-calendar/daily', [App\Http\Controllers\HomeController::class, 'my_calendar_daily'])->name('my_calendar_daily');
+Route::get('/my-calendar/weekly', [App\Http\Controllers\HomeController::class, 'my_calendar_weekly'])->name('my_calendar_weekly');
 
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
 
