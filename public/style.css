@@ -54,6 +54,22 @@ form input {
   align-items: center;
   margin-bottom: 3%;
 }
+select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+}
+label {
+  font-weight: bold;
+}
+
+input[type=submit] {
+  font-weight: bold;
+  background-color: #4484FF;
+  color: #FFF;
+  border-radius: 10px;
+}
 /* END OF GLOBAL CSS */
 
 /* NAVBAR */
@@ -293,6 +309,8 @@ footer a:hover{
   display: flex;
   padding: 0px 70px 20px 50px;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 .section-container .columns {
   flex: 0 0 auto;
@@ -307,11 +325,12 @@ footer a:hover{
 }
 .columns.image {
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #calendar{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #FF4269;
 }
 .calendar h5{
@@ -319,7 +338,7 @@ footer a:hover{
 }
 #office-view{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #F2A645;
 }
 .office-view h5{
@@ -327,7 +346,7 @@ footer a:hover{
 }
 #desk-view{
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #06BB87;
 }
 .desk-view h5{
@@ -335,7 +354,7 @@ footer a:hover{
 }
 #reservation {
   margin-top: 50px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #F26849;
 }
 .reservation h5{
@@ -493,6 +512,7 @@ footer a:hover{
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
+  border-radius: 6px;  
 }
 .sidebar .menu-links li:hover{
   background: #80acff;
@@ -705,3 +725,100 @@ footer a:hover{
   }
 }
 /* END OF SIDE BAR */
+
+/* MODAL */
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 90px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* The Modal Header */
+  .modal-header {
+    padding: 2px 16px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+  }
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #FFF;
+    /* background-image: url("../images/open-book.jpg"); */
+    background-size: 840px 500px;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  /* The Close Button */
+  span.close {
+    color: white;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-right: -45px;
+  }
+  span.close:hover,
+  span.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-body {padding: 10px 16px;}
+  .modal-button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    color: #FFF;
+    background-color: #4484FF;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+  #dot1 {
+    top: 41%;
+    left: 36.2%;
+  }
+  #dot2 {
+    top: 41%;
+    left: 42.25%;
+  }
+  #dot3 {
+    top: 41%;
+    left: 48.5%;
+  }
+  #dot4 {
+    top: 41%;
+    left: 54.8%;
+  }
+  #dot5 {
+    top: 41%;
+    left: 61.5%;
+  }
+  /* END OF MODAL */

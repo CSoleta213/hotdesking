@@ -33,7 +33,15 @@ class HomeController extends Controller
         return view('my_profile');
     }
 
-    // Calendar
+    public function my_calendar_monthly()
+    {
+        return view('my_calendar.monthly');
+    }
+
+    public function my_calendar_weekly()
+    {
+        return view('my_calendar.weekly');
+    }
 
     public function my_bookings()
     {
@@ -70,14 +78,16 @@ class HomeController extends Controller
         return view('features.desk_map');
     }
 
-    public function book_a_desk()
-    {
-        return view('features.forms.book_a_desk');
-    }
-
     public function adminHome()
     {
         return view('admin.admin');
+    }
+
+    public function adminUsersList()
+    {
+        $users = \App\Models\User::all();
+        return view('admin.users_list',compact('users'));
+        // return view('admin.users_list');
     }
 
     public function adminBookings()

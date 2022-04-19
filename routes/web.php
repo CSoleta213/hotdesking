@@ -25,13 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/my-profile', [App\Http\Controllers\HomeController::class, 'my_profile'])->name('my_profile');
 
-Route::get('/my-bookings', [App\Http\Controllers\HomeController::class, 'my_bookings'])->name('my_bookings');
+Route::get('/my-calendar/monthly', [App\Http\Controllers\HomeController::class, 'my_calendar_monthly'])->name('my_calendar_monthly');
+
+Route::get('/my-calendar/weekly', [App\Http\Controllers\HomeController::class, 'my_calendar_weekly'])->name('my_calendar_weekly');
 
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
 
 Route::get('/features/desk-map', [App\Http\Controllers\HomeController::class, 'desk_map'])->name('desk_map');
-
-Route::get('/features/desk-map/book-a-desk', [App\Http\Controllers\HomeController::class, 'book_a_desk'])->name('book_a_desk');
 
 Route::post('/book-a-desk', [App\Http\Controllers\BookController::class, 'save_book']);
 
@@ -39,4 +39,8 @@ Route::get('/demo', [App\Http\Controllers\HomeController::class, 'demo'])->name(
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'adminUsersList'])->name('admin.users_list')->middleware('is_admin');
+
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'adminBookings'])->name('admin.bookings')->middleware('is_admin');
+
+Route::resource('books', App\Http\Controllers\BookController::class);

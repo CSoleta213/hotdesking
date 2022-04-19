@@ -1,13 +1,19 @@
 # 🔥 Desktiny Hotdesking App 2022 🔥
 
 ## ⚓ Pages
+- Login / Sign up
 - Homepage
 - Features
 - FAQs
 - Demo
 - User View
 - Admin View
-- Login / Sign up
+1. Home
+  - Countings of occupied desk and available desk everyday
+2. List of users
+  - Add/Remove as admin button
+  - Add/Remove users
+3. List of reservation
 
 ## ⚙️ Installation
 > Run the following commands on your terminal:

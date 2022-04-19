@@ -31,53 +31,30 @@
       </div>
       <ul class="menu-links">
         <li class="nav-link">
-          <a href="/home">
+          <a href="/admin/home">
             <i class='bx bx-home' ></i>
             <span class="link_name">Home</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/home">Home</a></li>
+            <li><a class="link_name" href="/admin/home">Home</a></li>
           </ul>
         </li>
         <li class="nav-link">
-          <a href="/my-profile">
+          <a href="/admin/users">
             <i class='bx bx-user' ></i>
-            <span class="link_name">My Profile</span>
+            <span class="link_name">List of Users</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/my-profile">My Profile</a></li>
+            <li><a class="link_name" href="/admin/users">List of Users</a></li>
           </ul>
         </li>
         <li class="nav-link">
-          <a href="/my-calendar/monthly">
-            <i class='bx bx-calendar' ></i>
-            <span class="link_name">My Calendar</span>
+          <a href="/admin/bookings">
+            <i class='bx bx-book' ></i>
+            <span class="link_name">List of Bookings</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/my-calendar/monthly">My Calendar</a></li>
-          </ul>
-        </li>
-        <li class="nav-link">
-          <a href="/demo">
-            <i class='bx bx-video' ></i>
-            <span class="link_name">Video Demo</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="/demo">Video Demo</a></li>
-          </ul>
-        </li>
-        <li class="nav-link">
-          <div class="iocn-link">
-            <a href="/features">
-              <i class='bx bx-category' ></i>
-              <span class="link_name">Features</span>
-            </a>
-            <i class='bx bxs-chevron-down arrow' ></i>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="link_name" href="/features">Features</a></li>
-            <li><a href="#">Office View</a></li>
-            <li><a href="/features/desk-map">Desk View</a></li>
+            <li><a class="link_name" href="/admin/bookings">List of Bookings</a></li>
           </ul>
         </li>
         <li class="nav-link">
