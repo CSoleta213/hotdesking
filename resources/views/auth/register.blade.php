@@ -4,13 +4,12 @@
     <title>Desktiny</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Sora&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       html, body {
         height: 100%;
         margin: 0;
-        font-family: 'Sora', sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
       .register {
         display: flex;
@@ -22,7 +21,7 @@
       }
 
       .register .logo a img {
-        width: 150px;
+        width: 250px;
       }
 
       .form {
@@ -47,31 +46,30 @@
         margin-right: 20%;
         margin-left: 1%;
       }
-      .form-fields input {
+      .form-fields input, select {
         width: 100%;
         padding: 12px 20px;
         margin: 0 0px;
         display: inline-block;
         border: 1px solid #C4C4C4;
         box-sizing: border-box;
+        border-radius: 5px;
+        font-family: 'Poppins';
       }
       .button button {
         background: #4484FF;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 0;
-        width: 93px;
+        width: 100px;
         height: 40px;
-        font-weight: 700;
+        font-weight: 500;
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
       }
-
-      #office {
-        width: 100%;
-        padding: 12px 20px;
-        border: 1px solid #C4C4C4;
-        box-sizing: border-box;
-      }
+      .button button:hover{
+      background-color: #80acff;
+      color: #ffff;
+    }
     </style>
   </head>
   <body>
@@ -170,9 +168,9 @@
 
               <!-- <input id="office" type="text" name="office" value="{{ old('office') }}" required autocomplete="office" autofocus> -->
               <select name="office" id="office">
-                <option value="pampanga">Pampanga</option>
-                <option value="bulacan">Bulacan</option>
-                <option value="ncr">NCR</option>
+                <option value="pampanga">Sydney</option>
+                <option value="bulacan">Victoria</option>
+                <option value="ncr">Brisbane</option>
               </select>
 
               @error('office')

@@ -28,15 +28,19 @@ h4 {
 }
 .button button {
   background: #4484FF;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 0;
   width: auto;
   height: auto;
   padding: 10px 20px;
-  font-weight: 700;
+  font-weight: 500;
   color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
 }
+.button button:hover{
+    background-color: #80acff;
+    color: #ffff;
+  }
 form input {
   width: 100%;
   padding: 12px 20px;
@@ -98,10 +102,10 @@ form input {
 }
 .navbar .menu .login-button a {
   background: #4484ff;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 0;
   width: 93px;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
@@ -244,37 +248,6 @@ footer a:hover{
 }
 /* END BRAND */
 
-/* COUNT */
-.count-fluid {
-  /* background-color: #333; */
-  flex: 1;
-  padding: 100px;
-  width: 750px;
-}
-.count-1,
-.count-2,
-.count-3 {
-  display: flex;
-  flex-direction: column;
-  width: 175px;
-  height: 150px;
-  border-radius: 5px;
-  background-color: #a4c4ff;
-  justify-content: center;
-  align-items: center;
-}
-.count-subtitle {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.box-count {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-/* END COUNT */
-
 /* OUR APP, TEAM, OFFICES */
 .our-fluid {
   display: flex;
@@ -313,71 +286,6 @@ footer a:hover{
   background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3Cpattern id=%22pattern%22 patternUnits=%22userSpaceOnUse%22 width=%2225%22 height=%2225%22 viewBox=%220 0 100 100%22 fill=%22%23e3d0ff%22 %3E %3Ccircle cx=%2250%22 cy=%2250%22 r=%2212.5%22 %2F%3E %3C%2Fpattern%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M770%2C656.5Q602%2C813%2C361%2C794.5Q120%2C776%2C112.5%2C494.5Q105%2C213%2C379%2C120.5Q653%2C28%2C795.5%2C264Q938%2C500%2C770%2C656.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23pattern)%22 d=%22M770%2C656.5Q602%2C813%2C361%2C794.5Q120%2C776%2C112.5%2C494.5Q105%2C213%2C379%2C120.5Q653%2C28%2C795.5%2C264Q938%2C500%2C770%2C656.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
 }
 /* END OF OUR APP, TEAM, OFFICES */
-
-/* DM US */
-.dm-fluid {
-  display: flex;
-  flex-direction: column;
-  /* background-color: #333699; */
-  padding: 30px 0px;
-}
-.dm-subtitle {
-  /* background-color: #a4c4ff; */
-  text-align: center;
-}
-.dm-desc {
-  padding: 0px 200px;
-}
-.dm {
-  /* background-color: aliceblue; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dm-us {
-  /* background-color: aquamarine; */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.dm-us form {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  align-items: center;
-  justify-content: center;
-}
-.dm-email {
-  margin-bottom: 10px;
-  width: 450px;
-  height: 50px;
-  border: 1px solid #cecece;
-  border-radius: 5px;
-  padding: 0px 20px 0px 20px;
-  font-family: "Poppins";
-  background-color: #f2f7ff;
-}
-.dm-mess {
-  width: 450px;
-  height: 200px;
-  border: 1px solid #cecece;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-family: "Poppins";
-  background-color: #f2f7ff;
-}
-.dm-button {
-  width: 200px;
-  height: 50px;
-  border: 1px solid #4484ff;
-  border-radius: 5px;
-  font-family: "Poppins";
-  font-weight: bold;
-  color: #ffff;
-  background-color: #4484ff;
-  margin-top: 30px;
-}
-/* END DM US */
 /* END OF HOMEPAGE */
 
 /* FEATURE PAGE CSS*/
