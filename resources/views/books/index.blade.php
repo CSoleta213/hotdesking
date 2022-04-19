@@ -17,7 +17,7 @@
                 <a href="/books">List of Books</a>
             </button>
       </center>
-      
+
       <div class="row" style="margin-top: 5rem;">
           <div class="col-lg-12 margin-tb">
               <div class="pull-left">
@@ -25,7 +25,7 @@
               </div>
               <div class="pull-right">
                     <button> 
-                        <a class="btn btn-success" href="{{ route('books.create') }}">Add Book</a>
+                        <a class="btn btn-success" href="{{ route('books.create') }}" > <i class="fas fa-solid fas fa-plus"></i> Add Book</a>
                     </button>
               </div>
           </div>
@@ -56,7 +56,7 @@
               <!-- <td>{{ \Str::limit($value->description, 100) }}</td> -->
               <td>
                   <form action="{{ route('books.destroy',$value->id) }}" method="POST">   
-                      <a class="btn btn-info" href="{{ route('books.show',$value->id) }}">Show</a>    
+                      <a class="btn btn-info" href="{{ route('books.show',$value->id) }}" >Show</a>    
                       <a class="btn btn-primary" href="{{ route('books.edit',$value->id) }}">Edit</a>   
                       @csrf
                       @method('DELETE')      
