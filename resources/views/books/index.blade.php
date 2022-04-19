@@ -7,17 +7,26 @@
     </div>
     <div class="body-content">
       <center>
-        <a href="/my-calendar/monthly">Per Month</a>
-        <a href="/my-calendar/weekly">Per Week</a>
-        <a href="/books">List of Books</a>
+            <button>
+                <a href="/my-calendar/monthly">Per Month</a>
+            </button>
+            <button>
+                <a href="/my-calendar/weekly">Per Week</a>
+            </button>
+            <button>
+                <a href="/books">List of Books</a>
+            </button>
       </center>
+      
       <div class="row" style="margin-top: 5rem;">
           <div class="col-lg-12 margin-tb">
               <div class="pull-left">
                   <h2>My Bookings</h2>
               </div>
               <div class="pull-right">
-                  <a class="btn btn-success" href="{{ route('books.create') }}">Add Book</a>
+                    <button> 
+                        <a class="btn btn-success" href="{{ route('books.create') }}">Add Book</a>
+                    </button>
               </div>
           </div>
       </div>
