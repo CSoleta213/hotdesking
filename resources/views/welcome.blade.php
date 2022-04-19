@@ -29,7 +29,7 @@
         <h1>The desk that is <span class="span-destined"> destined </span>to work with you</h1>
       </div>
       <div class="subtitle">
-        <h3>Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
+        <h3>eMachines' Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
       </div>
       <div class="button-reserve">
         <a href="/features/desk-map">Reserve a seat</a>
@@ -49,7 +49,7 @@
       </div>
       <div class="our-desc">
         <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desktiny is a workspace booking software that allows employees from eMachines to book their workspace from any device, anywhere, and at any time. It is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eMachines' Desktiny is a workspace booking software that allows employees from eMachines to book their workspace from any device, anywhere, and at any time. It is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
         </p>
       </div>
     </div>
