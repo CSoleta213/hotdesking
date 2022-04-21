@@ -111,5 +111,5 @@
       }
     }
   </script>
-  </section>
+</section>
 @endsection
