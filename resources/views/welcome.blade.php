@@ -29,7 +29,7 @@
         <h1>The desk that is <span class="span-destined"> destined </span>to work with you</h1>
       </div>
       <div class="subtitle">
-        <h3>Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
+        <h3>eMachines' Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
       </div>
       <div class="button-reserve">
         <a href="/features/desk-map">Reserve a seat</a>
@@ -41,27 +41,6 @@
     </div>
   </div>
 
-  <!-- COUNT -->
-  <!-- <div class="count-fluid">
-    <div class="count-subtitle">
-      <h1>Let's get Countin'</h1>
-    </div>
-    <div class="box-count">
-      <div class="count-1">
-        <h1>3</h1>
-        <p>Offices Available</p>
-      </div>
-      <div class="count-2">
-        <h1>75</h1>
-        <p>Seats Available</p>
-      </div>
-      <div class="count-3">
-        <h1>25</h1>
-        <p>Occupied Desks</p>
-      </div>
-    </div>
-  </div> -->
-
   <!-- OUR APP -->
   <div class="our-fluid">
     <div class="our-desc-fluid">
@@ -70,7 +49,7 @@
       </div>
       <div class="our-desc">
         <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desktiny is a workspace booking software that allows employees from eMachines to book their workspace from any device, anywhere, and at any time. It is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eMachines' Desktiny is a workspace booking software that allows employees from eMachines to book their workspace from any device, anywhere, and at any time. It is designed to assist companies in managing workstations and making their office more accessible to everyone, resulting in a simple return to work, whether their employees choose to collaborate in the office or work remotely.
         </p>
       </div>
     </div>
@@ -113,28 +92,6 @@
     <div class="our-picture">
       <div class="blob-2"></div>
       <img src="{{ asset('/desk.png') }}" class="our-logo">
-    </div>
-  </div>
-
-  <!-- DM Us -->
-  <div class="dm-fluid">
-    <div class="dm-subtitle">
-      <h1>Need help? DM us!</h1>
-      <div class="dm-desc">
-        <p>
-          Have an inquiry or some feedback for us? Fill out the form below to contact us. Our brillant team will get back to you as soon as possible. For Customer Support inquiries, please contact support@desktiny.com.
-        </p>
-      </div>
-    </div>
-
-    <div class="dm">
-      <div class="dm-us">
-        <form action="mailto:andreamauricedeguzman@student.laverdad.edu.ph" method="POST" enctype="multipart/form-data" name="EmailForm">
-          <input type="text" name="dm-email" class="dm-email" placeholder="Enter Email"/>
-          <textarea class="dm-mess" name="dm-mess" rows="06" cols="20" placeholder="Enter your message"></textarea>
-          <input class="dm-button" type="submit" value="Send"/>
-        </form>
-      </div>
     </div>
   </div>
 

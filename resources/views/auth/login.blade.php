@@ -29,15 +29,14 @@
       }
       .left {
         width: 50%;
-        background: #343799;
-      }
-      .logo a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        /* background: #343799; */
         align-items: center;
-        color: #E2F4FF;
-        margin-top: 20%;
+        justify-content: center;
+        display: flex;
+      }
+      .logo-d{
+        height: 300px;
+        width: auto;
       }
       .right {
         width: 50%;
@@ -53,13 +52,21 @@
         justify-content: center;
         align-items: center;
       }
+      a {
+        text-decoration: none;
+      }
+      .checkbox-with-label{
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="left">
         <div class="logo">
-          <a href="/">Logo</a>
+          <a href="/">
+            <img src="{{ asset('/full-logo.png') }}" alt="" class="logo-d">
+          </a>
         </div>
       </div>
       <div class="right">
@@ -107,7 +114,7 @@
           <div class="button">
             <center>
               <button type="submit">
-                {{ __('Login') }}
+                {{ __('Log in') }}
               </button><br>
             </center>
           </div>

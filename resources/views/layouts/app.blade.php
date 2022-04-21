@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="{{ url('/desktiny-d.png') }}">
   <script src="https://kit.fontawesome.com/80a2a00cbd.js" crossorigin="anonymous"></script>
+
+  
   <title>Desktiny</title>
 </head>
 <body>
