@@ -23,9 +23,17 @@
       <p>
         &#169; 2022 eMachines' Desktiny. All rights reserved.
       </p>
-      <p>
-      <a href="/privacy">Privacy Statement</a>&nbsp;and&nbsp;<a href="/terms">Terms & Conditions</a>
-      </p>
+      <div class="privacy-terms">
+        <div>
+          <a href="/privacy">Privacy Statement</a>
+        </div>
+        <div>
+          &nbsp;and&nbsp;
+        </div>
+        <div>
+          <a href="/terms">Terms & Conditions</a>
+        </div>
+      </div>
     </div>
   </footer>
 </body>

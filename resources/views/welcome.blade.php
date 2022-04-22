@@ -2,8 +2,9 @@
 
 @section('content')
 
-<div class="navbar">
+<div class="navbar" id="myTopnav">
   <div class="logo">
+    <div class="hide"><a href="/"><img src="{{ asset('/desktiny-d.png') }}" width="30px"></a></div>
     <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="150px"></a></div>
   </div>
   <div class="menu">
@@ -11,15 +12,46 @@
       @auth
         <div class="menu-option"><a href="{{ url('/home') }}">Home</a></div>
       @else
-        <div class="menu-option login-button"><a href="{{ route('login') }}">Log in</a></div>
+        <div class="menu-option login-button menu-hide"><a href="{{ route('login') }}">Log in</a></div>
 
         @if (Route::has('register'))
-          <div class="menu-option"><a href="{{ route('register') }}">Register</a></div>
+          <div class="menu-option menu-hide"><a href="{{ route('register') }}">Register</a></div>
+          <div class="menu-option">
+            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <br>
+              <div><a href="{{ route('login') }}">Login</a></div><br>
+              <div><a href="{{ route('register') }}">Sign up</a></div>
+              <br>
+            </div>
+          </div>
         @endif
       @endauth
     @endif
   </div>
 </div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 <div class="home">
   <!-- BRAND -->
@@ -60,7 +92,7 @@
   </div>
 
   <!-- OUR TEAM -->
-  <div class="our-fluid">
+  <div class="our-fluid-img-tx">
     <div class="our-picture">
       <div class="blob-2"></div>
       <img src="{{ asset('/valve.png') }}" class="our-logo">
