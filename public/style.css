@@ -717,7 +717,6 @@ footer a:hover{
   text-align: center;
   line-height: 50px;
   color: #3D3D42;
-  font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -736,7 +735,6 @@ footer a:hover{
   text-decoration: none;
 }
 .sidebar .menu-links li a .link_name{
-  font-size: 18px;
   font-weight: 400;
   color: #3D3D42;
   transition: all 0.4s ease;
@@ -759,7 +757,6 @@ footer a:hover{
 }
 .sidebar .menu-links li .sub-menu a{
   color: #fff;
-  font-size: 15px;
   padding: 5px 0;
   white-space: nowrap;
   opacity: 0.6;
@@ -790,7 +787,6 @@ footer a:hover{
   display: none;
 }
 .sidebar.close .menu-links li .sub-menu .link_name{
-  font-size: 18px;
   opacity: 1;
   display: block;
 }
@@ -873,6 +869,7 @@ footer a:hover{
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .body-section .body-header .bx-menu,
 .body-section .body-header .text{
@@ -1015,7 +1012,7 @@ footer a:hover{
   color: #155724; 
   background-color:#c7eed0;
 }
-.month, .week, .list {
+.month, .week {
   margin: 3px;
   font-size: 13px;
   width: auto;
@@ -1028,17 +1025,7 @@ footer a:hover{
   transition: 0.5s;
   text-decoration: none;
 }
-.month:hover {
-  background: #2e73f4;
-  color: #fff;
-  transition: 0.5s;
-}
-.list:hover {
-  background: #2e73f4;
-  color: #fff;
-  transition: 0.5s;
-}
-.week:hover {
+.month:hover, .week:hover {
   background: #2e73f4;
   color: #fff;
   transition: 0.5s;

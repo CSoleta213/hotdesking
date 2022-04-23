@@ -42,7 +42,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('features.desk_map');
+        return view('office_map');
     }
 
     /**

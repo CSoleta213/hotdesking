@@ -42,29 +42,38 @@
         <li class="nav-link">
           <a href="/admin/users">
             <i class='bx bx-user' ></i>
-            <span class="link_name">List of Users</span>
+            <span class="link_name">Users</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/admin/users">List of Users</a></li>
+            <li><a class="link_name" href="/admin/users">Users</a></li>
           </ul>
         </li>
         <li class="nav-link">
           <a href="/admin/bookings">
             <i class='bx bx-book' ></i>
-            <span class="link_name">List of Bookings</span>
+            <span class="link_name">Bookings</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/admin/bookings">List of Bookings</a></li>
+            <li><a class="link_name" href="/admin/bookings">Bookings</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="#admin/available-seats">
+            <i class='bx bx-chair' ></i>
+            <span class="link_name">Available Seats</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#admin/available-seats">Available Seats</a></li>
           </ul>
         </li>
         <li class="nav-link">
           <div class="profile-details">
             <div class="profile-content">
-              <img src="{{ asset('/avatar.png') }}" alt="profileImg">
+              <a href="/my-profile"><img src="{{ asset('/avatar.png') }}" alt="profileImg"></a>
             </div>
             <div class="name-job">
-              <div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div>
-              <div class="job">Project Manager</div>
+              <a href="/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>
+              <a href="/my-profile"><div class="job">Project Manager</div></a>
             </div>
             <a href="{{ route('logout') }}"
               onclick="event.preventDefault();

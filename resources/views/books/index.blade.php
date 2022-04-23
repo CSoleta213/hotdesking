@@ -3,15 +3,9 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">My Calendar</span>
+      <span class="text">My Bookings</span>
     </div>
     <div class="body-content">
-      <center>
-                <a href="/my-calendar/monthly" class="month">Per Month</a>
-                <a href="/my-calendar/weekly" class="week">Per Week</a>
-                <a href="/books" class="list">List of Books</a>
-      </center>
-
       <div class="row" style="margin-top: 5rem;">
           <div class="col-lg-12 margin-tb">
               <div class="pull-left">

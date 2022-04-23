@@ -40,12 +40,12 @@
           </ul>
         </li>
         <li class="nav-link">
-          <a href="/my-profile">
-            <i class='bx bx-user' ></i>
-            <span class="link_name">My Profile</span>
+          <a href="/features">
+            <i class='bx bx-category' ></i>
+            <span class="link_name">Features</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/my-profile">My Profile</a></li>
+            <li><a class="link_name" href="/features">Features</a></li>
           </ul>
         </li>
         <li class="nav-link">
@@ -58,6 +58,24 @@
           </ul>
         </li>
         <li class="nav-link">
+          <a href="/books">
+            <i class='bx bx-book' ></i>
+            <span class="link_name">My Bookings</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/books">My Bookings</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="/office-map">
+            <i class='bx bx-map' ></i>
+            <span class="link_name">Office Map</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/office-map">Office Map</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
           <a href="/demo">
             <i class='bx bx-video' ></i>
             <span class="link_name">Video Demo</span>
@@ -66,7 +84,7 @@
             <li><a class="link_name" href="/demo">Video Demo</a></li>
           </ul>
         </li>
-        <li class="nav-link">
+        <!-- <li class="nav-link">
           <div class="iocn-link">
             <a href="/features">
               <i class='bx bx-category' ></i>
@@ -79,15 +97,15 @@
             <li><a href="#">Office View</a></li>
             <li><a href="/features/desk-map">Desk View</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="nav-link">
           <div class="profile-details">
             <div class="profile-content">
-              <img src="{{ asset('/avatar.png') }}" alt="profileImg">
+              <a href="/my-profile"><img src="{{ asset('/avatar.png') }}" alt="profileImg"></a>
             </div>
             <div class="name-job">
-              <div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div>
-              <div class="job">Project Manager</div>
+              <a href="/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>
+              <a href="/my-profile"><div class="job">Project Manager</div></a>
             </div>
             <a href="{{ route('logout') }}"
               onclick="event.preventDefault();

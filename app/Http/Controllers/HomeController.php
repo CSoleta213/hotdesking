@@ -71,11 +71,9 @@ class HomeController extends Controller
         return view('features');
     }
 
-    // Office View
-
-    public function desk_map()
+    public function office_map()
     {
-        return view('features.desk_map');
+        return view('office_map');
     }
 
     public function adminHome()

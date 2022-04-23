@@ -31,7 +31,7 @@ Route::get('/my-calendar/weekly', [App\Http\Controllers\HomeController::class, '
 
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
 
-Route::get('/features/desk-map', [App\Http\Controllers\HomeController::class, 'desk_map'])->name('desk_map');
+Route::get('/office-map', [App\Http\Controllers\HomeController::class, 'office_map'])->name('office_map');
 
 Route::post('/book-a-desk', [App\Http\Controllers\BookController::class, 'save_book']);
 
