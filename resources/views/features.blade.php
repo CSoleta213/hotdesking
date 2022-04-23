@@ -30,18 +30,18 @@
       </div> -->
 
       <div class="section-container">
-        <a href="#">
-          <div class="columns image" id="office-view"></div>
+        <a href="{{ url('/features/desk-map') }}">
+          <div class="columns image"><img src="{{ asset('/office-desk-view.jpg') }}" alt="Reservation Listing" width="100%"></div>
         </a>
     
         <div class="columns content">
           <div class="content-container office-view">
-            <h5>Office View</h5>
+            <h5>Office View & Desk View</h5>
             <p>
-              Want to explore the office? Our intuitive floor plan maps will give you an instant overview of the entire
-              office and space availability – all in one single screen, anytime and anywhere. View office amenities such
-              as pantry area, restroom, meeting rooms, as well as the entrance and exit. Making your trip to the office
-              a familiar one.
+              Our intuitive floor plan provides an unbeatable overview of the entire office and space availability – 
+              all in one single screen, anytime and anywhere. Making it easier to find the right desk for you or a 
+              free desk next to your team member. It will also gives you overview of the office amenities such as pantry 
+              area, restroom, meeting rooms, as well as the entrance and fire exit. Making your trip to the office a familiar one.
             </p>
           </div>
         </div>
@@ -50,27 +50,7 @@
       <div class="section-container">
         <div class="columns content">
           <div class="content-container desk-view">
-            <h5>Desk View</h5>
-            <p>
-              Don&apos;t know what desk to reserve? Our desk view provides an unbeatable overview of available and occupied desks
-              in the office. Making it easier to find the right desk for you or a free desk next to your team member.
-              Once you&apos;ve spotted a space you like, simply click on the desk and book it.
-            </p>
-          </div>
-        </div>
-        <a href="{{ url('/features/desk-map') }}">
-          <div class="columns image"><img src="{{ asset('/floor-plan.jpg') }}" alt="Desk View" width="100%"></div>
-        </a>
-      </div>
-    
-      <div class="section-container">
-        <a href="#">
-          <div class="columns image" id="reservation"></div>
-        </a>
-    
-        <div class="columns content">
-          <div class="content-container reservation">
-            <h5>Reservation Listings</h5>
+            <h5>Reservation Listing</h5>
             <p>
               Our reservation Listing is where you can view and manage your booked/reserved desk for the next few days,
               weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings
@@ -78,7 +58,11 @@
             </p>
           </div>
         </div>
+        <a href="{{ url('/features/desk-map') }}">
+          <div class="columns image" id="desk-view"></div>
+        </a>
       </div>
+    
     </div>
   </section>
 @endsection
