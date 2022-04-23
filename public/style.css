@@ -538,14 +538,6 @@ footer a:hover{
 .desk-view h5{
   color: #06BB87;
 }
-#reservation {
-  margin-top: 50px;
-  /* margin-left: 50px; */
-  background: #F26849;
-}
-.reservation h5{
-  color: #F26849;
-}
 .section-container .columns.content .content-container {
   padding: 40px 50px;
 }

@@ -14,8 +14,8 @@
             <option>Bulacan</option>
             <option>Pampanga</option>
           </select><br><br>
-          <a href="#">Per Month</a>
-          <a href="#">Per Day</a>
+          <a href="#">Monthly</a>
+          <a href="#">Weekly</a>
           <a href="/books">List of Books</a>
         </center><br><br>
         <table>
