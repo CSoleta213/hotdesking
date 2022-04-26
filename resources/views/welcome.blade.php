@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-
 <div class="navbar">
   <div class="logo">
     <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="150px"></a></div>

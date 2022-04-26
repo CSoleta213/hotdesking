@@ -13,7 +13,6 @@
   <link rel="icon" href="{{ url('/desktiny-d.png') }}">
   <script src="https://kit.fontawesome.com/80a2a00cbd.js" crossorigin="anonymous"></script>
 
-  
   <title>Desktiny</title>
 </head>
 <body>
