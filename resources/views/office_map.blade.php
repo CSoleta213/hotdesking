@@ -3,13 +3,12 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Desk View</span>
+      <span class="text">Office Map</span>
     </div>
     <div class="body-content">
       <div class="desk-map">
-        <a class="btn btn-primary" href="{{ route('books.index') }}"> Back</a>
-        <!-- <a href="{{ url('/features/desk-map/book-a-desk') }}">1</a> -->
-        <img src="{{ asset('/desk-view.jpg') }}" alt="Desk View" width="100%">
+        <a class="btn btn-primary" href="{{ route('books.index') }}">Go to My Bookings</a>
+        <img src="{{ asset('/office-desk-view.jpg') }}" alt="Desk View" width="100%">
         <div class="dots"></div>
           <!-- Trigger/Open The Modal -->
           <button id="dot1" class="modal-button" href="#myModal1">A1</button>
