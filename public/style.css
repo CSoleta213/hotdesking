@@ -1129,3 +1129,85 @@ tr:nth-child(odd) {
   text-align: center;
 }
 /* End of My Calendar */
+
+/*Media query*/
+@media only screen and (max-width: 540px){
+  iframe {
+    width: 290px;
+    height: 190px;
+  }
+  .body-content {
+    font-size: 15px;
+}
+  p {
+    font-size: 80%;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .extra-content {
+    justify-content: center;
+  }
+
+.read-more  {
+  margin-left: 35%;
+  display: center;
+}
+
+.show {
+   display: none;
+}
+}
+
+@media (min-width: 768px) {
+  .read-more {
+    display: none;
+ }
+ .extra-content {
+   display: block;
+ }
+}
+
+@media (max-width: 540px) {
+  .extra-content {
+    display: none;
+  }
+  
+.read-more  {
+  display: block;
+  margin-left: 35%;
+}
+.show {
+   display: inline;
+   text-align: justify;
+   background-color: rgba(0,0,0,0);
+   color: rgb(201, 197, 190);
+   justify-content: center;
+}
+  iframe  {
+    width: 100%;
+} 
+}
+
+@media (max-width: 280px) {
+  h2 {
+    font-size: 18px;
+  }
+  iframe  {
+    width: 200px;
+    height: 100px;
+  } 
+  .read-more  {
+    display: block;
+    margin-left: 32%;
+}
+ .extra-content {
+   margin: 0;
+   padding: 0;
+   text-align: justify;
+
+ }
+ .body-content {
+   padding: 10px;
+ }
+}
