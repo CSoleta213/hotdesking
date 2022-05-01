@@ -18,14 +18,16 @@
           <a href="#">Weekly</a>
           <a href="/books">List of Books</a>
         </center><br><br>
-        <table>
-          <tr>
+        <table class="list-table " style="margin-top: 20px;">
+          <tr style="background-color: #C4C4C4BD;">
+            <th>No</th>
             <th>Name of Employee</th>
             <th>Desk Number</th>
             <th>Date</th>
           </tr>
           @foreach ($bookings as $booking)
           <tr>
+            <td>{{ ++$i }}</td>
             <td>{{ $booking->name }}</td>
             <td>{{ $booking->desk_number }}</td>
             <td>{{ $booking->date }}</td>

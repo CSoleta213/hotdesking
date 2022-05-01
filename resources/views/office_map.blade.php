@@ -38,7 +38,6 @@
 
           <label for="desk_number">Your Chosen Desk:</label>
           <select name="desk_number" id="desk_number">
-            <option value="5">5</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
             <option value="A3">A3</option>

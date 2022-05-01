@@ -58,7 +58,7 @@ class HomeController extends Controller
         ->get();
 
         // SELECT * FROM `books` WHERE name = {{ Auth::user()->firstname }} {{ Auth::user()->lastname }};
-        return view('features.my_bookings',compact('my_bookings'));
+        return view('my_bookings',compact('my_bookings'));
     }
 
     public function demo()
@@ -91,6 +91,7 @@ class HomeController extends Controller
     public function adminBookings()
     {
         $bookings = \App\Models\Book::all();
-        return view('admin.bookings',compact('bookings'));
+        return view('admin.bookings',compact('bookings'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

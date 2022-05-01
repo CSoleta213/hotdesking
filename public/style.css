@@ -121,7 +121,7 @@ input[type=submit] {
   padding: 10px 25px;
 }
 .navbar .menu .menu-option a:hover{
-  color: #80acff;
+  color: #4484FF;
 }
 .navbar .menu .login-button a {
   background: #4484ff;
@@ -847,6 +847,7 @@ footer a:hover{
 .body-section{
   position: relative;
   background: #E4E9F7;
+  min-height: 100vh;
   height: 100%;
   left: 260px;
   width: calc(100% - 260px);
@@ -858,23 +859,19 @@ footer a:hover{
 }
 .body-section .body-header{
   margin: 0 35px;
-  height: 100px;
+  height: 150px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-.body-section .body-header .bx-menu,
-.body-section .body-header .text{
+.body-section .body-header .bx-menu
+{
   color: #11101d;
   font-size: 35px;
-}
-.body-section .body-header .bx-menu{
   margin: 0 15px;
   cursor: pointer;
-}
-.body-section .body-header .text{
-  font-size: 26px;
-  font-weight: 600;
 }
 .body-content {
   padding: 0 50px 50px;
@@ -1030,13 +1027,14 @@ footer a:hover{
     font-size: 13px;
     width: auto;
     padding:8px;
-    background: #333699;
+    background: #4484FF;
     color: #fff;
     outline: none;
     border-radius: 4px;
     border: 1px solid transparent;
     transition: 0.5s;
     text-decoration: none;
+    text-align: right;
 }
 .add:hover {
     background: #5055dc;
@@ -1052,15 +1050,19 @@ footer a:hover{
   border-collapse: collapse;
   width: 100%;
 }
+table th + th { border-left: thin solid #FFFFFF; }
 td, th {
-  border: thin solid #dedbdb;
   text-align: center;
   padding: 8px;
 }
 th{
   height: 10px;
+  color: #FFFFFF;
 }
-tr:nth-child(even) {
+table, td {
+  border: thin solid #313499;
+}
+tr:nth-child(odd) {
   background-color: #ffff;
 }
 

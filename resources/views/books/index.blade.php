@@ -3,38 +3,33 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">My Bookings</span>
+      <h2 class="text">My Bookings</h2>
+      <p>"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings if you like.</p>
     </div>
     <div class="body-content">
-      <div class="row" style="margin-top: 5rem;">
-          <div class="col-lg-12 margin-tb">
-              <div class="pull-left">
-                  <h2 style="margin-bottom:-30px;"> My Bookings </h2>
-              </div>
-              <div class="pull-right" style="text-align: right; ">
-                        <a class="btn btn-success add" href="{{ route('books.create') }}">
-                        <i class="fas fa-light fa-plus"></i> Add Book</a>
-                    
-              </div>
-          </div>
+      <div>
+        <div style="text-align: right; ">
+          <a class="add" href="{{ route('books.create') }}"><i class="fas fa-light fa-plus"></i> Add Book</a>    
+        </div>
       </div>
      
       @if ($message = Session::get('success'))
-          <div class="alert-success" >
-              <p>{{ $message }}</p>
-          </div>
+        <div class="alert-success">
+          <p>{{ $message }}</p>
+        </div>
       @endif
      
       <table class="list-table " style="margin-top: 20px;">
-          <tr style="background-color: #C4C4C4BD;">
-              <th>No</th>
-              <th>Name</th>
-              <th>Office Name</th>
-              <th>Desk Number</th>
-              <th>Date</th>
-              <th width="280px">Action</th>
-          </tr>
-          @foreach ($data as $key => $value)
+        <tr style="background-color: #313499;">
+          <th>No</th>
+          <th>Name</th>
+          <th>Office Name</th>
+          <th>Desk Number</th>
+          <th>Date</th>
+          <th width="280px">Action</th>
+        </tr>
+        @foreach ($data as $key => $value)
+          @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
           <tr>
               <td>{{ ++$i }}</td>
               <td>{{ $value->name }}</td>
@@ -44,17 +39,18 @@
               <!-- <td>{{ \Str::limit($value->description, 100) }}</td> -->
               <td >
                   <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
-                         <a class="btn btn-info show" href="{{ route('books.show',$value->id) }}" > Show</a>    
-                        <a class="btn btn-primary edit" href="{{ route('books.edit',$value->id) }}">Edit</a>   
+                         <a class="show" href="{{ route('books.show',$value->id) }}" > Show</a>    
+                        <a class="edit" href="{{ route('books.edit',$value->id) }}">Edit</a>   
                       @csrf
                       @method('DELETE')      
-                      <button type="submit" class="btn btn-danger del">Delete</button>
+                      <button type="submit" class="del">Delete</button>
                   </form>
               </td>
           </tr>
-          @endforeach
-      </table>  
-      {!! $data->links() !!}
+          @endif
+        @endforeach
+      </table>
+      <!-- {!! $data->links() !!} -->
     </div>
-  </section>  
+  </section>
 @endsection
