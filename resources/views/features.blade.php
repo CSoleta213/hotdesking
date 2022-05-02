@@ -50,9 +50,9 @@
       <div class="section-container">
         <div class="columns content">
           <div class="content-container desk-view">
-            <h5>Reservation Listing</h5>
+            <h5>My Bookings</h5>
             <p>
-              Our reservation Listing is where you can view and manage your booked/reserved desk for the next few days,
+              "My Bookings" is where you can view and manage your booked/reserved desk for the next few days,
               weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings
               if you like.
             </p>

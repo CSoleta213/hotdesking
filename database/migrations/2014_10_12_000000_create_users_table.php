@@ -17,13 +17,15 @@ return new class extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
+            $table->set('gender',['Male','Female']);
             $table->string('phone_number');
             $table->string('employee_id_number');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('is_admin')->default(0);
             $table->string('password');
-            $table->set('office',['Pampanga','Bulacan','NCR']);
+            $table->set('office',['Sydney','Victoria','Brisbane']);
+            $table->string('position');
             $table->rememberToken();
             $table->timestamps();
         });

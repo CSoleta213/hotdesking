@@ -107,7 +107,7 @@
             </div>
             <div class="name-job">
               <a href="/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>
-              <a href="/my-profile"><div class="job">Project Manager</div></a>
+              <a href="/my-profile"><div class="job">{{ Auth::user()->position }}</div></a>
             </div>
             <a href="{{ route('logout') }}"
               onclick="event.preventDefault();

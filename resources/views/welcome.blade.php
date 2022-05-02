@@ -5,7 +5,7 @@
 <div class="navbar" id="myTopnav">
   <div class="logo">
     <div class="hide"><a href="/"><img src="{{ asset('/desktiny-d.png') }}" width="30px"></a></div>
-    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="150px"></a></div>
+    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="250px"></a></div>
   </div>
   <div class="menu">
     @if (Route::has('login'))

@@ -30,7 +30,7 @@
       }
 
       .register .logo a img {
-        width: 250px;
+        width: 150px;
       }
 
       .form {
@@ -42,7 +42,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 5%;
+        margin-top: 25px;
       }
       .form-left, .form-right {
         width: 100%;
@@ -117,6 +117,22 @@
 
               <br><br>
 
+              <label for="gender">{{ __('Gender') }}</label>
+
+              <select name="gender" id="gender" required>
+                <option value="">--- Select your gender ---</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+
+              @error('gender')
+                <span role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+
+              <br><br>
+
               <label for="phone_number">{{ __('Phone Number') }}</label>
 
               <input id="phone_number" type="tel" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
@@ -176,13 +192,26 @@
               <label for="office">{{ __('Office') }}</label>
 
               <!-- <input id="office" type="text" name="office" value="{{ old('office') }}" required autocomplete="office" autofocus> -->
-              <select name="office" id="office">
-                <option value="pampanga">Sydney</option>
-                <option value="bulacan">Victoria</option>
-                <option value="ncr">Brisbane</option>
+              <select name="office" id="office" required>
+                <option value="">--- Select your office ---</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Brisbane">Brisbane</option>
               </select>
 
               @error('office')
+                <span role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+
+              <br><br>
+                        
+              <label for="position">{{ __('Position') }}</label>
+
+              <input id="position" type="position" name="position" value="{{ old('position') }}" required autocomplete="position">
+
+              @error('position')
                 <span role="alert">
                   <strong>{{ $message }}</strong>
                 </span>
