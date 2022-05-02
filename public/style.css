@@ -1128,6 +1128,15 @@ tr:nth-child(even) {
 }
 /* End of My Calendar */
 
+label {
+  margin: 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+}
+#toggle {
+  display: none;
+}
 /*Media query*/
 @media only screen and (max-width: 540px){
   iframe {
@@ -1185,6 +1194,24 @@ tr:nth-child(even) {
   iframe  {
     width: 100%;
 } 
+.sidebar, .sidebar close{
+  display: block;
+}
+
+.sidebar .logo-details .toggle {
+  display: block;
+}
+ 
+.menu-links {
+  display: block;
+}
+label {
+  display: block;
+  cursor: pointer;
+}
+#toggle:checked + .sidebar {
+  display: block;
+}
 }
 
 @media (max-width: 280px) {
