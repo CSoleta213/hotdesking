@@ -3,13 +3,10 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Features</span>
+      <h1 class="content-title">Features</h1>
+      <p class="title-desc">The simplest and most configurable application for booking and managing your desks and meeting rooms.</p>
     </div>
     <div class="body-content">
-      <h1 class="content-title">Features</h1><br>
-      <p class="title-desc">The simplest and most configurable application for booking and managing your desks and meeting rooms.</p>
- 
-  
       <div class="section-container">
         <div class="columns content">
           <div class="content-container calendar">

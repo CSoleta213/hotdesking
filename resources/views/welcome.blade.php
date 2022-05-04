@@ -64,7 +64,7 @@ window.onclick = function(event) {
         <h3>eMachines' Desktiny will help you successfully transform the workspace from a place of work into a space that works.</h3>
       </div>
       <div class="button-reserve">
-        <a href="/books/create">Reserve a seat</a>
+        <a href="/office-map">Reserve a seat</a>
       </div>
     </div>
     <div class="picture-fluid">

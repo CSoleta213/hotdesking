@@ -3,7 +3,7 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">My Calendar</span>
+      <h1 class="content-title">My Calendar</h1>
     </div>
     <div class="body-content">
       <center>
