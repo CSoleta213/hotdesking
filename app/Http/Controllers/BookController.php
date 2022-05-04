@@ -123,6 +123,8 @@ class BookController extends Controller
         return redirect()->route('books.index')
                         ->with('success','Book deleted successfully');
     }
+
+    
 }
 // Check the duplicate entry via two criteria: desk_number and date
 // SELECT * FROM `books` WHERE name="Carlo Soleta" && date="2022-04-03";
