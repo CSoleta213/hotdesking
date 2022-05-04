@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 /* GLOBAL CSS */
 * {
   padding: 0;
@@ -69,6 +71,24 @@ input[type=submit] {
   background-color: #4484FF;
   color: #FFF;
   border-radius: 10px;
+}
+
+.alert-success{
+  text-align:center; 
+  color: #155724; 
+  background-color:#c7eed0;
+}
+
+.alert-fail{
+  text-align:center; 
+  color: #CF222E; 
+  background-color:#FFEBE9;
+  border: #FFC1C0 1px Solid;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* END OF GLOBAL CSS */
 
@@ -564,19 +584,13 @@ footer a:hover{
   color: #3d3d42;
   margin-top: -20px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
 }
 /* END OF FEATURE PAGE */
 
 /* DEMO PAGE CSS */
 .demo {
   text-align: center;
-}
-.demo-h1 {
-    color: #4484ff;
-}
-.demo-h2 {
-    color: #2E2E33;
 }
 .demo-desc {
   display: flex;
@@ -859,11 +873,11 @@ footer a:hover{
 }
 .body-section .body-header{
   margin: 0 35px;
-  height: 150px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
 }
 .body-section .body-header .bx-menu
@@ -996,11 +1010,6 @@ footer a:hover{
   /* END OF MODAL */
 
 /* My Calendar */
-.alert-success{
-  text-align:center; 
-  color: #155724; 
-  background-color:#c7eed0;
-}
 .month, .week {
   margin: 3px;
   font-size: 13px;
@@ -1067,7 +1076,7 @@ tr:nth-child(odd) {
 }
 
 /* END OF TABLE */
-.show {
+.read {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1237,4 +1246,120 @@ label {
  .body-content {
    padding: 10px;
  }
+}
+
+/*Dashboard*/
+.content .cards {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.icon-case{
+  height: 80px;
+  width: 80px;
+  background-color: #bbb;
+  border-radius: 50%;
+ 
+}
+.icon-case h1{
+  font-size: 48px;
+  text-align: center;
+   margin-top: 5px;
+}
+.box1{
+  margin-left: -15px; 
+  margin-right: -5px; 
+   text-align: center;
+}
+.box2{
+  margin-left: -20px; 
+  margin-right: -10px; 
+   text-align: center;
+}
+.box3{
+  margin-right: -15px; 
+  margin-left: -40px;
+  text-align: center;
+}
+.dot1{
+  margin: 20px;
+   background: rgba(6, 187, 135, 0.72);
+}
+.dot2{
+  margin-right: 20px; 
+  margin-left: 20px; 
+  background: rgba(242, 166, 69, 0.72);
+}
+.dot3{
+  margin-right: 20px; 
+  margin-left: 20px;  
+  background: rgba(242, 104, 73, 0.72);
+}
+.content .cards .card {
+  width: 250px;
+  height: 130px;
+  background: white;
+  margin-top: 10px ; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.content .content-2 {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.content .content-2 .recent-payments {
+  min-height: 50vh;
+  flex: 5;
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-2 .new-students {
+  flex: 2;
+  background: white;
+  min-height: 50vh;
+  margin: 0 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-2 .new-students table td:nth-child(1) img {
+  height: 40px;
+  width: 40px;
+}
+.calendar{
+  margin-left: -70px;
+}
+.details{
+  margin-left: -2000px;
+}
+
+.bookings{
+
+}
+
+/*Filter*/
+.inp-group{
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+#lang{
+  border-radius: 20px;
 }

@@ -8,20 +8,6 @@ use DB;
 
 class BookController extends Controller
 {
-    public function save_book(Request $request)
-    {
-        $book = new Book;
-
-        $book->name = request('name');
-        $book->office_name = request('office_name');
-        $book->desk_number = request('desk_number');
-        $book->date = request('date');
-
-        $book->save();
-
-        return redirect('/home');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data = Book::latest()->paginate(5);
+        $data = Book::latest()->paginate(100);
     
         return view('books.index',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -53,16 +39,25 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-            'name' => 'required',
-            'office_name' => 'required',
-            'desk_number' => 'required',
-            'date' => 'required',
-        ]);
+        //  $request->validate([
+        //     'name' => 'required',
+        //     'office_name' => 'required',
+        //     'desk_number' => 'required',
+        //     'date' => 'required',
+        // ]);
     
-        Book::create($request->all());
+        // Book::create($request->all());
+
+        $book = new Book;
+
+        $book->name = request('name');
+        $book->office_name = request('office_name');
+        $book->desk_number = request('desk_number');
+        $book->date = request('date');
+
+        $book->save();
      
-        return redirect()->route('books.index')
+        return redirect()->route('books.index',compact('book'))
                         ->with('success','Booked successfully.');
     }
 

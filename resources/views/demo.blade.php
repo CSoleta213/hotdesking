@@ -3,18 +3,12 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Demo</span>
+      <h1 class="content-title">Demo</h1>
+      <p class="title-desc">Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</p>
     </div>
+    <h1 class="content-title"></h1>
     <div class="body-content">
       <div class="demo">
-        <header>
-          <div class="demo-h1">
-            <h1>Demo</h1>
-          </div>
-        </header>
-        <div class="demo-h2">
-          <h2>Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</h2>
-        </div>
         <div class="demo-desc">
           <div class="Add-Reservation">
             <!-- embed -->
