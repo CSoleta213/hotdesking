@@ -3,7 +3,7 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Office Map</span>
+    <h1 class="content-title">Office Map</h1>
     </div>
     <div class="body-content">
       <div class="desk-map">
@@ -37,7 +37,8 @@
           <input type="text" id="office_name" name="office_name" value="{{ Auth::user()->office }}" readonly><br><br>
 
           <label for="desk_number">Your Chosen Desk:</label>
-          <select name="desk_number" id="desk_number">
+          <select name="desk_number" id="desk_number" required>
+            <option value="">--- Select a Desk ---</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
             <option value="A3">A3</option>
@@ -66,7 +67,7 @@
           </select><br><br>
 
           <label for="date">When?</label>
-          <input type="date" id="date" name="date"><br><br>
+          <input type="date" id="date" name="date" required><br><br>
 
           <input type="submit" value="Book a Desk">
         </div>

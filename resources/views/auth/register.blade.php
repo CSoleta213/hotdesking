@@ -87,6 +87,44 @@
         <a href="/"><img src="{{ asset('/desktiny-logo.png') }}"></a>
       </div>
 
+      <br>
+
+      @error('firstname')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('lastname')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('gender')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('phone_number')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('employee_id_number')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('email')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('password')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('office')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
+      @error('position')
+        <span class="alert-fail" role="alert">{{ $message }}</span>
+      @enderror
+
       <div class="form">
         <form method="POST" action="{{ route('register') }}">
           @csrf
@@ -97,23 +135,11 @@
 
               <input id="firstname" type="text" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
 
-              @error('firstname')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-
               <br><br>
 
               <label for="lastname">{{ __('Last Name') }}</label>
 
               <input id="lastname" type="text" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
-
-              @error('lastname')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
 
               <br><br>
 
@@ -125,35 +151,17 @@
                 <option value="Female">Female</option>
               </select>
 
-              @error('gender')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-
               <br><br>
 
               <label for="phone_number">{{ __('Phone Number') }}</label>
 
               <input id="phone_number" type="tel" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
 
-              @error('phone_number')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-
               <br><br>
 
               <label for="employee_id_number">{{ __('Employee ID Number') }}</label>
 
               <input id="employee_id_number" type="text" name="employee_id_number" value="{{ old('employee_id_number') }}" required autocomplete="employee_id_number" autofocus>
-
-              @error('employee_id_number')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
 
             </div>            
 
@@ -163,23 +171,11 @@
 
               <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-              @error('email')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-
               <br><br>
                         
               <label for="password">{{ __('Password') }}</label>
 
               <input id="password" type="password" name="password" required autocomplete="new-password">
-
-              @error('password')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
                         
               <br><br>
                        
@@ -199,23 +195,11 @@
                 <option value="Brisbane">Brisbane</option>
               </select>
 
-              @error('office')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-
               <br><br>
                         
               <label for="position">{{ __('Position') }}</label>
 
               <input id="position" type="position" name="position" value="{{ old('position') }}" required autocomplete="position">
-
-              @error('position')
-                <span role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
                         
             </div>
           </div>

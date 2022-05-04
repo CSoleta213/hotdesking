@@ -3,8 +3,8 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <h2 class="text">My Bookings</h2>
-      <p>"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings if you like.</p>
+      <h1 class="content-title">My Bookings</h1>
+      <p class="title-desc">"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings if you like.</p>
     </div>
     <div class="body-content">
       <div>
@@ -38,19 +38,21 @@
               <td>{{ $value->date }}</td>
               <!-- <td>{{ \Str::limit($value->description, 100) }}</td> -->
               <td >
-                  <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
-                         <a class="show" href="{{ route('books.show',$value->id) }}" > Show</a>    
-                        <a class="edit" href="{{ route('books.edit',$value->id) }}">Edit</a>   
-                      @csrf
-                      @method('DELETE')      
-                      <button type="submit" class="del">Delete</button>
-                  </form>
+                <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
+                  <a class="read" href="{{ route('books.show',$value->id) }}" > Show</a>
+                  <a class="edit" href="{{ route('books.edit',$value->id) }}">Edit</a>   
+                  @csrf
+                  @method('DELETE')      
+                  <button type="submit" class="del">Delete</button>
+                </form>
               </td>
           </tr>
           @endif
         @endforeach
       </table>
-      <!-- {!! $data->links() !!} -->
+      <div style="display: flex; flex-direction: row; width: 100px">
+        {!! $data->links() !!}
+      </div>
     </div>
   </section>
 @endsection
