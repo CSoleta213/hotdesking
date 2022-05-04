@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 /* GLOBAL CSS */
 * {
   padding: 0;
@@ -1237,4 +1239,120 @@ label {
  .body-content {
    padding: 10px;
  }
+}
+
+/*Dashboard*/
+.content .cards {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.icon-case{
+  height: 80px;
+  width: 80px;
+  background-color: #bbb;
+  border-radius: 50%;
+ 
+}
+.icon-case h1{
+  font-size: 48px;
+  text-align: center;
+   margin-top: 5px;
+}
+.box1{
+  margin-left: -15px; 
+  margin-right: -5px; 
+   text-align: center;
+}
+.box2{
+  margin-left: -20px; 
+  margin-right: -10px; 
+   text-align: center;
+}
+.box3{
+  margin-right: -15px; 
+  margin-left: -40px;
+  text-align: center;
+}
+.dot1{
+  margin: 20px;
+   background: rgba(6, 187, 135, 0.72);
+}
+.dot2{
+  margin-right: 20px; 
+  margin-left: 20px; 
+  background: rgba(242, 166, 69, 0.72);
+}
+.dot3{
+  margin-right: 20px; 
+  margin-left: 20px;  
+  background: rgba(242, 104, 73, 0.72);
+}
+.content .cards .card {
+  width: 250px;
+  height: 130px;
+  background: white;
+  margin-top: 10px ; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.content .content-2 {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.content .content-2 .recent-payments {
+  min-height: 50vh;
+  flex: 5;
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-2 .new-students {
+  flex: 2;
+  background: white;
+  min-height: 50vh;
+  margin: 0 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-2 .new-students table td:nth-child(1) img {
+  height: 40px;
+  width: 40px;
+}
+.calendar{
+  margin-left: -70px;
+}
+.details{
+  margin-left: -2000px;
+}
+
+.bookings{
+
+}
+
+/*Filter*/
+.inp-group{
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+#lang{
+  border-radius: 20px;
 }
