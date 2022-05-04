@@ -20,6 +20,8 @@
   </head>
   <body>
     <div class="sidebar close">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
       <div class="logo-details">
         <div class="logo-d">
           <a href="{{ url('/') }}"><img src="{{ asset('/desktiny-d.png') }}" width="30px"></a>
