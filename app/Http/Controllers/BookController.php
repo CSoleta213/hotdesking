@@ -40,25 +40,47 @@ class BookController extends Controller
     public function store(Request $request)
     {
         //  $request->validate([
-        //     'name' => 'required',
-        //     'office_name' => 'required',
-        //     'desk_number' => 'required',
-        //     'date' => 'required',
+        //     // 'name' => 'required',
+        //     // 'office_name' => 'required',
+        //     // 'desk_number' => 'required',
+        //     // 'date' => 'required',
+        //     'code' => 'required|unique',
         // ]);
+
+        // if(true === $code) {
+        //     return back()->with('error','Duplicated');
+        // }
     
         // Book::create($request->all());
 
-        $book = new Book;
+        $codeNameDate = $request->input('name').$request->input('date');
+        $codeNumDate = $request->input('desk_number').$request->input('date');
 
-        $book->name = request('name');
-        $book->office_name = request('office_name');
-        $book->desk_number = request('desk_number');
-        $book->date = request('date');
+            $book = new Book;
 
-        $book->save();
-     
-        return redirect()->route('books.index',compact('book'))
-                        ->with('success','Booked successfully.');
+            $book->name = request('name');
+            $book->office_name = request('office_name');
+            $book->desk_number = request('desk_number');
+            $book->date = request('date');
+            $book->codeNameDate = $codeNameDate;
+            $book->codeNumDate = $codeNumDate;
+
+
+            $check = Book::where([
+                ['codeNameDate', "=", $codeNameDate],
+            ])->first();
+    
+            if($check)
+            {
+                $request->session()->flash('error', 'Your input is not allowed. Either the desk is taken or you have two entry for today.');
+                return redirect('/office-map');
+            }
+            else{
+                $book->save();
+            
+            return redirect()->route('books.index',compact('book'))
+                            ->with('success','Booked successfully.');
+            }
     }
 
     /**

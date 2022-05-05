@@ -9,7 +9,7 @@
     <div class="body-content">
       <div>
         <div style="text-align: right; ">
-          <a class="add" href="{{ route('books.create') }}"><i class="fas fa-light fa-plus"></i> Add Book</a>    
+          <a class="add" href="/office-map"><i class="fas fa-light fa-plus"></i> Add Book</a>    
         </div>
       </div>
      
@@ -19,8 +19,8 @@
         </div>
       @endif
      
-      <table class="list-table " style="margin-top: 20px;">
-        <tr style="background-color: #313499;">
+      <table class="list-table">
+        <tr>
           <th>No</th>
           <th>Name</th>
           <th>Office Name</th>
@@ -40,10 +40,10 @@
               <td >
                 <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
                   <a class="read" href="{{ route('books.show',$value->id) }}" > Show</a>
-                  <a class="edit" href="{{ route('books.edit',$value->id) }}">Edit</a>   
+                  <a class="update" href="{{ route('books.edit',$value->id) }}">Edit</a>   
                   @csrf
                   @method('DELETE')      
-                  <button type="submit" class="del">Delete</button>
+                  <button type="submit" class="destroy">Delete</button>
                 </form>
               </td>
           </tr>

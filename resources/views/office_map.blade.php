@@ -6,6 +6,11 @@
     <h1 class="content-title">Office Map</h1>
     </div>
     <div class="body-content">
+      @if(session('error'))
+      <div class="alert-fail">
+        {{ session('error') }}
+      </div><br>
+      @endif
       <div class="desk-map">
         <a class="btn btn-primary" href="{{ route('books.index') }}">Go to My Bookings</a>
         <img src="{{ asset('/office-desk-view.jpg') }}" alt="Desk View" width="100%">
@@ -19,7 +24,7 @@
         </div>
       </div>
     </div>
-    <!-- The Modal -->
+  <!-- The Modal -->
   <div id="myModal1" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
@@ -39,31 +44,9 @@
           <label for="desk_number">Your Chosen Desk:</label>
           <select name="desk_number" id="desk_number" required>
             <option value="">--- Select a Desk ---</option>
-            <option value="A1">A1</option>
-            <option value="A2">A2</option>
-            <option value="A3">A3</option>
-            <option value="A4">A4</option>
-            <option value="A5">A5</option>
-            <option value="B1">B1</option>
-            <option value="B2">B2</option>
-            <option value="B3">B3</option>
-            <option value="B4">B4</option>
-            <option value="B5">B5</option>
-            <option value="C1">C1</option>
-            <option value="C2">C2</option>
-            <option value="C3">C3</option>
-            <option value="C4">C4</option>
-            <option value="C5">C5</option>
-            <option value="D1">D1</option>
-            <option value="D2">D2</option>
-            <option value="D3">D3</option>
-            <option value="D4">D4</option>
-            <option value="D5">D5</option>
-            <option value="E1">E1</option>
-            <option value="E2">E2</option>
-            <option value="E3">E3</option>
-            <option value="E4">E4</option>
-            <option value="E5">E5</option>
+            @foreach($desks as $desk)
+            <option value="{{ $desk->desk_number }}">{{ $desk->desk_number }}</option>
+            @endforeach
           </select><br><br>
 
           <label for="date">When?</label>

@@ -19,8 +19,8 @@
           <a href="#">Weekly</a>
           <a href="/books">List of Books</a>
         </center><br><br>
-        <table class="list-table " style="margin-top: 20px;">
-          <tr style="background-color: #313499;">
+        <table class="list-table">
+          <tr>
             <th>No</th>
             <th>Name of Employee</th>
             <th>Office Name</th>
