@@ -48,4 +48,4 @@ Route::get('/admin/available-desks', [App\Http\Controllers\HomeController::class
 
 Route::resource('books', App\Http\Controllers\BookController::class);
 
-Route::resource('/admin/desks', DeskController::class);
+Route::resource('/admin/desks', DeskController::class)->middleware('is_admin');

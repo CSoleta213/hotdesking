@@ -10,7 +10,12 @@
   <div class="menu">
     @if (Route::has('login'))
       @auth
+        @if(Auth::user()->is_admin === 1)
+        <div class="menu-option"><a href="{{ url('/admin/home') }}">Admin's View</a></div>
+        <div class="menu-option"><a href="{{ url('/home') }}">Employee's View</a></div>
+        @else
         <div class="menu-option"><a href="{{ url('/home') }}">Home</a></div>
+        @endif
       @else
         <div class="menu-option login-button menu-hide"><a href="{{ route('login') }}">Log in</a></div>
 

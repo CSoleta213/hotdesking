@@ -59,7 +59,7 @@
         <div class="modal-body">
           <label for="desk_number">Desk #:</label>
           <input type="text" id="desk_number" name="desk_number" placeholder="Enter new desk number" required><br><br>
-          <label for="desk_map">Desk #:</label>
+          <label for="desk_map">Desk Map:</label>
           <input type="file" id="desk_map" name="desk_map" accept="image/*" required><br><br>
           <input type="submit" value="Add it!">
         </div>
