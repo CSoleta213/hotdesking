@@ -1058,6 +1058,7 @@ footer a:hover{
 .list-table {
   border-collapse: collapse;
   width: 100%;
+  margin-top: 20px;
 }
 table th + th { border-left: thin solid #FFFFFF; }
 td, th {
@@ -1067,6 +1068,7 @@ td, th {
 th{
   height: 10px;
   color: #FFFFFF;
+  background-color: #313499;
 }
 table, td {
   border: thin solid #313499;
@@ -1090,12 +1092,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.show:hover {
+.read:hover {
   background: #2e952e;
   color: #fff;
   transition: 0.5s;
 }
-.edit {
+.update {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1109,12 +1111,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.edit:hover {
+.update:hover {
   background: #be8132;
   color: #fff;
   transition: 0.5s;
 }
-.del {
+.destroy {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1128,7 +1130,7 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.del:hover {
+.destroy:hover {
   background: #b85039;
   color: #fff;
   transition: 0.5s;
@@ -1139,7 +1141,7 @@ tr:nth-child(odd) {
 }
 /* End of My Calendar */
 
-label {
+.sidebar label {
   margin: 0;
   font-size: 26px;
   line-height: 70px;
@@ -1216,7 +1218,7 @@ label {
 .menu-links {
   display: block;
 }
-label {
+.sidebar label {
   display: block;
   cursor: pointer;
 }

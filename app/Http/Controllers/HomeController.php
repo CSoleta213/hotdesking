@@ -73,7 +73,8 @@ class HomeController extends Controller
 
     public function office_map()
     {
-        return view('office_map');
+        $desks = \App\Models\Desk::all();
+        return view('office_map', compact('desks'));
     }
 
     public function adminHome()
@@ -93,5 +94,10 @@ class HomeController extends Controller
         $bookings = \App\Models\Book::all();
         return view('admin.bookings',compact('bookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function adminAvailableDesks()
+    {
+        return view('admin.available_desks');
     }
 }

@@ -6,8 +6,8 @@
       <h1 class="content-title">LIST OF USERS</h1>
     </div>
     <div class="body-content">
-      <table class="list-table " style="margin-top: 20px;">
-        <tr style="background-color: #313499;">
+      <table class="list-table">
+        <tr>
           <th>No.</th>
           <th>Name of Employee</th>
           <th>Phone Number</th>

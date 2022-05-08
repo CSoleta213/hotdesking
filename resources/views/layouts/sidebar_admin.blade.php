@@ -58,12 +58,12 @@
           </ul>
         </li>
         <li class="nav-link">
-          <a href="#admin/available-seats">
+          <a href="/admin/available-desks">
             <i class='bx bx-chair' ></i>
             <span class="link_name">Available Seats</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="#admin/available-seats">Available Seats</a></li>
+            <li><a class="link_name" href="/admin/available-desks">Available Seats</a></li>
           </ul>
         </li>
         <li class="nav-link">

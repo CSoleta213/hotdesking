@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DeskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,8 @@ Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'adminUs
 
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'adminBookings'])->name('admin.bookings')->middleware('is_admin');
 
+Route::get('/admin/available-desks', [App\Http\Controllers\HomeController::class, 'adminAvailableDesks'])->name('admin.available_seats')->middleware('is_admin');
+
 Route::resource('books', App\Http\Controllers\BookController::class);
+
+Route::resource('/admin/desks', DeskController::class)->middleware('is_admin');
