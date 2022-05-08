@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <div class="content">
-            <div class="cards" >
-                <div class="card" style="margin-left:100px; background: rgba(6, 187, 135, 0.44);">
+    <div class="content" style="margin-top: 100px; margin-left: 80px;">
+    <div class="cards" >
+                <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
                     <div class="icon-case dot1" >
                             <h1>15</h1>
                         </div>
@@ -27,16 +27,17 @@
                         <h3>Available Desks</h3>
                     </div>
                 </div>
-                <div class="card" style="background: rgba(242, 166, 69, 0.44);">
-                  <div class="icon-case dot2">
-                        <h1>10</h1>
-                    </div>
-                    <div class="box2">
-                        <h3>Occupied &nbsp; Desks</h3>
-                    </div>
-   
+                <div class="cards" >
+                  <div class="card" style=" background: rgba(242, 166, 69, 0.44);">
+                      <div class="icon-case dot1" style="  background: rgba(242, 166, 69, 0.72);">
+                              <h1>15</h1>
+                          </div>
+                      <div class="box1">
+                          <h3>Occupied &nbsp; Desks</h3>
+                      </div>
+                  </div>
                 </div>
-                <div class="card" style="margin-right:100px; background: rgba(242, 104, 73, 0.44);">
+                <div class="card" style="background: rgba(242, 104, 73, 0.44); padding: 15px 15px; margin-right: 80px;">
                   <div class="icon-case dot3">
                         <h1>20</h1>
                     </div>
