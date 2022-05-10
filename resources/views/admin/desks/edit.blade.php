@@ -37,7 +37,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Desk:</strong>
-                        <input type="text" name="desk_number" value="{{ $desk->desk_number }}" class="form-control" placeholder="Desk">
+                        <input type="text" name="desk_number" value="{{ $desk->desk_number }}" class="form-control" style="text-transform:uppercase" placeholder="Desk">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">

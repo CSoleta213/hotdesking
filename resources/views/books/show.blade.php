@@ -3,7 +3,7 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Desk View</span>
+      <h1 class="content-title">Desk View</h1>
     </div>
     <div class="body-content">
       <div class="row">
@@ -32,16 +32,26 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-            <strong>Desk Number:</strong>
-            {{ $book->desk_number }}
+            <strong>Date:</strong>
+            {{ $book->date }}
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="form-group">
-            <strong>Date</strong>
-            {{ $book->date }}
+            <strong>Desk Number:</strong>
+            <span style="text-transform:uppercase">{{ $book->desk_number }}</span>
           </div>
         </div>
+        @foreach ($desks as $desk)
+        @if ($book->desk_number === $desk->desk_number)
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="form-group">
+            <strong>Desk Map:</strong>
+            <img src="/desks/{{ $desk->desk_map }}" width="500px">
+          </div>
+        </div>
+        @endif
+        @endforeach
       </div>
     </div>
   </section>
