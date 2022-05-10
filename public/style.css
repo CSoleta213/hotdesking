@@ -1250,29 +1250,24 @@ tr:nth-child(odd) {
    text-align: center;
 }
 .box3{
-  margin-right: -15px; 
-  margin-left: -40px;
+  margin-right: -10px; 
+  margin-left: -30px;
   text-align: center;
 }
 .dot1{
   margin: 20px;
    background: rgba(6, 187, 135, 0.72);
 }
-.dot2{
-  margin-right: 20px; 
-  margin-left: 20px; 
-  background: rgba(242, 166, 69, 0.72);
-}
 .dot3{
   margin-right: 20px; 
-  margin-left: 20px;  
+  margin-left: 10px;  
+  width: 100px;
   background: rgba(242, 104, 73, 0.72);
 }
 .content .cards .card {
   width: 250px;
-  height: 130px;
   background: white;
-  margin-top: 10px ; 
+  margin-top: -90px ; 
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1281,14 +1276,14 @@ tr:nth-child(odd) {
 }
 
 .content .content-2 {
-  min-height: 60vh;
+  min-height: auto;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.content .content-2 .recent-payments {
+.content .content-2  {
   min-height: 50vh;
   flex: 5;
   margin: 0 25px 25px 25px;
@@ -1297,7 +1292,7 @@ tr:nth-child(odd) {
   flex-direction: column;
 }
 
-.content .content-2 .new-students {
+.content .content-2  {
   flex: 2;
   background: white;
   min-height: 50vh;
@@ -1306,20 +1301,12 @@ tr:nth-child(odd) {
   display: flex;
   flex-direction: column;
 }
-
-.content .content-2 .new-students table td:nth-child(1) img {
-  height: 40px;
-  width: 40px;
-}
 .calendar{
   margin-left: -70px;
 }
-.details{
-  margin-left: -2000px;
-}
 
-.bookings{
-
+.card{
+  margin-right: 40px;
 }
 
 /*Filter*/
@@ -1327,9 +1314,45 @@ tr:nth-child(odd) {
   width: 300px;
   border-radius: 10px;
   margin-left: 40px;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-top: -60px;
 }
 #lang{
-  border-radius: 20px;
+  border-radius: 10px;
 }
+
+/*Team Member*/
+.list-wrapper {
+  width: 300px;
+ /* margin: 50px auto; */
+  margin-right: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.list-item {
+  display: flex;
+  margin: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+  .content{
+    margin-left: 20px;
+  }
+    h4, p{
+      margin: 0;
+    }
+    p{
+      margin-top: 5px;
+      font-size: small;
+  }
+  .list-item-image{
+    width: 30px;
+    height: auto;
+  }
+  .list-item-content h4, p{
+    margin-left: 10px;
+  }
