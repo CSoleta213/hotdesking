@@ -539,7 +539,7 @@ footer a:hover{
   /* margin-left: 50px; */
   background: #FF4269;
 }
-.calendar h5{
+.cal h5{
   color: #FF4269;
 }
 #office-view{
@@ -1234,6 +1234,9 @@ tr:nth-child(odd) {
   border-radius: 50%;
  
 }
+.us-dash{
+  margin-top: 100px;
+}
 .icon-case h1{
   font-size: 48px;
   text-align: center;
@@ -1339,13 +1342,13 @@ tr:nth-child(odd) {
   padding-top: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-  .content{
+.content{
     margin-left: 20px;
   }
-    h4, p{
+.list-item h4, p{
       margin: 0;
     }
-    p{
+.list-item p{
       margin-top: 5px;
       font-size: small;
   }
@@ -1390,7 +1393,7 @@ ul {
 li {
   padding: 2px;
 }
-.title{
+.titles{
   margin-left: -70px;
   width: 50%;
   float: left;

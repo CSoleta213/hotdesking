@@ -86,7 +86,7 @@
         <div class="dash-cal">
           <div class="calendar-wrapper">
             
-            <div class="title"> Calendar </div>
+            <div class="titles"> Calendar </div>
             <a class="side-title" href="/my-calendar/monthly"> View Details </a>
             <ul class="calendar" style="background: #fff;">
               
@@ -135,8 +135,8 @@
         </div>
         <div class="dash-cal">
           <div class="calendar-wrapper">
-            <div class="title"> Calendar</div>
-            <a class="side-title" href="/my-calendar/weekly"> View Details </a>
+            <div class="titles"> Bookings</div>
+            <a class="side-title" href="/my-calendar/weekly"> View More </a>
               
             <ul class="calendar" style="background: #fff;">
               
