@@ -16,8 +16,9 @@ class BookController extends Controller
     public function index()
     {
         $data = Book::latest()->paginate(100);
+        $desks = \App\Models\Desk::all();
     
-        return view('books.index',compact('data'))
+        return view('books.index',compact('data', 'desks'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -91,7 +92,8 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        return view('books.show',compact('book'));
+        $desks = \App\Models\Desk::all();
+        return view('books.show',compact('book', 'desks'));
     }
 
     /**

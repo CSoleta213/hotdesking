@@ -22,10 +22,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
+        $date = $request->input('date');
+        
+        $number_of_book = DB::table('books')->count();
         $number_of_books = DB::table('books')->count();
-        return view('home',compact('number_of_books'));
+        return view('home',compact('number_of_books','number_of_book'));
     }
 
     public function my_profile()
@@ -73,8 +76,7 @@ class HomeController extends Controller
 
     public function office_map()
     {
-        $desks = \App\Models\Desk::all();
-        return view('office_map', compact('desks'));
+        return view('office_map');
     }
 
     public function adminHome()

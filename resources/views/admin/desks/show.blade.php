@@ -22,7 +22,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Desk:</strong>
-                    {{ $desk->desk_number }}
+                    <span style="text-transform:uppercase">{{ $desk->desk_number }}</span>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

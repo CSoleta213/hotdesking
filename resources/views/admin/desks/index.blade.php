@@ -24,7 +24,7 @@
         @foreach ($desks as $desk)
         <tr>
           <td>{{ ++$i }}</td>
-          <td>{{ $desk->desk_number }}</td>
+          <td style="text-transform:uppercase">{{ $desk->desk_number }}</td>
           <td><img src="/desks/{{ $desk->desk_map }}" width="100px"></td>
           <td>
             <form action="{{ route('desks.destroy',$desk->id) }}" method="POST">
@@ -58,7 +58,7 @@
       @csrf
         <div class="modal-body">
           <label for="desk_number">Desk #:</label>
-          <input type="text" id="desk_number" name="desk_number" placeholder="Enter new desk number" required><br><br>
+          <input type="text" id="desk_number" name="desk_number" placeholder="Enter new desk number" style="text-transform:uppercase" required><br><br>
           <label for="desk_map">Desk Map:</label>
           <input type="file" id="desk_map" name="desk_map" accept="image/*" required><br><br>
           <input type="submit" value="Add it!">

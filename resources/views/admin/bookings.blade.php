@@ -32,7 +32,7 @@
             <td>{{ ++$i }}</td>
             <td>{{ $booking->name }}</td>
             <td>{{ $booking->office_name }}</td>
-            <td>{{ $booking->desk_number }}</td>
+            <td style="text-transform:uppercase">{{ $booking->desk_number }}</td>
             <td>{{ $booking->date }}</td>
           </tr>
           @endforeach

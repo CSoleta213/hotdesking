@@ -14,6 +14,13 @@
           <option value="office 2">Office 2</option>
           <option value="office 3">Office 3</option>
         </select>
+      </div><br>
+      <div class="inp-group">
+        <form action="" method="POST">
+          @csrf
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date">
+        </form>
       </div>
     </div>
 
@@ -39,7 +46,7 @@
                 </div>
                 <div class="card" style="background: rgba(242, 104, 73, 0.44); padding: 15px 15px; margin-right: 80px;">
                   <div class="icon-case dot3">
-                        <h1>20</h1>
+                        <h1>{{ $number_of_books }}</h1>
                     </div>
                     <div class="box3">
                         <h3> Number of Bookings</h3>
