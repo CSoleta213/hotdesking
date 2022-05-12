@@ -6,7 +6,7 @@
       <h1 class="content-title">ADMIN HOME PAGE</h1>
     </div>
 
-    <!-- <div class="container">
+    <!-- <div class="container1">
       <div class="inp-group">
         <select name="lang" id="lang">
           <option value="office">All Offices</option>
@@ -18,6 +18,7 @@
     </div> -->
 
     <div class="content">
+
             <div class="cards" >
                 <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
                     <div class="icon-case dot1" >
@@ -49,22 +50,125 @@
 
                 <div class="list-wrapper" >      
                   <ul class="list">
-                    <h2> Team Members </h2>
+                    <h2 style="margin-right: 30px;"> Team Members </h2>
                       @foreach($users as $user)
                       <li class="list-item">
                         <div>
                           <img src="http://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" class="list-item-image">
                         </div>
-                          <div class="list-item-content">
-                            <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
-                            <p>{{ $user->position }}</p>
-                          </div>
+                        <div class="list-item-content">
+                          <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
+                          <p style="margin-left: 15px;">{{ $user->position }}</p>
+                        </div>
                       </li>
                       @endforeach
                   </ul>
               </div>
           </div>
       </div>
+      <div class="content">
+        <div class="dash-cal">
+          <div class="calendar-wrapper">
+            
+            <div class="titles"> Calendar </div>
+            <a class="side-title" href="/my-calendar/monthly"> View Details </a>
+            <ul class="calendar" style="background: #fff;">
+              
+                <li class="day-name">Sun</li>
+                <li class="day-name">Mon</li>
+                <li class="day-name">Tue</li>
+                <li class="day-name">Wed</li>
+                <li class="day-name">Thu</li>
+                <li class="day-name">Fri</li>
+                <li class="day-name">Sat</li>
+              
+              <li>1</li>
+              
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dash-cal">
+          <div class="calendar-wrapper">
+            <div class="titles"> Bookings</div>
+            <a class="side-title" href="/my-calendar/weekly"> View More </a>
+              
+            <ul class="calendar" style="background: #fff;">
+              
+                <li class="day-name">Sun</li>
+                <li class="day-name">Mon</li>
+                <li class="day-name">Tue</li>
+                <li class="day-name">Wed</li>
+                <li class="day-name">Thu</li>
+                <li class="day-name">Fri</li>
+                <li class="day-name">Sat</li>
+              
+              <li>1</li>
+              
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+            </ul>
+          </div>
+        </div>  
+      </div>  
+    
     </div>
   </section>
 @endsection

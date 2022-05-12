@@ -9,7 +9,7 @@
     <div class="body-content">
       <div class="section-container">
         <div class="columns content">
-          <div class="content-container calendar">
+          <div class="content-container cal">
             <h5>Calendar</h5>
             <p>
               Emachine&apos;s Desktiny calendar provides you with an overview of all bookings in the days, weeks or even months ahead. 

@@ -4,7 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">My Bookings</h1>
-      <p class="title-desc">"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings if you like.</p>
+      <p class="title-desc">"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search, filter and edit your existing bookings if you like. </p>
     </div>
     <div class="body-content">
       <div>

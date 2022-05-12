@@ -539,7 +539,7 @@ footer a:hover{
   /* margin-left: 50px; */
   background: #FF4269;
 }
-.calendar h5{
+.cal h5{
   color: #FF4269;
 }
 #office-view{
@@ -1237,6 +1237,9 @@ tr:nth-child(odd) {
   border-radius: 50%;
  
 }
+.us-dash{
+  margin-top: 100px;
+}
 .icon-case h1{
   font-size: 48px;
   text-align: center;
@@ -1342,13 +1345,13 @@ tr:nth-child(odd) {
   padding-top: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-  .content{
+.content{
     margin-left: 20px;
   }
-    h4, p{
+.list-item h4, p{
       margin: 0;
     }
-    p{
+.list-item p{
       margin-top: 5px;
       font-size: small;
   }
@@ -1359,3 +1362,50 @@ tr:nth-child(odd) {
   .list-item-content h4, p{
     margin-left: 10px;
   }
+
+  /*Dashboard Cal.*/
+  
+.calendar-wrapper {
+  max-width: 300px;
+  margin-left:50px;
+  text-align: left;
+  
+}
+.dash-cal{
+  margin:50px;
+  width: 350px;
+  margin-top: -100px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-name {
+  background: #4484FF;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  padding: 2px;
+}
+.titles{
+  margin-left: -70px;
+  width: 50%;
+  float: left;
+  font-weight: bold;
+}
+
+.side-title{
+  text-align: right;
+  flex-grow: 1;
+  display: block;
+  text-decoration: none;
+}
