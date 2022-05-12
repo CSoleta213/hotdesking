@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use DB;
+use Spatie\GoogleCalendar\Event;
+use Carbon\Carbon;
 
 class BookController extends Controller
 {
@@ -74,12 +76,21 @@ class BookController extends Controller
             if($check)
             {
                 $request->session()->flash('error', 'Your input is not allowed. Either the desk is taken or you have two entry for today.');
-                return redirect('/office-map');
+                return redirect()->route('books.index');
             }
             else{
                 $book->save();
+
+                $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
+                $endTime = (clone $startTime)->addHour(9);
+
+                Event::create([
+                    'name' => $request->input('name').' - '.$request->input('desk_number'),
+                    'startDateTime' => $startTime,
+                    'endDateTime' => $endTime,
+                ]);
             
-            return redirect()->route('books.index',compact('book'))
+                return redirect()->route('books.index',compact('book'))
                             ->with('success','Booked successfully.');
             }
     }

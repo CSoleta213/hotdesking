@@ -978,7 +978,7 @@ footer a:hover{
   /* END OF MODAL */
 
 /* My Calendar */
-.month, .week {
+/* .month, .week {
   margin: 3px;
   font-size: 13px;
   width: auto;
@@ -995,7 +995,9 @@ footer a:hover{
   background: #2e73f4;
   color: #fff;
   transition: 0.5s;
-}
+} */
+
+/* Global CSS for Buttons */
 .fa-plus {
   font-size: 13px;
 }
@@ -1013,14 +1015,15 @@ footer a:hover{
     text-decoration: none;
     text-align: right;
 }
-.add:hover {
+.add:hover, .go-to:hover {
     background: #5055dc;
     color: #fff;
     transition: 0.5s;
 }
-.add:focus {
+.add:focus, .go-to:focus {
     box-shadow: 0 0 0 5px rgba(158, 149, 239, 0.5);
 }
+/* End of Global CSS for Buttons */
 
 /* TABLE */
 .list-table {
