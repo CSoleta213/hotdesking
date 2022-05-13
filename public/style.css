@@ -28,6 +28,9 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
 }
+a {
+  text-decoration: none;
+}
 .button button {
   background: #4484FF;
   border-radius: 5px;
@@ -541,7 +544,7 @@ footer a:hover{
   margin-left: 50px;
   background: #FF4269;
 }
-.calendar h5{
+.cal h5{
   color: #FF4269;
 }
 #office-view{
@@ -649,7 +652,7 @@ footer a:hover{
 .sidebar{
   position: fixed;
   top: 0;
-  left: 0;
+  left: -5px;
   height: 100%;
   width: 260px;
   background: #FFF;
@@ -996,42 +999,10 @@ footer a:hover{
     cursor: pointer;
   }
   .modal-body {padding: 10px 16px;}
-  .modal-button {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    width: 20px;
-    color: #FFF;
-    background-color: #4484FF;
-    border-radius: 50%;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-  }
-  #dot1 {
-    top: 41%;
-    left: 36.2%;
-  }
-  #dot2 {
-    top: 41%;
-    left: 42.25%;
-  }
-  #dot3 {
-    top: 41%;
-    left: 48.5%;
-  }
-  #dot4 {
-    top: 41%;
-    left: 54.8%;
-  }
-  #dot5 {
-    top: 41%;
-    left: 61.5%;
-  }
   /* END OF MODAL */
 
 /* My Calendar */
-.month, .week {
+/* .month, .week {
   margin: 3px;
   font-size: 13px;
   width: auto;
@@ -1048,15 +1019,17 @@ footer a:hover{
   background: #2e73f4;
   color: #fff;
   transition: 0.5s;
-}
+} */
+
+/* Global CSS for Buttons */
 .fa-plus {
   font-size: 13px;
 }
-.add {
-    margin: 10px;
+.add, .go-to {
+    margin: 0 10px;
     font-size: 13px;
     width: auto;
-    padding:8px;
+    padding: 8px;
     background: #4484FF;
     color: #fff;
     outline: none;
@@ -1066,20 +1039,22 @@ footer a:hover{
     text-decoration: none;
     text-align: right;
 }
-.add:hover {
+.add:hover, .go-to:hover, .active {
     background: #5055dc;
     color: #fff;
     transition: 0.5s;
 }
-.add:focus {
+.add:focus, .go-to:focus {
     box-shadow: 0 0 0 5px rgba(158, 149, 239, 0.5);
 }
+/* End of Global CSS for Buttons */
 
 /* TABLE */
 .list-table {
   border-collapse: collapse;
   width: 100%;
   height: auto;
+  margin-top: 20px;
 }
 table th + th { border-left: thin solid #FFFFFF; }
 td, th {
@@ -1089,6 +1064,7 @@ td, th {
 th{
   height: 10px;
   color: #FFFFFF;
+  background-color: #313499;
 }
 table, td {
   border: thin solid #313499;
@@ -1162,12 +1138,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.show:hover {
+.read:hover {
   background: #2e952e;
   color: #fff;
   transition: 0.5s;
 }
-.edit {
+.update {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1181,12 +1157,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.edit:hover {
+.update:hover {
   background: #be8132;
   color: #fff;
   transition: 0.5s;
 }
-.del {
+.destroy {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1200,7 +1176,7 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.del:hover {
+.destroy:hover {
   background: #b85039;
   color: #fff;
   transition: 0.5s;
@@ -1213,7 +1189,7 @@ tr:nth-child(odd) {
 }
 /* End of My Calendar */
 
-label {
+.sidebar label {
   margin: 0;
   font-size: 26px;
   line-height: 70px;
@@ -1300,7 +1276,7 @@ label {
 .menu-links {
   display: block;
 }
-label {
+.sidebar label {
   display: block;
   cursor: pointer;
 }
@@ -1348,6 +1324,9 @@ label {
   border-radius: 50%;
  
 }
+.us-dash{
+  margin-top: 100px;
+}
 .icon-case h1{
   font-size: 48px;
   text-align: center;
@@ -1364,29 +1343,23 @@ label {
    text-align: center;
 }
 .box3{
-  margin-right: -15px; 
-  margin-left: -40px;
+  margin-right: -10px; 
+  margin-left: -30px;
   text-align: center;
 }
 .dot1{
   margin: 20px;
    background: rgba(6, 187, 135, 0.72);
 }
-.dot2{
-  margin-right: 20px; 
-  margin-left: 20px; 
-  background: rgba(242, 166, 69, 0.72);
-}
 .dot3{
   margin-right: 20px; 
-  margin-left: 20px;  
+  margin-left: 10px;  
+  width: 100px;
   background: rgba(242, 104, 73, 0.72);
 }
 .content .cards .card {
   width: 250px;
-  height: 130px;
   background: white;
-  margin-top: 10px ; 
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1395,14 +1368,14 @@ label {
 }
 
 .content .content-2 {
-  min-height: 60vh;
+  min-height: auto;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.content .content-2 .recent-payments {
+.content .content-2  {
   min-height: 50vh;
   flex: 5;
   margin: 0 25px 25px 25px;
@@ -1411,7 +1384,7 @@ label {
   flex-direction: column;
 }
 
-.content .content-2 .new-students {
+.content .content-2  {
   flex: 2;
   background: white;
   min-height: 50vh;
@@ -1420,14 +1393,13 @@ label {
   display: flex;
   flex-direction: column;
 }
-
-.content .content-2 .new-students table td:nth-child(1) img {
-  height: 40px;
-  width: 40px;
+.calendar{
+  margin-left: -70px;
 }
 
-.details{
-  margin-left: -2000px;
+.card{
+  margin-right: 40px;
+
 }
 
 /*Filter*/
@@ -1435,9 +1407,97 @@ label {
   width: 300px;
   border-radius: 10px;
   margin-left: 40px;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-top: -60px;
 }
 #lang{
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+/*Team Member*/
+.list-wrapper {
+  width: 300px;
+ /* margin: 50px auto; */
+  margin-right: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 10px 20px;
+  margin-bottom: 80px;
+}
+
+.list-item {
+  display: flex;
+  margin: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content{
+    margin-left: 20px;
+  }
+.list-item h4, p{
+      margin: 0;
+    }
+.list-item p{
+      margin-top: 5px;
+      font-size: small;
+  }
+  .list-item-image{
+    width: 30px;
+    height: auto;
+  }
+  .list-item-content h4, p{
+    margin-left: 10px;
+  }
+
+  /*Dashboard Cal.*/
+  
+.calendar-wrapper {
+  max-width: 300px;
+  margin-left:50px;
+  text-align: left;
+  
+}
+.dash-cal{
+  margin:50px;
+  width: 350px;
+  margin-top: -100px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-name {
+  background: #4484FF;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  padding: 5px;
+}
+li:hover{
+ background-color: #80acff;
+ border-radius: 50px;
+}
+.titles{
+  margin-left: -70px;
+  width: 50%;
+  float: left;
+  font-weight: bold;
+}
+
+.side-title{
+  text-align: right;
+  flex-grow: 1;
+  display: block;
+  text-decoration: none;
 }
