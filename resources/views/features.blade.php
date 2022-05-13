@@ -10,7 +10,7 @@
       <div class="section-container">
         <div class="columns content">
           <div class="content-container cal">
-            <h5>Calendar</h5>
+            <a href="/my-calendar"><h5>Calendar</h5></a>
             <p>
               Emachine&apos;s Desktiny calendar provides you with an overview of all bookings in the days, weeks or even months ahead. 
               It is where you can see other employees booking, as well as the date and duration of the booking. 
@@ -18,7 +18,7 @@
             </p>        
           </div>
         </div>
-        <a href="#"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="475" height="350" frameborder="0" scrolling="no"></iframe></a>
+        <a href="/my-calendar" style="cursor:zoom-in;"><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="475" height="350" frameborder="0" scrolling="no"></iframe></a>
       </div>
 
        <!-- <div class="section-container">
@@ -27,13 +27,13 @@
       </div> -->
 
       <div class="section-container">
-        <a href="{{ url('/features/desk-map') }}">
-          <img src="{{ asset('/office-desk-view.jpg') }}" alt="Reservation Listing" width="100%">
+        <a href="{{ url('/office-map') }}" style="cursor:zoom-in;">
+          <img src="{{ asset('/office-view-with-code.png') }}" alt="Reservation Listing" width="100%">
         </a>
     
         <div class="columns content">
           <div class="content-container office-view">
-            <h5>Office View & Desk View</h5>
+            <a href="{{ url('/office-map') }}"><h5>Office View & Desk View</h5></a>
             <p>
               Our intuitive floor plan provides an unbeatable overview of the entire office and space availability – 
               all in one single screen, anytime and anywhere. Making it easier to find the right desk for you or a 
@@ -47,7 +47,7 @@
       <div class="section-container">
         <div class="columns content">
           <div class="content-container desk-view">
-            <h5>My Bookings</h5>
+            <a href="{{ url('/books') }}"><h5>My Bookings</h5></a>
             <p>
               "My Bookings" is where you can view and manage your booked/reserved desk for the next few days,
               weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings
@@ -55,7 +55,7 @@
             </p>
           </div>
         </div>
-        <a href="{{ url('/books') }}" style="text-decoration: none;">
+        <a href="{{ url('/books') }}" style="cursor:zoom-in;">
           <!-- <div class="columns image" id="desk-view"> -->
           <table class="list-table" style="font-size: 10px">
             <tr>

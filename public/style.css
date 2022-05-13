@@ -28,6 +28,9 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
 }
+a {
+  text-decoration: none;
+}
 .button button {
   background: #4484FF;
   border-radius: 5px;
