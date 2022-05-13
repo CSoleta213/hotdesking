@@ -8,17 +8,16 @@
     <div class="body-content">
       <div class="features">
         <center>
-          <label for="">Select an Office:</label>
+          <!-- <label for="">Select an Office:</label>
           <select name="office" id="office" required style="margin-top: 50px">
             <option value="">--- All Offices ---</option>
             <option value="Sydney">Sydney</option>
             <option value="Victoria">Victoria</option>
             <option value="Brisbane">Brisbane</option>
-          </select><br><br>
-          <a href="#">Monthly</a>
-          <a href="#">Weekly</a>
-          <a href="/books">List of Books</a>
-        </center><br><br>
+          </select><br><br> -->
+          <a href="/admin/calendar-view" class="go-to">Calendar View</a>
+          <a href="/admin/bookings" class="go-to">List View</a>
+        </center><br>
         <table class="list-table">
           <tr>
             <th>No</th>

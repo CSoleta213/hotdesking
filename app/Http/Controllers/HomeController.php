@@ -36,14 +36,9 @@ class HomeController extends Controller
         return view('my_profile');
     }
 
-    public function my_calendar_monthly()
+    public function my_calendar()
     {
-        return view('my_calendar.monthly');
-    }
-
-    public function my_calendar_weekly()
-    {
-        return view('my_calendar.weekly');
+        return view('my_calendar');
     }
 
     public function my_bookings()
@@ -81,7 +76,10 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        return view('admin.admin');
+        $users = \App\Models\User::all();
+        $number_of_book = DB::table('books')->count();
+        $number_of_books = DB::table('books')->count();
+        return view('admin.admin',compact('users','number_of_books','number_of_book'));
     }
 
     public function adminUsersList()
@@ -96,6 +94,11 @@ class HomeController extends Controller
         $bookings = \App\Models\Book::all();
         return view('admin.bookings',compact('bookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function adminCalendarView()
+    {
+        return view('admin.calendar_view');
     }
 
     public function adminAvailableDesks()

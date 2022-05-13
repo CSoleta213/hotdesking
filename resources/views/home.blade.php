@@ -3,10 +3,10 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <h1 class="content-title">User's Homepage</h1>
+      <h1 class="content-title">My Homepage</h1>
     </div>
     
-    <div class="container">
+    <!-- <div class="container">
       <div class="inp-group">
         <select name="lang" id="lang">
           <option value="office">All Offices</option>
@@ -22,7 +22,7 @@
           <input type="date" name="date" id="date">
         </form>
       </div>
-    </div>
+    </div> -->
 
     <div class="content" style="margin-top: -10px; margin-left: 80px;">
     <div class="cards" >

@@ -20,6 +20,12 @@
           <p>{{ $message }}</p>
         </div>
       @endif
+      @if(session('error'))
+      <br>
+      <div class="alert-fail">
+        {{ session('error') }}
+      </div>
+      @endif
      
       <table class="list-table">
         <tr>
@@ -74,7 +80,7 @@
           <label for="office_name">Your Office:</label>
           <input type="text" id="office_name" name="office_name" value="{{ Auth::user()->office }}" readonly><br><br>
 
-          <label for="desk_number">Your Chosen Desk:</label>
+          <label for="desk_number">Your Desk:</label>
           <select name="desk_number" id="desk_number" style="text-transform:uppercase" required>
             <option value="">--- Select a Desk ---</option>
             @foreach($desks as $desk)
@@ -82,8 +88,9 @@
             @endforeach
           </select><br><br>
 
-          <label for="date">When?</label>
+          <label for="date">Date of booking:</label>
           <input type="date" id="date" name="date" required><br><br>
+          <input type="time" name="time" value="08:00 AM" hidden>
 
           <input type="submit" value="Book a Desk">
         </div>

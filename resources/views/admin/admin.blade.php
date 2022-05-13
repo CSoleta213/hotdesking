@@ -6,16 +6,16 @@
       <h1 class="content-title">ADMIN HOME PAGE</h1>
     </div>
 
-          <div class="container1">
-            <div class="inp-group">
-              <select name="lang" id="lang">
-                <option value="office">All Offices</option>
-                <option value="office 1">Office 1</option>
-                <option value="office 2">Office 2</option>
-                <option value="office 3">Office 3</option>
-              </select>
-            </div>
-       </div>
+    <!-- <div class="container1">
+      <div class="inp-group">
+        <select name="lang" id="lang">
+          <option value="office">All Offices</option>
+          <option value="office 1">Office 1</option>
+          <option value="office 2">Office 2</option>
+          <option value="office 3">Office 3</option>
+        </select>
+      </div>
+    </div> -->
 
     <div class="content">
 
@@ -40,7 +40,7 @@
                 </div>
                 <div class="card" style="background: rgba(242, 104, 73, 0.44); padding: 15px 15px;">
                   <div class="icon-case dot3">
-                        <h1>20</h1>
+                        <h1>{{ $number_of_books }}</h1>
                     </div>
                     <div class="box3">
                         <h3> Number of Bookings</h3>
@@ -51,33 +51,17 @@
                 <div class="list-wrapper" >      
                   <ul class="list">
                     <h2 style="margin-right: 30px;"> Team Members </h2>
+                      @foreach($users as $user)
                       <li class="list-item">
                         <div>
                           <img src="http://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" class="list-item-image">
                         </div>
-                          <div class="list-item-content">
-                            <h4>Carlo Soleta</h4>
-                            <p style="margin-left: 15px;">Project Manager</p>
-                          </div>
-                      </li>
-                      <li class="list-item">
-                        <div>
-                          <img src="http://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" class="list-item-image">
+                        <div class="list-item-content">
+                          <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
+                          <p style="margin-left: 15px;">{{ $user->position }}</p>
                         </div>
-                          <div class="list-item-content">
-                            <h4>Andrea De Guzman</h4>
-                            <p style="margin-right: 50px;">UI/UX Designer</p>
-                          </div>
                       </li>
-                      <li class="list-item">
-                        <div> 
-                            <img src="http://pluspng.com/img-png/png-user-icon-circled-user-icon-2240.png" class="list-item-image">
-                          </div>
-                          <div class="list-item-content">
-                            <h4>Bless Catalan</h4>
-                            <p style="margin-right: 20px;">QA Specialist</p>
-                          </div>
-                      </li>
+                      @endforeach
                   </ul>
               </div>
           </div>
