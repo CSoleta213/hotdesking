@@ -15,8 +15,8 @@
             <option value="Victoria">Victoria</option>
             <option value="Brisbane">Brisbane</option>
           </select><br><br> -->
+          <a href="/admin/bookings" class="go-to active">List View</a>
           <a href="/admin/calendar-view" class="go-to">Calendar View</a>
-          <a href="/admin/bookings" class="go-to">List View</a>
         </center><br>
         <table class="list-table">
           <tr>
