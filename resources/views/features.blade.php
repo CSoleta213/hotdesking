@@ -60,10 +60,11 @@
           <table class="list-table" style="font-size: 10px">
             <tr>
               <th>No</th>
-              <th>Name</th>
+              <th style="min-width: 100px">Name</th>
               <th>Office Name</th>
               <th>Desk Number</th>
-              <th>Date</th>
+              <th style="min-width: 80px">Date</th>
+              <th style="min-width: 100px">Action</th>
             </tr>
             @forelse ($data as $key => $value)
               @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
