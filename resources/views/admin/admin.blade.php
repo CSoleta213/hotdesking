@@ -58,7 +58,7 @@
                         </div>
                         <div class="list-item-content">
                           <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
-                          <p style="margin-left: 15px;">{{ $user->position }}</p>
+                          <p>{{ $user->position }}</p>
                         </div>
                       </li>
                       @endforeach
@@ -71,7 +71,7 @@
           <div class="calendar-wrapper">
             
             <div class="titles"> Calendar </div>
-            <a class="side-title" href="/my-calendar/monthly"> View Details </a>
+            <a class="side-title" href="/admin/calendar-view"> View Details </a>
             <ul class="calendar" style="background: #fff;">
               
                 <li class="day-name">Sun</li>
@@ -120,7 +120,7 @@
         <div class="dash-cal">
           <div class="calendar-wrapper">
             <div class="titles"> Bookings</div>
-            <a class="side-title" href="/my-calendar/weekly"> View More </a>
+            <a class="side-title" href="/admin/bookings"> View More </a>
               
             <ul class="calendar" style="background: #fff;">
               

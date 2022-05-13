@@ -71,7 +71,6 @@ class HomeController extends Controller
     
         return view('features',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
-        // return view('features');
     }
 
     public function office_map()

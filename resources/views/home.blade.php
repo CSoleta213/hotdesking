@@ -60,7 +60,7 @@
           <div class="calendar-wrapper" style="margin-top: 100px;">
             
             <div class="titles"> Calendar </div>
-            <a class="side-title" href="/my-calendar/monthly"> View Details </a>
+            <a class="side-title" href="/my-calendar"> View Details </a>
             <ul class="calendar" style="background: #fff;">
               
                 <li class="day-name">Sun</li>
@@ -109,7 +109,7 @@
           <div class="dash-cal" >
             <div class="calendar-wrapper" style="margin-top: 100px;">
               <div class="titles"> Bookings</div>
-              <a class="side-title" href="/my-calendar/weekly"> View More </a>
+              <a class="side-title" href="/books"> View More </a>
               
               <ul class="calendar" style="background: #fff;">
               
