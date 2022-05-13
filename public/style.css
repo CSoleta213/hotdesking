@@ -1270,7 +1270,6 @@ tr:nth-child(odd) {
 .content .cards .card {
   width: 250px;
   background: white;
-  margin-top: -90px ; 
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1310,6 +1309,7 @@ tr:nth-child(odd) {
 
 .card{
   margin-right: 40px;
+
 }
 
 /*Filter*/
@@ -1333,6 +1333,7 @@ tr:nth-child(odd) {
 .list {
   list-style: none;
   padding: 10px 20px;
+  margin-bottom: 80px;
 }
 
 .list-item {
@@ -1391,7 +1392,11 @@ ul {
   text-align: center;
 }
 li {
-  padding: 2px;
+  padding: 5px;
+}
+li:hover{
+ background-color: #80acff;
+ border-radius: 50px;
 }
 .titles{
   margin-left: -70px;
