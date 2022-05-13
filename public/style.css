@@ -1015,7 +1015,7 @@ footer a:hover{
     text-decoration: none;
     text-align: right;
 }
-.add:hover, .go-to:hover {
+.add:hover, .go-to:hover, .active {
     background: #5055dc;
     color: #fff;
     transition: 0.5s;
