@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\Book;
 
 class HomeController extends Controller
 {
@@ -66,7 +67,10 @@ class HomeController extends Controller
 
     public function features()
     {
-        return view('features');
+        $data = Book::latest()->paginate(100);
+    
+        return view('features',compact('data'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function office_map()

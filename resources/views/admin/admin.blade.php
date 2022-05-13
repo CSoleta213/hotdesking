@@ -58,7 +58,7 @@
                         </div>
                         <div class="list-item-content">
                           <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
-                          <p style="margin-left: 15px;">{{ $user->position }}</p>
+                          <p>{{ $user->position }}</p>
                         </div>
                       </li>
                       @endforeach

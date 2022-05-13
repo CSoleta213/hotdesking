@@ -6,7 +6,7 @@
       <h1 class="content-title">My Bookings</h1>
       <p class="title-desc">"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search, filter and edit your existing bookings if you like. </p>
     </div>
-    <div class="body-content">
+    <div class="body-content book-table">
       <div>
         <div style="display: flex; flex-direction: row; align-items: center">
           <div><a class="btn btn-primary go-to" href="/office-map">Go to Office Map</a></div>
@@ -36,27 +36,28 @@
           <th>Date</th>
           <th width="280px">Action</th>
         </tr>
-        @foreach ($data as $key => $value)
-          @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
-          <tr>
-              <td>{{ ++$i }}</td>
-              <td>{{ $value->name }}</td>
-              <td>{{ $value->office_name }}</td>
-              <td style="text-transform:uppercase">{{ $value->desk_number }}</td>
-              <td>{{ $value->date }}</td>
-              <!-- <td>{{ \Str::limit($value->description, 100) }}</td> -->
-              <td >
-                <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
-                  <a class="read" href="{{ route('books.show',$value->id) }}" > Show</a>
-                  <a class="update" href="{{ route('books.edit',$value->id) }}">Edit</a>   
-                  @csrf
-                  @method('DELETE')      
-                  <button type="submit" class="destroy">Delete</button>
-                </form>
-              </td>
-          </tr>
-          @endif
-        @endforeach
+        @forelse ($data as $key => $value)
+              @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
+              <tr>
+                  <td>{{ ++$i }}</td>
+                  <td>{{ $value->name }}</td>
+                  <td>{{ $value->office_name }}</td>
+                  <td style="text-transform:uppercase">{{ $value->desk_number }}</td>
+                  <td>{{ $value->date }}</td>
+                  <td >
+                    <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
+                      <a class="read" href="{{ route('books.show',$value->id) }}"> Show</a>
+                      <a class="update" href="{{ route('books.edit',$value->id) }}">Edit</a>   
+                      @csrf
+                      @method('DELETE')      
+                      <button type="submit" class="destroy">Delete</button>
+                    </form>
+                  </td>
+              </tr>
+              @endif
+              @empty
+              <center><h1 style="color: #551A8B">You haven't book yet!</h1></center>
+            @endforelse
       </table>
       <div style="display: flex; flex-direction: row; width: 100px">
         {!! $data->links() !!}
