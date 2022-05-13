@@ -24,7 +24,7 @@
       </div>
     </div> -->
 
-    <div class="content" style="margin-top: 100px; margin-left: 80px;">
+    <div class="content" style="margin-top: -10px; margin-left: 80px;">
     <div class="cards" >
                 <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
                     <div class="icon-case dot1" >
