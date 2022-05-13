@@ -18,7 +18,7 @@
             </p>        
           </div>
         </div>
-        <a href="#"><div class="columns image" style="background: #FF4269"> </div></a>
+        <a href="#"><div class="columns image" style="background: #FF4269" id="calendar"> </div></a>
       </div>
 
        <!-- <div class="section-container">

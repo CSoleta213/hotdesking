@@ -6,7 +6,7 @@
       <h1 class="content-title">My Bookings</h1>
       <p class="title-desc">"My Bookings" is where you can view and manage your booked/reserved desk for the next few days, weeks and months. Here you can search and filter your booking data. You can also edit your existing bookings if you like.</p>
     </div>
-    <div class="body-content">
+    <div class="body-content book-table">
       <div>
         <div style="text-align: right; ">
           <a class="add" href="{{ route('books.create') }}"><i class="fas fa-light fa-plus"></i> Add Book</a>    
@@ -20,7 +20,7 @@
       @endif
      
       <table class="list-table " style="margin-top: 20px;">
-        <tr style="background-color: #313499;">
+        <tr style="background-color: #313499;" class="t-book">
           <th>No</th>
           <th>Name</th>
           <th>Office Name</th>
@@ -31,11 +31,11 @@
         @foreach ($data as $key => $value)
           @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
           <tr>
-              <td>{{ ++$i }}</td>
-              <td>{{ $value->name }}</td>
-              <td>{{ $value->office_name }}</td>
-              <td>{{ $value->desk_number }}</td>
-              <td>{{ $value->date }}</td>
+              <td class="t-book">{{ ++$i }}</td>
+              <td class="t-book">{{ $value->name }}</td>
+              <td class="t-book">{{ $value->office_name }}</td>
+              <td class="t-book">{{ $value->desk_number }}</td>
+              <td class="t-book">{{ $value->date }}</td>
               <!-- <td>{{ \Str::limit($value->description, 100) }}</td> -->
               <td >
                 <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
