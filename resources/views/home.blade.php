@@ -24,9 +24,9 @@
       </div>
     </div> -->
 
-    <div class="content" style="margin-top: -10px; margin-left: 80px;">
+    <div class="content" style="margin-top: -10px; ">
     <div class="cards" >
-                <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
+                <div class="card" style=" background: rgba(6, 187, 135, 0.44); margin-left: 150px;">
                     <div class="icon-case dot1" >
                             <h1>15</h1>
                         </div>
@@ -44,7 +44,7 @@
                       </div>
                   </div>
                 </div>
-                <div class="card" style="background: rgba(242, 104, 73, 0.44); padding: 15px 15px; margin-right: 80px;">
+                <div class="card" style="background: rgba(242, 104, 73, 0.44); padding: 15px 15px; margin-right: 150px;">
                   <div class="icon-case dot3">
                         <h1>{{ $number_of_books }}</h1>
                     </div>
@@ -55,107 +55,11 @@
                 </div>
           </div>
 
-          <div class="content">
-        <div class="dash-cal">
-          <div class="calendar-wrapper" style="margin-top: 100px;">
-            
-            <div class="titles"> Calendar </div>
-            <a class="side-title" href="/my-calendar/monthly"> View Details </a>
-            <ul class="calendar" style="background: #fff;">
-              
-                <li class="day-name">Sun</li>
-                <li class="day-name">Mon</li>
-                <li class="day-name">Tue</li>
-                <li class="day-name">Wed</li>
-                <li class="day-name">Thu</li>
-                <li class="day-name">Fri</li>
-                <li class="day-name">Sat</li>
-              
-              <li>1</li>
-              
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
-          </div>
-        </div>
-          <div class="dash-cal" >
-            <div class="calendar-wrapper" style="margin-top: 100px;">
-              <div class="titles"> Bookings</div>
-              <a class="side-title" href="/my-calendar/weekly"> View More </a>
-              
-              <ul class="calendar" style="background: #fff;">
-              
-                <li class="day-name">Sun</li>
-                <li class="day-name">Mon</li>
-                <li class="day-name">Tue</li>
-                <li class="day-name">Wed</li>
-                <li class="day-name">Thu</li>
-                <li class="day-name">Fri</li>
-                <li class="day-name">Sat</li>
-              
-              <li>1</li>
-              
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
-          </div>
-        </div>  
+
+         <center style="margin-left: 50px;">   
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </center>
+         
       </div>  
     </div>
   </section>

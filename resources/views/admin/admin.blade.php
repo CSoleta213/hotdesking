@@ -20,7 +20,7 @@
     <div class="content">
 
             <div class="cards" >
-                <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
+                <div class="card" style=" background: rgba(6, 187, 135, 0.44); margin-left: 100px;">
                     <div class="icon-case dot1" >
                             <h1>15</h1>
                         </div>
@@ -66,109 +66,14 @@
               </div>
           </div>
       </div>
-      <div class="content">
-        <div class="dash-cal">
-          <div class="calendar-wrapper">
-            
-            <div class="titles"> Calendar </div>
-            <a class="side-title" href="/my-calendar/monthly"> View Details </a>
-            <ul class="calendar" style="background: #fff;">
-              
-                <li class="day-name">Sun</li>
-                <li class="day-name">Mon</li>
-                <li class="day-name">Tue</li>
-                <li class="day-name">Wed</li>
-                <li class="day-name">Thu</li>
-                <li class="day-name">Fri</li>
-                <li class="day-name">Sat</li>
-              
-              <li>1</li>
-              
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
+        
+          <div style="margin-left: 150px; margin-top: -30px;"> 
+              <div style="display: block;">
+                <span style="display: inline-block; font-weight: bold; font-size: larger;"> Calendar </span>
+                <a href="/admin/calendar-view"> <span style="margin-left: 720px;">View More </span></a>
+              </div>
+              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="900" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
-        </div>
-        <div class="dash-cal">
-          <div class="calendar-wrapper">
-            <div class="titles"> Bookings</div>
-            <a class="side-title" href="/my-calendar/weekly"> View More </a>
-              
-            <ul class="calendar" style="background: #fff;">
-              
-                <li class="day-name">Sun</li>
-                <li class="day-name">Mon</li>
-                <li class="day-name">Tue</li>
-                <li class="day-name">Wed</li>
-                <li class="day-name">Thu</li>
-                <li class="day-name">Fri</li>
-                <li class="day-name">Sat</li>
-              
-              <li>1</li>
-              
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
-          </div>
-        </div>  
-      </div>  
-    
     </div>
   </section>
 @endsection

@@ -18,17 +18,18 @@
             </p>        
           </div>
         </div>
-        <a href="#"><div class="columns image" style="background: #FF4269"> </div></a>
+        <div class="section-container">
+        <a href="#">
+        <div class="columns image" id="calendar"> <img src="{{ asset('/Calendar.PNG') }}" alt="Reservation Listing" width="100%" ></div>
+        </a>
+      </div> 
       </div>
 
-       <!-- <div class="section-container">
-        <a href="#"><div class="columns image" style="background: #F2A645"></div></a>
-        <div class="columns image" id="calendar"> </div>
-      </div> -->
+
 
       <div class="section-container">
         <a href="{{ url('/features/desk-map') }}">
-          <div class="columns image"><img src="{{ asset('/office-desk-view.jpg') }}" alt="Reservation Listing" width="100%"></div>
+          <div ><img src="{{ asset('/office-desk-view.jpg') }}" alt="Reservation Listing" width="100%"></div>
         </a>
     
         <div class="columns content">
