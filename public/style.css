@@ -1501,3 +1501,16 @@ li:hover{
   display: block;
   text-decoration: none;
 }
+
+.portrait {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .portrait {
+    display: block;
+  }
+  .landscape {
+    display: none;
+  }
+}
