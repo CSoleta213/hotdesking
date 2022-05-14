@@ -42,6 +42,9 @@
               <label for="date">Date:</label>
               <input type="text" name="date" value="{{ $book->date }}" class="form-control" placeholder="Date"><br><br>
 
+              <input type="text" name="codeNameDate" value="{{ $book->name }}{{ $book->date }}" hidden>
+              <input type="text" name="codeNumDate" value="{{ $book->desk_number }}{{ $book->date }}" hidden>
+
               <input type="submit" value="Submit">
             </div>
           </form>
