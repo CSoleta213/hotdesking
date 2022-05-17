@@ -4,7 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">ADMIN HOME PAGE</h1>
-      <p class="title-desc">The solution in helping businesses manage their workspace and remote working effectively and safely.  </p>
+      <p class="title-desc">eMachines' Desktiny is the solution in helping businesses manage their workspace and remote working effectively and safely.</p>
     </div>
 
     <!-- <div class="container1">
@@ -21,7 +21,7 @@
     <div class="content">
 
             <div class="cards" >
-                <div class="card" style=" background: rgba(6, 187, 135, 0.44); margin-left: 100px;">
+                <div class="card" style=" background: rgba(6, 187, 135, 0.44); margin-left: 5%;">
                     <div class="icon-case dot1" >
                             <h1>15</h1>
                         </div>
@@ -51,7 +51,7 @@
 
                 <div class="list-wrapper" >      
                   <ul class="list">
-                    <h2 style="margin-right: 30px;"> Team Members </h2>
+                    <h2 style="margin-right: 10%"> Team Members </h2>
                       @foreach($users as $user)
                       <li class="list-item">
                         <div>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="list-item-content">
                           <h4>{{ $user->firstname }} {{ $user->lastname }}</h4>
-                          <p>{{ $user->position }}</p>
+                          <p class="position">{{ $user->position }}</p>
                         </div>
                       </li>
                       @endforeach
@@ -68,7 +68,7 @@
           </div>
       </div>
         
-          <div style="margin-left: 150px; margin-top: -30px;"> 
+          <div style="margin-left: 8%; margin-top: -4%;"> 
               <div style="display: block;">
                 <span style="display: inline-block; font-weight: bold; font-size: larger;"> Calendar </span>
                 <a href="/admin/calendar-view"> <span style="margin-left: 720px;">View More </span></a>
