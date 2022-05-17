@@ -4,6 +4,7 @@
   <section class="body-section">
     <div class="body-header">
     <h1 class="content-title">Bookings</h1>
+    <p class="title-desc">"Bookings" is where you can view the list of booked desks for the next few days, weeks, and months. </p>
     </div>
     <div class="body-content">
       <div class="features">

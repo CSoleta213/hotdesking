@@ -4,6 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">ADMIN HOME PAGE</h1>
+      <p class="title-desc">The solution in helping businesses manage their workspace and remote working effectively and safely.  </p>
     </div>
 
     <!-- <div class="container1">

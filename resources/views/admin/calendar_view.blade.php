@@ -3,7 +3,8 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <h1 class="content-title">Bookings</h1>
+      <h1 class="content-title">Calendar</h1>
+      <p class="title-desc">Look at all the bookings in the days, weeks, or even months ahead. </p>
     </div>
     <div class="body-content">
       <center>
