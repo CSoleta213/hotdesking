@@ -107,6 +107,9 @@ class HomeController extends Controller
 
     public function adminAvailableDesks()
     {
-        return view('admin.available_desks');
+        $bookings = \App\Models\Book::all();
+        $desks = \App\Models\Desk::all();
+        return view('admin.available_desks', compact('desks', 'bookings'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

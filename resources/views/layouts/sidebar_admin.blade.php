@@ -50,7 +50,7 @@
         </li>
         <li class="nav-link">
           <a href="/admin/bookings">
-            <i class='bx bx-book' ></i>
+            <i class='bx bx-table' ></i>
             <span class="link_name">Bookings</span>
           </a>
           <ul class="sub-menu blank">
@@ -60,10 +60,19 @@
         <li class="nav-link">
           <a href="/admin/available-desks">
             <i class='bx bx-chair' ></i>
-            <span class="link_name">Available Seats</span>
+            <span class="link_name">Available Desks</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/admin/available-desks">Available Seats</a></li>
+            <li><a class="link_name" href="/admin/available-desks">Available Desks</a></li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="/admin/desks">
+            <i class='bx bx-book' ></i>
+            <span class="link_name">Manage Desks</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/admin/desks">Manage Desks</a></li>
           </ul>
         </li>
         <li class="nav-link">
