@@ -4,6 +4,7 @@
   <section class="body-section">
     <div class="body-header">
     <h1 class="content-title">Office Map</h1>
+    <p class="title-desc">“Office Map” will give you a crystal clear overview of the entire office and space availability. </p>
     </div>
     <div class="body-content">
       <div class="desk-map">
