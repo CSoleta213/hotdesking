@@ -19,9 +19,9 @@
       <table class="list-table">
         <tr>
           <th>No.</th>
+          <th>ID No.</th>
           <th>Name of Employee</th>
           <th>Phone Number</th>
-          <th>ID No.</th>
           <th>Email</th>
           <th>Position</th>
           <th>Office</th>
@@ -31,9 +31,9 @@
         @foreach ($users as $user)
         <tr>
           <td>{{ ++$i }}</td>
+          <td>{{ $user->employee_id_number }}</td>
           <td>{{ $user->firstname }} {{ $user->lastname }}</td>
           <td>{{ $user->phone_number }}</td>
-          <td>{{ $user->employee_id_number }}</td>
           <td>{{ $user->email }}</td>
           <td>{{ $user->position }}</td>
           <td>{{ $user->office }}</td>

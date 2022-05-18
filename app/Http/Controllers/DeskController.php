@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
   
 use App\Models\Desk;
 use Illuminate\Http\Request;
+use DB;
   
 class DeskController extends Controller
 {
@@ -14,7 +15,7 @@ class DeskController extends Controller
      */
     public function index()
     {
-        $desks = Desk::latest()->paginate(5);
+        $desks = DB::table('desks')->orderBy('desk_number')->paginate(100);
     
         return view('admin.desks.index',compact('desks'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
