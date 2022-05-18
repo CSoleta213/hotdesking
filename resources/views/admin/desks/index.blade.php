@@ -4,7 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">DESKS MANAGEMENT</h1>
-      <p class="title-desc">AAdd and Manage office desks and meeting rooms according to the social distancing policy.  </p>
+      <p class="title-desc">Add and Manage office desks and meeting rooms according to the social distancing policy.  </p>
     </div>
     <div class="body-content">
       <!-- Trigger/Open The Modal -->

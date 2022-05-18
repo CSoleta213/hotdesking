@@ -4,6 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">LIST OF USERS</h1>
+      <p class="title-desc">Get to know the bookers of emachines' desktiny from the user's list.</p>
     </div>
     <div class="body-content">
       <table class="list-table">
