@@ -127,17 +127,41 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        $request->validate([
-            'name' => 'required',
-            'office_name' => 'required',
-            'desk_number' => 'required',
-            'date' => 'required',
-        ]);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'office_name' => 'required',
+        //     'desk_number' => 'required',
+        //     'date' => 'required',
+        //     'codeNameDate' => 'required',
+        //     'codeNumDate' => 'required',
+        // ]);
+
+        $codeNameDate = $request->input('name').$request->input('date');
+        $codeNumDate = $request->input('desk_number').$request->input('date');
+
+        $book->name = request('name');
+        $book->office_name = request('office_name');
+        $book->desk_number = request('desk_number');
+        $book->date = request('date');
+        $book->codeNameDate = $codeNameDate;
+        $book->codeNumDate = $codeNumDate;
+
+        $check = Book::where([
+            ['codeNameDate', "=", $codeNameDate],
+        ])->first();
     
-        $book->update($request->all());
+        if($check)
+        {
+            $request->session()->flash('error', 'Your input is not allowed. Either the desk is taken or you have two entry for today.');
+            return redirect()->route('books.index');
+        }
+        else{
+    
+            $book->save();
     
         return redirect()->route('books.index')
                         ->with('success','Book updated successfully');
+        }
     }
 
     /**

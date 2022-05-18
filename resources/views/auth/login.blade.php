@@ -86,7 +86,7 @@
 
           <label for="email">{{ __('Email Address') }}</label>
 
-          <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="Enter Email" required autocomplete="email" autofocus>
 
           @error('email')
             <span role="alert">
@@ -94,9 +94,11 @@
             </span>
           @enderror
 
+          <br><br>
+
           <label for="password">{{ __('Password') }}</label>
 
-          <input id="password" type="password" name="password" required autocomplete="current-password">
+          <input id="password" type="password" name="password" placeholder="Enter Password" required autocomplete="current-password">
 
           @error('password')
             <span role="alert">
@@ -104,7 +106,7 @@
             </span>
           @enderror
 
-          <div class="checkbox-with-label">
+          <!-- <div class="checkbox-with-label">
           <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} style="width: 5%">
 
           <label for="remember" style="width: 45%">
@@ -116,9 +118,9 @@
               <div style="text-align: right;">{{ __('Forgot Your Password?') }}</div>
             </a>
           @endif
-          </div>
+          </div> -->
 
-          <br>
+          <br><br>
 
           <div class="button">
             <center>

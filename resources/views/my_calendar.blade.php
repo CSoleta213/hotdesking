@@ -4,6 +4,7 @@
   <section class="body-section">
     <div class="body-header">
       <h1 class="content-title">My Calendar</h1>
+      <p class="title-desc">"My Calendar" provides you with an overview of all your bookings in the days, weeks, or even months ahead. </p>
     </div>
     <div class="body-content">
       <center>

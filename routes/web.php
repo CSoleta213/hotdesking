@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DeskController;
+use App\Http\Controllers\UserController;
 use Spatie\GoogleCalendar\Event;
 
 /*
@@ -15,9 +16,9 @@ use Spatie\GoogleCalendar\Event;
 |
 */
 
-// Route::view('/','welcome');
+Route::view('/','auth.login');
 
-Route::get('/', function() {
+// Route::get('/', function() {
 
     // $event = new Event;
 
@@ -29,8 +30,8 @@ Route::get('/', function() {
 
     // $e = Event::get();
 
-    return view('welcome');
-});
+//     return view('welcome');
+// });
 
 Route::view('/privacy','privacy.privacy');
 
@@ -65,3 +66,5 @@ Route::get('/admin/available-desks', [App\Http\Controllers\HomeController::class
 Route::resource('books', App\Http\Controllers\BookController::class);
 
 Route::resource('/admin/desks', DeskController::class)->middleware('is_admin');
+
+Route::resource('/admin/users', UserController::class);
