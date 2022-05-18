@@ -7,7 +7,7 @@
     </div>
     <div class="body-content">
       <div class="pull-right">
-          <a class="btn btn-success" href="{{ route('users.create') }}"> Create New Product</a>
+          <a class="add" href="{{ route('users.create') }}">Add New Account</a>
       </div>
    
       @if ($message = Session::get('success'))
@@ -30,7 +30,7 @@
         </tr>
         @foreach ($users as $user)
         <tr>
-          <td>{{ $user->id }}</td>
+          <td>{{ ++$i }}</td>
           <td>{{ $user->firstname }} {{ $user->lastname }}</td>
           <td>{{ $user->phone_number }}</td>
           <td>{{ $user->employee_id_number }}</td>
@@ -48,12 +48,12 @@
    
               <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
     
-              <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Remove as Admin</a>
+              <a class="update" href="{{ route('users.edit',$user->id) }}">Remove as Admin</a>
    
               @csrf
               @method('DELETE')
       
-              <button type="submit" class="btn btn-danger">Delete</button>
+              <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
             </form>
           </td>
           @else
@@ -62,12 +62,12 @@
    
               <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
     
-              <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Add as Admin</a>
+              <a class="update" href="{{ route('users.edit',$user->id) }}">Add as Admin</a>
    
               @csrf
               @method('DELETE')
       
-              <button type="submit" class="btn btn-danger">Delete</button>
+              <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
             </form>
           </td>
           @endif

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
    
 use App\Models\User;
 use Illuminate\Http\Request;
+use DB;
   
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::latest()->paginate(5);
+        $users = DB::table('users')->orderBY('employee_id_number')->paginate(5);
     
         return view('admin.users.index',compact('users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -105,10 +106,18 @@ class UserController extends Controller
     
         // $user->update($request->all());
 
+        if ($user->is_admin === '1') {
+
         $user->save();
     
         return redirect()->route('users.index')
-                        ->with('success','Account updated successfully');
+                        ->with('success','Account was added as admin successfully');
+        } else {
+            $user->save();
+    
+            return redirect()->route('users.index')
+                        ->with('success','Account was removed as admin successfully');
+        }
     }
     
     /**
