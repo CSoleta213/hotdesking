@@ -80,7 +80,7 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        $users = \App\Models\User::all();
+        $users = DB::table('users')->orderBy('lastname')->paginate(100);
         $number_of_book = DB::table('books')->count();
         $number_of_books = DB::table('books')->count();
         return view('admin.admin',compact('users','number_of_books','number_of_book'));
@@ -95,7 +95,7 @@ class HomeController extends Controller
 
     public function adminBookings()
     {
-        $bookings = \App\Models\Book::all();
+        $bookings = DB::table('books')->orderBy('date')->paginate(100);
         return view('admin.bookings',compact('bookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }

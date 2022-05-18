@@ -17,7 +17,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data = Book::latest()->paginate(100);
+        $data = DB::table('books')->orderBy('date')->paginate(100);
         $desks = \App\Models\Desk::all();
     
         return view('books.index',compact('data', 'desks'))
