@@ -1583,28 +1583,6 @@ li:hover{
   display: none;
 }
 
-@media screen and (max-width: 770px) {
-  .portrait {
-    display: block;
-  }
-  .landscape {
-    display: none;
-  }
-  .desk-map {
-    margin-top: 30px;
-  }
-}
-@media screen and (max-width: 540px) {
-  .desk-map {
-    margin-top: 50px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .desk-map {
-    margin-top: 70px;
-  }
-}
-
 .profile-header{
   color: #2e73f4;
 }
@@ -1633,9 +1611,30 @@ li:hover{
     width: 650px;
   }
 }
+@media screen and (max-width: 780px) {
+  .booking-admin{
+    margin-top: 30px;
+  }
+  }
 @media screen and (max-width: 770px) {
+  /* Profile User */
   .profile-tab{
     width: 550px;
+  }
+  /* Calendar User */
+  .portrait {
+    display: block;
+  }
+  .landscape {
+    display: none;
+  }
+  .desk-map {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .body-content.desk {
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 590px) {
@@ -1643,20 +1642,21 @@ li:hover{
     width: 450px;
   }
 }
+@media screen and (max-width: 540px) {
+  .desk-map {
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width: 490px) {
   .profile-tab{
     width: 350px;
   }
-}
-
-@media screen and (max-width: 780px) {
-.booking-admin{
-  margin-top: 30px;
-}
-}
-
-@media screen and (max-width: 490px) {
   .booking-admin{
     margin-top: 70px;
   }
+}
+@media screen and (max-width: 480px) {
+  .desk-map {
+    margin-top: 70px;
   }
+}
