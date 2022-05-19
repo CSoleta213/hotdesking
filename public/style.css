@@ -556,7 +556,7 @@ footer a:hover{
   margin-top: 50px;
   /* margin-left: 50px; */
 
-  margin-left: 50px;
+  /* margin-left: 50px; */
   background: #FF4269;
 }
 .cal h5{
@@ -616,6 +616,9 @@ footer a:hover{
   }
   .section-container .columns.content .content-container {
     padding: 2%;
+  }
+  .section-container .reverse {
+    flex-direction: column-reverse;
   }
 }
 /* END OF FEATURE PAGE */
@@ -1099,7 +1102,7 @@ tr:nth-child(odd) {
 }
 @media screen and (max-width:840px) {
   .book-table{
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 14px;
   }
   .t-book{
@@ -1108,12 +1111,12 @@ tr:nth-child(odd) {
 }
 @media screen and (max-width:780px) {
   .book-table{
-    margin-top: 120px;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width:720px) {
   .book-table{
-    margin-top: 120px;
+    margin-top: 50px;
   }
   .read, .edit, .del {
     margin: 3px;
@@ -1121,7 +1124,7 @@ tr:nth-child(odd) {
 }
 @media screen and (max-width:670px) {
   .book-table{
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .read, .edit, .del {
     margin: 1px;
@@ -1129,12 +1132,12 @@ tr:nth-child(odd) {
 }
 @media screen and (max-width:640px) {
   .book-table{
-    margin-top: 150px;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width:580px) {
   .book-table{
-    margin-top: 175px;
+    margin-top: 50px;
   }
   .action {
     text-align: center;
@@ -1142,7 +1145,7 @@ tr:nth-child(odd) {
 }
 @media screen and (max-width:550px) {
   .book-table{
-    margin-top: 200px;
+    margin-top: 100px;
   }
   .del {
    margin: 10px !important;
@@ -1223,22 +1226,23 @@ tr:nth-child(odd) {
 #toggle {
   display: none;
 }
+
 /*Media query*/
 @media only screen and (max-width: 780px){
- iframe {
+ iframe.demo{
    width: 480px; 
    height: 270px;
  }
 }
 
 @media only screen and (max-width: 670px){
-  iframe {
+  iframe.demo {
     width: 400px;
     height: 220px;
   }
  }
 @media only screen and (max-width: 540px){
-  iframe {
+  iframe.demo {
     width: 350px;
     height: 210px;
   }
@@ -1250,11 +1254,14 @@ tr:nth-child(odd) {
     justify-content: center;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .extra-content {
     justify-content: center;
   }
-
+  iframe.my-cal-frame{
+    width: 950px;
+    height: 720px;
+  }
 .read-more  {
   margin-left: 35%;
   display: center;
@@ -1264,7 +1271,50 @@ tr:nth-child(odd) {
    display: none;
 }
 }
-
+@media screen and (max-width: 1100px) {
+  iframe.my-cal-frame{
+    width: 850px;
+    height: 620px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  iframe.my-cal-frame{
+    width: 750px;
+    height: 520px;
+  }
+}
+@media screen and (max-width: 905px) {
+  iframe.my-cal-frame{
+    width: 650px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 856px) {
+  iframe.my-cal-frame{
+    margin-top: 50px;
+    width: 650px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 790px) {
+  iframe.my-cal-frame{
+    margin-top: 50px;
+    width: 550px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 615px) {
+  iframe.my-cal-frame{
+    width: 450px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 490px) {
+  iframe.my-cal-frame{
+    width: 350px;
+    height: 450px;
+  }
+}
 @media (min-width: 768px) {
   .read-more {
     display: none;
@@ -1314,7 +1364,7 @@ tr:nth-child(odd) {
   h2 {
     font-size: 18px;
   }
-  iframe  {
+  iframe.demo  {
     width: 200px;
     height: 100px;
   } 
@@ -1539,5 +1589,62 @@ li:hover{
   }
   .landscape {
     display: none;
+  }
+  .desk-map {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .desk-map {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .desk-map {
+    margin-top: 70px;
+  }
+}
+
+.profile-header{
+  color: #2e73f4;
+}
+
+.body-content.profile {
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-tab{
+  width: 950px;
+}
+
+@media screen and (max-width: 1120px) {
+  .profile-tab{
+    width: 850px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .profile-tab{
+    width: 750px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .profile-tab{
+    width: 650px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .profile-tab{
+    width: 550px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .profile-tab{
+    width: 450px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .profile-tab{
+    width: 350px;
   }
 }
