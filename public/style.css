@@ -1648,3 +1648,15 @@ li:hover{
     width: 350px;
   }
 }
+
+@media screen and (max-width: 780px) {
+.booking-admin{
+  margin-top: 30px;
+}
+}
+
+@media screen and (max-width: 490px) {
+  .booking-admin{
+    margin-top: 70px;
+  }
+  }
