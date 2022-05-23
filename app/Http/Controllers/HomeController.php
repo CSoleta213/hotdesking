@@ -95,8 +95,9 @@ class HomeController extends Controller
 
     public function adminBookings()
     {
+        $dateToday = now();
         $bookings = DB::table('books')->orderBy('date')->paginate(100);
-        return view('admin.bookings',compact('bookings'))
+        return view('admin.bookings',compact('bookings', 'dateToday'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

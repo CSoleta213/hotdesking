@@ -7,7 +7,7 @@
     </div>
     <div class="body-content">
       <div class="pull-right">
-          <a class="add" href="{{ route('users.create') }}">Add New Account</a>
+          <a href="{{ route('users.create') }}"><div class="add">Add New User</div></a>
       </div>
    
       @if ($message = Session::get('success'))
@@ -45,29 +45,41 @@
           @if ($user->is_admin === 1)
           <td>
             <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+            <div style="display: flex;">
+            <div>
    
               <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
     
-              <a class="update" href="{{ route('users.edit',$user->id) }}">Remove as Admin</a>
+              <a href="{{ route('users.edit',$user->id) }}"><div class="update">Remove as Admin</div></a>
+
+</div>
    
               @csrf
               @method('DELETE')
-      
+              <div>
               <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
+              </div>
+              </div>
             </form>
           </td>
           @else
           <td>
-            <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+          <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+            <div style="display: flex;">
+            <div>
    
               <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
     
-              <a class="update" href="{{ route('users.edit',$user->id) }}">Add as Admin</a>
+              <a href="{{ route('users.edit',$user->id) }}"><div class="update">Add as Admin</div></a>
+
+</div>
    
               @csrf
               @method('DELETE')
-      
+              <div>
               <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
+              </div>
+              </div>
             </form>
           </td>
           @endif

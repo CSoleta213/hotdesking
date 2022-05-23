@@ -9,8 +9,8 @@ class Event extends Model
 {
     use HasFactory;
 
-    protected $with = ['calendar'];
-    protected $fillable = ['google_id', 'name', 'description', 'allday', 'started_at', 'ended_at'];
+    protected $with = ['books'];
+    protected $fillable = ['google_id', 'name', 'office_name', 'desk_number', 'date'];
 
     public function calendar()
     {
@@ -27,8 +27,8 @@ class Event extends Model
         return $this->asDateTime($end)->setTimezone($this->calendar->timezone);
     }
 
-    public function getDurationAttribute()
-    {
-        return $this->started_at->diffForHumans($this->ended_at, true);
-    }
+    // public function getDurationAttribute()
+    // {
+    //     return $this->started_at->diffForHumans($this->ended_at, true);
+    // }
 }
