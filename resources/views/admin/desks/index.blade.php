@@ -6,7 +6,7 @@
       <h1 class="content-title">DESKS MANAGEMENT</h1>
       <p class="title-desc">Add and Manage office desks and meeting rooms according to the social distancing policy.  </p>
     </div>
-    <div class="body-content">
+    <div class="body-content desk">
       <!-- Trigger/Open The Modal -->
       <button class="add-new-desk-modal add" href="#myModal1">Add New Desk</button>
       @if ($message = Session::get('success'))

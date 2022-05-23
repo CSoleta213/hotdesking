@@ -7,7 +7,7 @@
       <p class="title-desc">The simplest and most configurable application for booking and managing your desks and meeting rooms.</p>
     </div>
     <div class="body-content">
-      <div class="section-container">
+      <div class="section-container reverse">
         <div class="columns content">
           <div class="content-container cal">
             <a href="/my-calendar"><h5>Calendar</h5></a>
@@ -48,7 +48,7 @@
         </div>
       </div>
     
-      <div class="section-container">
+      <div class="section-container reverse">
         <div class="columns content">
           <div class="content-container desk-view">
             <a href="{{ url('/books') }}"><h5>My Bookings</h5></a>
