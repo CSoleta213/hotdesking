@@ -19,6 +19,7 @@
     <title>Desktiny</title>
   </head>
   <body>
+    <script id="6284ca190d8c86492be82cbf" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
     <div class="sidebar close">
         <label for="toggle">&#9776;</label>
         <input type="checkbox" id="toggle">
@@ -51,12 +52,12 @@
           </ul>
         </li>
         <li class="nav-link">
-          <a href="/my-calendar/monthly">
+          <a href="/my-calendar">
             <i class='bx bx-calendar' ></i>
             <span class="link_name">My Calendar</span>
           </a>
           <ul class="sub-menu blank">
-            <li><a class="link_name" href="/my-calendar/monthly">My Calendar</a></li>
+            <li><a class="link_name" href="/my-calendar">My Calendar</a></li>
           </ul>
         </li>
         <li class="nav-link">

@@ -3,7 +3,7 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Desk View</span>
+      <h1 class="content-title">Desk View</h1>
     </div>
     <div class="body-content">
       <!-- The Modal -->
@@ -37,10 +37,13 @@
               <input type="text" name="office_name" value="{{ $book->office_name }}" class="form-control" placeholder="Office Name"><br><br>
 
               <label for="desk_number">Desk Number:</label>
-              <input type="text" name="desk_number" value="{{ $book->desk_number }}" class="form-control" placeholder="Desk Number"><br><br>
+              <input type="text" name="desk_number" value="{{ $book->desk_number }}" class="form-control" placeholder="Desk Number" style="text-transform:uppercase"><br><br>
 
               <label for="date">Date:</label>
               <input type="text" name="date" value="{{ $book->date }}" class="form-control" placeholder="Date"><br><br>
+
+              <input type="text" name="codeNameDate" value="{{ $book->name }}{{ $book->date }}" hidden>
+              <input type="text" name="codeNumDate" value="{{ $book->desk_number }}{{ $book->date }}" hidden>
 
               <input type="submit" value="Submit">
             </div>

@@ -5,23 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use DB;
+use Spatie\GoogleCalendar\Event;
+use Carbon\Carbon;
 
 class BookController extends Controller
 {
-    public function save_book(Request $request)
-    {
-        $book = new Book;
-
-        $book->name = request('name');
-        $book->office_name = request('office_name');
-        $book->desk_number = request('desk_number');
-        $book->date = request('date');
-
-        $book->save();
-
-        return redirect('/home');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -29,9 +17,10 @@ class BookController extends Controller
      */
     public function index()
     {
-        $data = Book::latest()->paginate(5);
+        $data = DB::table('books')->orderBy('date')->paginate(100);
+        $desks = \App\Models\Desk::all();
     
-        return view('books.index',compact('data'))
+        return view('books.index',compact('data', 'desks'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -53,17 +42,57 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-            'name' => 'required',
-            'office_name' => 'required',
-            'desk_number' => 'required',
-            'date' => 'required',
-        ]);
+        //  $request->validate([
+        //     // 'name' => 'required',
+        //     // 'office_name' => 'required',
+        //     // 'desk_number' => 'required',
+        //     // 'date' => 'required',
+        //     'code' => 'required|unique',
+        // ]);
+
+        // if(true === $code) {
+        //     return back()->with('error','Duplicated');
+        // }
     
-        Book::create($request->all());
-     
-        return redirect()->route('books.index')
-                        ->with('success','Booked successfully.');
+        // Book::create($request->all());
+
+        $codeNameDate = $request->input('name').$request->input('date');
+        $codeNumDate = $request->input('desk_number').$request->input('date');
+
+            $book = new Book;
+
+            $book->name = request('name');
+            $book->office_name = request('office_name');
+            $book->desk_number = request('desk_number');
+            $book->date = request('date');
+            $book->codeNameDate = $codeNameDate;
+            $book->codeNumDate = $codeNumDate;
+
+
+            $check = Book::where([
+                ['codeNameDate', "=", $codeNameDate],
+            ])->first();
+    
+            if($check)
+            {
+                $request->session()->flash('error', 'Your input is not allowed. Either the desk is taken or you have two entry for today.');
+                return redirect()->route('books.index');
+            }
+            else{
+                $book->save();
+
+                $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
+                $endTime = (clone $startTime)->addHour(9);
+
+                Event::create([
+                    'name' => $request->input('name').' - '.$request->input('desk_number'),
+                    'startDateTime' => $startTime,
+                    'endDateTime' => $endTime,
+                ]);
+            
+                return redirect()->route('books.index',compact('book'))
+                            ->with('success','Booked successfully.');
+            }
     }
 
     /**
@@ -74,7 +103,8 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        return view('books.show',compact('book'));
+        $desks = \App\Models\Desk::all();
+        return view('books.show',compact('book', 'desks'));
     }
 
     /**
@@ -97,17 +127,41 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        $request->validate([
-            'name' => 'required',
-            'office_name' => 'required',
-            'desk_number' => 'required',
-            'date' => 'required',
-        ]);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'office_name' => 'required',
+        //     'desk_number' => 'required',
+        //     'date' => 'required',
+        //     'codeNameDate' => 'required',
+        //     'codeNumDate' => 'required',
+        // ]);
+
+        $codeNameDate = $request->input('name').$request->input('date');
+        $codeNumDate = $request->input('desk_number').$request->input('date');
+
+        $book->name = request('name');
+        $book->office_name = request('office_name');
+        $book->desk_number = request('desk_number');
+        $book->date = request('date');
+        $book->codeNameDate = $codeNameDate;
+        $book->codeNumDate = $codeNumDate;
+
+        $check = Book::where([
+            ['codeNameDate', "=", $codeNameDate],
+        ])->first();
     
-        $book->update($request->all());
+        if($check)
+        {
+            $request->session()->flash('error', 'Your input is not allowed. Either the desk is taken or you have two entry for today.');
+            return redirect()->route('books.index');
+        }
+        else{
+    
+            $book->save();
     
         return redirect()->route('books.index')
                         ->with('success','Book updated successfully');
+        }
     }
 
     /**
@@ -123,6 +177,8 @@ class BookController extends Controller
         return redirect()->route('books.index')
                         ->with('success','Book deleted successfully');
     }
+
+    
 }
 // Check the duplicate entry via two criteria: desk_number and date
 // SELECT * FROM `books` WHERE name="Carlo Soleta" && date="2022-04-03";

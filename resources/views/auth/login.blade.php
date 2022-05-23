@@ -64,52 +64,63 @@
     <div class="container">
       <div class="left">
         <div class="logo">
-          <a href="/">
-            <img src="{{ asset('/full-logo.png') }}" alt="" class="logo-d">
+          <a href="/" style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <img src="{{ asset('/desktiny-d.png') }}" alt="Logo" class="logo-d"><br>
+            <img src="{{ asset('/desktiny-logo.png') }}" style="width: 550px;">
           </a>
         </div>
       </div>
       <div class="right">
         <h2 style="text-align:center;">Welcome Desky!</h2>
         <p>Join in reserving the best destined seat for you</p>
+
         <form method="POST" action="{{ route('login') }}">
           @csrf
 
-          <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+          @if ($message = Session::get('error'))
+            <div class="alert-fail">
+              <p>{{ $message }}</p>
+            </div>
+            <br>
+          @endif
 
-          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          <label for="email">{{ __('Email Address') }}</label>
+
+          <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="Enter Email" required autocomplete="email" autofocus>
 
           @error('email')
-            <span class="invalid-feedback" role="alert">
+            <span role="alert">
               <strong>{{ $message }}</strong>
             </span>
           @enderror
 
-          <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+          <br><br>
 
-          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+          <label for="password">{{ __('Password') }}</label>
+
+          <input id="password" type="password" name="password" placeholder="Enter Password" required autocomplete="current-password">
 
           @error('password')
-            <span class="invalid-feedback" role="alert">
+            <span role="alert">
               <strong>{{ $message }}</strong>
             </span>
           @enderror
 
-          <div class="checkbox-with-label">
-          <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} style="width: 5%">
+          <!-- <div class="checkbox-with-label">
+          <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} style="width: 5%">
 
-          <label class="form-check-label" for="remember" style="width: 45%">
+          <label for="remember" style="width: 45%">
             {{ __('Remember Me') }}
           </label>
           
           @if (Route::has('password.request'))
-            <a class="btn btn-link" href="{{ route('password.request') }}">
+            <a href="{{ route('password.request') }}">
               <div style="text-align: right;">{{ __('Forgot Your Password?') }}</div>
             </a>
           @endif
-          </div>
+          </div> -->
 
-          <br>
+          <br><br>
 
           <div class="button">
             <center>

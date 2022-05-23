@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 /* GLOBAL CSS */
 * {
   padding: 0;
@@ -25,6 +27,9 @@ h3 {
 h4 {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
+}
+a {
+  text-decoration: none;
 }
 .button button {
   background: #4484FF;
@@ -69,6 +74,24 @@ input[type=submit] {
   background-color: #4484FF;
   color: #FFF;
   border-radius: 10px;
+}
+
+.alert-success{
+  text-align:center; 
+  color: #155724; 
+  background-color:#c7eed0;
+}
+
+.alert-fail{
+  text-align:center; 
+  color: #CF222E; 
+  background-color:#FFEBE9;
+  border: #FFC1C0 1px Solid;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* END OF GLOBAL CSS */
 
@@ -233,12 +256,14 @@ footer a:hover{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* margin-top: 100px; */
 }
 .brand {
   display: flex;
   flex-direction: row;
   flex: 1;
   justify-content: center;
+  padding-top: 25px; 
   /* background-color: rgb(54, 54, 54); */
 }
 .tag-fluid {
@@ -282,7 +307,7 @@ footer a:hover{
   color: #4484ff;
 }
 .img-worker {
-  width: 650px;
+  width: 550px;
   height: auto;
   position: absolute;
   z-index: 2;
@@ -326,6 +351,11 @@ footer a:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3Cpattern id=%22pattern%22 patternUnits=%22userSpaceOnUse%22 width=%2225%22 height=%2225%22 viewBox=%220 0 100 100%22 fill=%22%23e3d0ff%22 %3E %3Ccircle cx=%2250%22 cy=%2250%22 r=%2212.5%22 %2F%3E %3C%2Fpattern%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M770%2C656.5Q602%2C813%2C361%2C794.5Q120%2C776%2C112.5%2C494.5Q105%2C213%2C379%2C120.5Q653%2C28%2C795.5%2C264Q938%2C500%2C770%2C656.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22url(%23pattern)%22 d=%22M770%2C656.5Q602%2C813%2C361%2C794.5Q120%2C776%2C112.5%2C494.5Q105%2C213%2C379%2C120.5Q653%2C28%2C795.5%2C264Q938%2C500%2C770%2C656.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+@media only screen and (max-width:1270px) {
+  .our-fluid, .our-fluid-img-tx{
+    padding: 0;
+  }
 }
 @media only screen and (max-width:1024px) {
   .our-fluid, .our-fluid-img-tx{
@@ -381,6 +411,12 @@ footer a:hover{
   /* For tablets: */
   .brand, .our-fluid {
     flex-direction: column-reverse;
+  }
+  .title, .subtitle{
+    text-align: center;
+  }
+  .button-reserve {
+    width: 100%;
   }
   .our-fluid, .our-fluid-img-tx{
     padding: 0;
@@ -493,21 +529,23 @@ footer a:hover{
 /* FEATURE PAGE CSS*/
 .section-container {
   display: flex;
-  padding: 0px 70px 20px 50px;
+  padding: 0px 3% 1% 3%;
   flex: 1;
   justify-content: center;
   align-items: center;
+  /* background-color: #06BB87; */
 }
 .section-container .columns {
   flex: 0 0 auto;
   width: 50%;
+  /* background-color: #ffff; */
 }
 .section-container .columns.image {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 473px;
-  height: 356px;
+  /* background-size: cover; */
+  width: 100%;
+  height: auto;
 }
 .columns.image {
   margin-top: 50px;
@@ -517,9 +555,11 @@ footer a:hover{
 #calendar{
   margin-top: 50px;
   /* margin-left: 50px; */
+
+  /* margin-left: 50px; */
   background: #FF4269;
 }
-.calendar h5{
+.cal h5{
   color: #FF4269;
 }
 #office-view{
@@ -530,16 +570,16 @@ footer a:hover{
 .office-view h5{
   color: #F2A645;
 }
-#desk-view{
+ #desk-view{
   margin-top: 50px;
-  /* margin-left: 50px; */
+  margin-left: 50px;
   background: #06BB87;
 }
 .desk-view h5{
   color: #06BB87;
-}
+} 
 .section-container .columns.content .content-container {
-  padding: 40px 50px;
+  padding: 1% 5%;
 }
 .section-container .columns.content .content-container h5 {
   font-weight: 700;
@@ -564,19 +604,28 @@ footer a:hover{
   color: #3d3d42;
   margin-top: -20px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1120px) {
+  .section-container {
+    flex-direction: column;
+  }
+  .section-container .columns {
+    width: 100%;
+  }
+  .section-container .columns.content .content-container {
+    padding: 2%;
+  }
+  .section-container .reverse {
+    flex-direction: column-reverse;
+  }
 }
 /* END OF FEATURE PAGE */
 
 /* DEMO PAGE CSS */
 .demo {
   text-align: center;
-}
-.demo-h1 {
-    color: #4484ff;
-}
-.demo-h2 {
-    color: #2E2E33;
 }
 .demo-desc {
   display: flex;
@@ -621,7 +670,7 @@ footer a:hover{
 .sidebar{
   position: fixed;
   top: 0;
-  left: 0;
+  left: -5px;
   height: 100%;
   width: 260px;
   background: #FFF;
@@ -852,18 +901,19 @@ footer a:hover{
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
+  padding-top: 50px;
 }
 .sidebar.close ~ .body-section{
   left: 78px;
   width: calc(100% - 78px);
 }
 .body-section .body-header{
-  margin: 0 35px;
-  height: 150px;
+  padding: 0 5% 0 5% ;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
 }
 .body-section .body-header .bx-menu
@@ -874,9 +924,22 @@ footer a:hover{
   cursor: pointer;
 }
 .body-content {
-  padding: 0 50px 50px;
+  padding: 0 5% 5%;
+  flex: 1
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 720px) {
+  .body-section{
+    left: 78px;
+    width: calc(100% - 78px);
+    z-index: 100;
+  }
+  .sidebar.close ~ .body-section{
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .sidebar.close .menu-links li .sub-menu{
     display: none;
   }
@@ -894,6 +957,12 @@ footer a:hover{
   .sidebar.close ~ .body-section{
     width: 100%;
     left: 0;
+  }
+}
+@media screen and (max-width: 420px) { 
+  .body-section .body-header{
+    align-items: center;
+    justify-content: center;
   }
 }
 /* END OF SIDE BAR */
@@ -961,47 +1030,10 @@ footer a:hover{
     cursor: pointer;
   }
   .modal-body {padding: 10px 16px;}
-  .modal-button {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    width: 20px;
-    color: #FFF;
-    background-color: #4484FF;
-    border-radius: 50%;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-  }
-  #dot1 {
-    top: 41%;
-    left: 36.2%;
-  }
-  #dot2 {
-    top: 41%;
-    left: 42.25%;
-  }
-  #dot3 {
-    top: 41%;
-    left: 48.5%;
-  }
-  #dot4 {
-    top: 41%;
-    left: 54.8%;
-  }
-  #dot5 {
-    top: 41%;
-    left: 61.5%;
-  }
   /* END OF MODAL */
 
 /* My Calendar */
-.alert-success{
-  text-align:center; 
-  color: #155724; 
-  background-color:#c7eed0;
-}
-.month, .week {
+.monthbtn, .week {
   margin: 3px;
   font-size: 13px;
   width: auto;
@@ -1022,11 +1054,11 @@ footer a:hover{
 .fa-plus {
   font-size: 13px;
 }
-.add {
-    margin: 10px;
+.add, .go-to {
+    margin: 0 10px;
     font-size: 13px;
     width: auto;
-    padding:8px;
+    padding: 8px;
     background: #4484FF;
     color: #fff;
     outline: none;
@@ -1036,7 +1068,7 @@ footer a:hover{
     text-decoration: none;
     text-align: right;
 }
-.add:hover {
+.add:hover, .go-to:hover, .active {
     background: #5055dc;
     color: #fff;
     transition: 0.5s;
@@ -1049,6 +1081,8 @@ footer a:hover{
 .list-table {
   border-collapse: collapse;
   width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
 table th + th { border-left: thin solid #FFFFFF; }
 td, th {
@@ -1058,6 +1092,7 @@ td, th {
 th{
   height: 10px;
   color: #FFFFFF;
+  background-color: #313499;
 }
 table, td {
   border: thin solid #313499;
@@ -1065,9 +1100,59 @@ table, td {
 tr:nth-child(odd) {
   background-color: #ffff;
 }
-
+@media screen and (max-width:840px) {
+  .book-table{
+    margin-top: 50px;
+    font-size: 14px;
+  }
+  .t-book{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:780px) {
+  .book-table{
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width:720px) {
+  .book-table{
+    margin-top: 50px;
+  }
+  .read, .edit, .del {
+    margin: 3px;
+  }
+}
+@media screen and (max-width:670px) {
+  .book-table{
+    margin-top: 50px;
+  }
+  .read, .edit, .del {
+    margin: 1px;
+  }
+}
+@media screen and (max-width:640px) {
+  .book-table{
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width:580px) {
+  .book-table{
+    margin-top: 50px;
+  }
+  .action {
+    text-align: center;
+  }
+}
+@media screen and (max-width:550px) {
+  .book-table{
+    margin-top: 100px;
+  }
+  .del {
+   margin: 10px !important;
+  }
+}
 /* END OF TABLE */
-.show {
+.read {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1081,12 +1166,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.show:hover {
+.read:hover {
   background: #2e952e;
   color: #fff;
   transition: 0.5s;
 }
-.edit {
+.update {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1100,12 +1185,12 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.edit:hover {
+.update:hover {
   background: #be8132;
   color: #fff;
   transition: 0.5s;
 }
-.del {
+.destroy {
   margin: 5px;
   font-size: 13px;
   width: 50px;
@@ -1119,7 +1204,7 @@ tr:nth-child(odd) {
   transition: 0.5s;
   text-decoration: none;
 }
-.del:hover {
+.destroy:hover {
   background: #b85039;
   color: #fff;
   transition: 0.5s;
@@ -1127,10 +1212,12 @@ tr:nth-child(odd) {
 .action{
   vertical-align: middle; 
   text-align: center;
+  display: inline-block;
+  /* display: flex; */
 }
 /* End of My Calendar */
 
-label {
+.sidebar label {
   margin: 0;
   font-size: 26px;
   line-height: 70px;
@@ -1140,11 +1227,25 @@ label {
 #toggle {
   display: none;
 }
+
 /*Media query*/
+@media only screen and (max-width: 780px){
+ iframe.demo{
+   width: 480px; 
+   height: 270px;
+ }
+}
+
+@media only screen and (max-width: 670px){
+  iframe.demo {
+    width: 400px;
+    height: 220px;
+  }
+ }
 @media only screen and (max-width: 540px){
-  iframe {
-    width: 290px;
-    height: 190px;
+  iframe.demo {
+    width: 350px;
+    height: 210px;
   }
   .body-content {
     font-size: 15px;
@@ -1154,11 +1255,14 @@ label {
     justify-content: center;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .extra-content {
     justify-content: center;
   }
-
+  iframe.my-cal-frame{
+    width: 950px;
+    height: 720px;
+  }
 .read-more  {
   margin-left: 35%;
   display: center;
@@ -1168,7 +1272,50 @@ label {
    display: none;
 }
 }
-
+@media screen and (max-width: 1100px) {
+  iframe.my-cal-frame{
+    width: 850px;
+    height: 620px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  iframe.my-cal-frame{
+    width: 750px;
+    height: 520px;
+  }
+}
+@media screen and (max-width: 905px) {
+  iframe.my-cal-frame{
+    width: 650px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 856px) {
+  iframe.my-cal-frame{
+    margin-top: 50px;
+    width: 650px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 790px) {
+  iframe.my-cal-frame{
+    margin-top: 50px;
+    width: 550px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 615px) {
+  iframe.my-cal-frame{
+    width: 450px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 490px) {
+  iframe.my-cal-frame{
+    width: 350px;
+    height: 450px;
+  }
+}
 @media (min-width: 768px) {
   .read-more {
     display: none;
@@ -1194,9 +1341,6 @@ label {
    color: rgb(201, 197, 190);
    justify-content: center;
 }
-  iframe  {
-    width: 100%;
-} 
 .sidebar, .sidebar close{
   display: block;
 }
@@ -1208,7 +1352,7 @@ label {
 .menu-links {
   display: block;
 }
-label {
+.sidebar label {
   display: block;
   cursor: pointer;
 }
@@ -1221,7 +1365,7 @@ label {
   h2 {
     font-size: 18px;
   }
-  iframe  {
+  iframe.demo  {
     width: 200px;
     height: 100px;
   } 
@@ -1238,4 +1382,282 @@ label {
  .body-content {
    padding: 10px;
  }
+}
+
+/*Dashboard*/
+.content .cards {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.icon-case{
+  height: 80px;
+  width: 80px;
+  background-color: #bbb;
+  border-radius: 50%;
+ 
+}
+.us-dash{
+  margin-top: 100px;
+}
+.icon-case h1{
+  font-size: 48px;
+  text-align: center;
+   margin-top: 5px;
+}
+.box1{
+  margin-left: -15px; 
+  margin-right: -5px; 
+   text-align: center;
+}
+.box2{
+  margin-left: -20px; 
+  margin-right: -10px; 
+   text-align: center;
+}
+.box3{
+  margin-right: -10px; 
+  margin-left: -30px;
+  text-align: center;
+}
+.dot1{
+  margin: 20px;
+   background: rgba(6, 187, 135, 0.72);
+}
+.dot3{
+  margin-right: 20px; 
+  margin-left: 10px;  
+  width: 100px;
+  background: rgba(242, 104, 73, 0.72);
+}
+.content .cards .card {
+  width: 250px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.content .content-2 {
+  min-height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.content .content-2  {
+  min-height: 50vh;
+  flex: 5;
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.content .content-2  {
+  flex: 2;
+  background: white;
+  min-height: 50vh;
+  margin: 0 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+.calendar{
+  margin-left: -70px;
+}
+
+.card{
+  margin-right: 40px;
+
+}
+
+/*Filter*/
+.inp-group{
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-top: -60px;
+}
+#lang{
+  border-radius: 10px;
+}
+
+/*Team Member*/
+.list-wrapper {
+  width: 300px;
+ /* margin: 50px auto; */
+  margin-right: 30px;
+  margin-left: -20px;
+}
+
+.list {
+  list-style: none;
+  padding: 10px 20px;
+  margin-bottom: 80px;
+}
+
+.list-item {
+  display: flex;
+  margin: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content{
+    margin-left: 20px;
+  }
+.list-item h4, p{
+      margin: 0;
+    }
+.list-item p{
+      margin-top: 5px;
+      font-size: small;
+  }
+  .list-item-image{
+    width: 30px;
+    height: auto;
+  }
+  .list-item-content h4, p{
+    margin-left: 10px;
+  }
+  
+
+  /*Dashboard Cal.*/
+  
+.calendar-wrapper {
+  max-width: 300px;
+  margin-left:50px;
+  text-align: left;
+  
+}
+.dash-cal{
+  margin:50px;
+  width: 350px;
+  margin-top: -100px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-name {
+  background: #4484FF;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  padding: 5px;
+}
+li:hover{
+ background-color: #80acff;
+ border-radius: 50px;
+}
+.titles{
+  margin-left: -70px;
+  width: 50%;
+  float: left;
+  font-weight: bold;
+}
+
+.side-title{
+  text-align: right;
+  flex-grow: 1;
+  display: block;
+  text-decoration: none;
+}
+
+.portrait {
+  display: none;
+}
+
+.profile-header{
+  color: #2e73f4;
+}
+
+.body-content.profile {
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-tab{
+  width: 950px;
+}
+
+@media screen and (max-width: 1120px) {
+  .profile-tab{
+    width: 850px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .profile-tab{
+    width: 750px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .profile-tab{
+    width: 650px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .booking-admin{
+    margin-top: 30px;
+  }
+  }
+@media screen and (max-width: 770px) {
+  /* Profile User */
+  .profile-tab{
+    width: 550px;
+  }
+  /* Calendar User */
+  .portrait {
+    display: block;
+  }
+  .landscape {
+    display: none;
+  }
+  .desk-map {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .body-content.desk {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .profile-tab{
+    width: 450px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .desk-map {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .profile-tab{
+    width: 350px;
+  }
+  .booking-admin{
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .desk-map {
+    margin-top: 70px;
+  }
 }

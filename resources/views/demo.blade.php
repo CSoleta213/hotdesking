@@ -3,22 +3,17 @@
 @section('content')
   <section class="body-section">
     <div class="body-header">
-      <span class="text">Demo</span>
+      <h1 class="content-title">Demo</h1>
+      <p class="title-desc">Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</p>
     </div>
+    <h1 class="content-title"></h1>
     <div class="body-content">
       <div class="demo">
-        <header>
-          <div class="demo-h1">
-            <h1>Demo</h1>
-          </div>
-        </header>
-        <div class="demo-h2">
-          <h2>Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</h2>
-        </div>
         <div class="demo-desc">
           <div class="Add-Reservation">
             <!-- embed -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2og2DbjaX0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <iframe class="demo" width="560" height="315" src="https://www.youtube.com/embed/2og2DbjaX0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
             <h3>Add a reservation</h3>
             <p>You want to book a desk in advance?</p>
@@ -47,7 +42,7 @@
     
           <div class="Cancel-Reservation">
             <!-- embed -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QYHN3Y6M5ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="demo" width="560" height="315" src="https://www.youtube.com/embed/QYHN3Y6M5ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
             <h3>Cancel reservation</h3>
             <p>How about canceling reservations?</p>
@@ -74,7 +69,7 @@
      
           <div class="View-Dashboard">
             <!-- embed -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/onLS-hUIMP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="demo" width="560" height="315" src="https://www.youtube.com/embed/onLS-hUIMP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
             <h3>View dashboard</h3>
             <p>We have a clear, interactive and user-friendly dashboard.</p>
@@ -101,7 +96,7 @@
           
           <div class="Manage-Schedule">
             <!-- embed -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LwN3jm3fxMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="demo" width="560" height="315" src="https://www.youtube.com/embed/LwN3jm3fxMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
             
             <h3>Manage schedule</h3>

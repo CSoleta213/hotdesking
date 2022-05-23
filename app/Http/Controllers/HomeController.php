@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\Book;
 
 class HomeController extends Controller
 {
@@ -22,10 +23,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
+        $date = $request->input('date');
+        
+        $number_of_book = DB::table('books')->count();
         $number_of_books = DB::table('books')->count();
-        return view('home',compact('number_of_books'));
+        return view('home',compact('number_of_books','number_of_book'));
     }
 
     public function my_profile()
@@ -33,14 +37,9 @@ class HomeController extends Controller
         return view('my_profile');
     }
 
-    public function my_calendar_monthly()
+    public function my_calendar()
     {
-        return view('my_calendar.monthly');
-    }
-
-    public function my_calendar_weekly()
-    {
-        return view('my_calendar.weekly');
+        return view('my_calendar');
     }
 
     public function my_bookings()
@@ -68,7 +67,10 @@ class HomeController extends Controller
 
     public function features()
     {
-        return view('features');
+        $data = Book::latest()->paginate(100);
+    
+        return view('features',compact('data'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function office_map()
@@ -78,7 +80,10 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        return view('admin.admin');
+        $users = DB::table('users')->orderBy('lastname')->paginate(100);
+        $number_of_book = DB::table('books')->count();
+        $number_of_books = DB::table('books')->count();
+        return view('admin.admin',compact('users','number_of_books','number_of_book'));
     }
 
     public function adminUsersList()
@@ -90,8 +95,21 @@ class HomeController extends Controller
 
     public function adminBookings()
     {
-        $bookings = \App\Models\Book::all();
+        $bookings = DB::table('books')->orderBy('date')->paginate(100);
         return view('admin.bookings',compact('bookings'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function adminCalendarView()
+    {
+        return view('admin.calendar_view');
+    }
+
+    public function adminAvailableDesks()
+    {
+        $bookings = \App\Models\Book::all();
+        $desks = \App\Models\Desk::all();
+        return view('admin.available_desks', compact('desks', 'bookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DeskController;
+use App\Http\Controllers\UserController;
+use Spatie\GoogleCalendar\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','welcome');
+Route::view('/','auth.login');
+
+// Route::get('/', function() {
+
+    // $event = new Event;
+
+    // $event->name = '';
+    // $event->startDateTime = Carbon\Carbon::now();
+    // $event->endDateTime = Carbon\Carbon::now()->addHour();
+
+    // $event->save();
+
+    // $e = Event::get();
+
+//     return view('welcome');
+// });
 
 Route::view('/privacy','privacy.privacy');
 
@@ -25,9 +43,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/my-profile', [App\Http\Controllers\HomeController::class, 'my_profile'])->name('my_profile');
 
-Route::get('/my-calendar/monthly', [App\Http\Controllers\HomeController::class, 'my_calendar_monthly'])->name('my_calendar_monthly');
-
-Route::get('/my-calendar/weekly', [App\Http\Controllers\HomeController::class, 'my_calendar_weekly'])->name('my_calendar_weekly');
+Route::get('/my-calendar', [App\Http\Controllers\HomeController::class, 'my_calendar'])->name('my_calendar');
 
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
 
@@ -43,4 +59,12 @@ Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'adminUs
 
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'adminBookings'])->name('admin.bookings')->middleware('is_admin');
 
+Route::get('/admin/calendar-view', [App\Http\Controllers\HomeController::class, 'adminCalendarView'])->name('admin.calendar_view')->middleware('is_admin');
+
+Route::get('/admin/available-desks', [App\Http\Controllers\HomeController::class, 'adminAvailableDesks'])->name('admin.available_seats')->middleware('is_admin');
+
 Route::resource('books', App\Http\Controllers\BookController::class);
+
+Route::resource('/admin/desks', DeskController::class)->middleware('is_admin');
+
+Route::resource('/admin/users', UserController::class);
