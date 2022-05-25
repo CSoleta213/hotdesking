@@ -19,10 +19,13 @@
           </div>
         </div>
         <div class="section-container">
-        <a href="#">
-        <div class="columns image" id="calendar"> <img src="{{ asset('/Calendar.PNG') }}" alt="Reservation Listing" width="100%" ></div>
-        </a>
-      </div> 
+          <a href="{{ url('/books') }}" style="cursor:zoom-in;">
+          <!-- <div class="columns image" id="calendar"> -->
+            <!-- <img src="{{ asset('/Calendar.PNG') }}" alt="Reservation Listing" width="100%" > -->
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="500" height="350" frameborder="0" scrolling="no"></iframe>
+          <!-- </div> -->
+          </a>
+        </div> 
       </div>
 
 

@@ -19,7 +19,7 @@
     <title>Desktiny</title>
   </head>
   <body>
-  <script id="6284ca190d8c86492be82cbf" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+    <script id="6284ca190d8c86492be82cbf" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
     <div class="sidebar close">
       <div class="logo-details">
         <div class="logo-d">
@@ -79,7 +79,11 @@
         <li class="nav-link">
           <div class="profile-details">
             <div class="profile-content">
-              <a href="/my-profile"><img src="{{ asset('/avatar.png') }}" alt="profileImg"></a>
+              @if(Auth::user()->gender === "Male")
+                <a href="/my-profile"><img src="{{ asset('/avatar-for-male.png') }}" alt="profileImg"></a>
+              @else
+                <a href="/my-profile"><img src="{{ asset('/avatar-for-female.png') }}" alt="profileImg"></a>
+              @endif
             </div>
             <div class="name-job">
               <a href="/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>

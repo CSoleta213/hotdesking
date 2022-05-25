@@ -11,7 +11,7 @@
         <div style="display: flex; flex-direction: row; align-items: center">
           <div><a class="btn btn-primary go-to" href="/office-map">Go to Office Map</a></div>
           <!-- Trigger/Open The Modal -->
-          <div><button class="add-new-book-modal add" href="#myModal1"><i class="fas fa-light fa-plus"></i> Add Book</button></div>
+          <div><button class="add-new-book-modal add" href="#addNewBookFormModal"><i class="fas fa-light fa-plus"></i> Add Book</button></div>
         </div>
       </div>
      
@@ -31,21 +31,19 @@
         <tr>
           <th>No</th>
           <th>Name</th>
-          <th>Office Name</th>
           <th>Desk Number</th>
           <th>Date</th>
           <th width="280px">Action</th>
         </tr>
-        @forelse ($data as $key => $value)
-              @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname)
+        @forelse ($books as $key => $value)
+              @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname && $dateToday < $value->date)
               <tr>
                   <td>{{ ++$i }}</td>
                   <td>{{ $value->name }}</td>
-                  <td>{{ $value->office_name }}</td>
                   <td style="text-transform:uppercase">{{ $value->desk_number }}</td>
                   <td>{{ $value->date }}</td>
                   <td >
-                    <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">   
+                    <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">
                       <a class="read" href="{{ route('books.show',$value->id) }}"> Show</a>
                       <a class="update" href="{{ route('books.edit',$value->id) }}">Edit</a>   
                       @csrf
@@ -60,12 +58,12 @@
             @endforelse
       </table>
       <div style="display: flex; flex-direction: row; width: 100px">
-        {!! $data->links() !!}
+        {!! $books->links() !!}
       </div>
     </div>
   </section>
-  <!-- The Modal -->
-  <div id="myModal1" class="modal">
+  <!-- The Add New Book Form Modal -->
+  <div id="addNewBookFormModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">

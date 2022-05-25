@@ -61,6 +61,71 @@
     </style>
   </head>
   <body>
+    <script id="6284ca190d8c86492be82cbf" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+  <!-- <div class="navbar" id="myTopnav"> -->
+  <!-- <div class="logo">
+    <div class="hide"><a href="/"><img src="{{ asset('/desktiny-d.png') }}" width="30px"></a></div>
+    <div><a href="/"><img src="{{ asset('/desktiny-logo.png') }}" width="250px"></a></div>
+  </div> -->
+  <!-- <div class="menu">
+    @if (Route::has('login'))
+      @auth
+        @if(Auth::user()->is_admin === 1)
+        <div class="menu-option menu-hide"><a href="{{ url('/admin/home') }}">Admin's View</a></div>
+        <div class="menu-option menu-hide"><a href="{{ url('/home') }}">Employee's View</a></div>
+        <div class="menu-option">
+            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <br>
+              <div><a href="{{ url('/admin/home') }}">Admin's View</a></div><br>
+              <div><a href="{{ url('/home') }}">Employee's View</a></div>
+              <br>
+            </div>
+          </div>
+        @else
+        <div class="menu-option"><a href="{{ url('/home') }}">Home</a></div>
+        @endif
+      @else
+        <div class="menu-option login-button menu-hide"><a href="{{ route('login') }}">Log in</a></div>
+
+        @if (Route::has('register'))
+          <div class="menu-option menu-hide"><a href="{{ route('register') }}">Register</a></div>
+          <div class="menu-option">
+            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <br>
+              <div><a href="{{ route('login') }}">Login</a></div><br>
+              <div><a href="{{ route('register') }}">Sign up</a></div>
+              <br>
+            </div>
+          </div>
+        @endif
+      @endauth
+    @endif
+  </div>
+</div>
+
+<script> -->
+<!-- /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */ -->
+<!-- function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show-down");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show-down')) {
+        openDropdown.classList.remove('show-down');
+      }
+    }
+  }
+}
+</script> -->
     <div class="container">
       <div class="left">
         <div class="logo">
@@ -74,7 +139,24 @@
         <h2 style="text-align:center;">Welcome Desky!</h2>
         <p>Join in reserving the best destined seat for you</p>
 
-        <form method="POST" action="{{ route('login') }}">
+        <br><br>
+
+        @if (Route::has('login'))
+      @auth
+        @if(Auth::user()->is_admin === 1)
+        <div style="display: flex;">
+          <a href="{{ url('/admin/home') }}"><div class="go-to">Admin's View</div></a>
+          <a href="{{ url('/home') }}"><div class="go-to">Employee's View</div></a>
+          <a href="/books"><div class="go-to">Reserve a seat</div></a>
+        </div>
+        @else
+        <div style="display: flex;">
+          <a href="{{ url('/home') }}"><div class="go-to">Home</div></a>
+          <a href="/books"><div class="go-to">Reserve a seat</div></a>
+        </div>
+        @endif
+      @else
+      <form method="POST" action="{{ route('login') }}">
           @csrf
 
           @if ($message = Session::get('error'))
@@ -130,6 +212,78 @@
             </center>
           </div>
         </form>
+
+        @if (Route::has('register'))
+          <div class="menu-option menu-hide"><a href="{{ route('register') }}">Register</a></div>
+          <div class="menu-option">
+            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <br>
+              <div><a href="{{ route('login') }}">Login</a></div><br>
+              <div><a href="{{ route('register') }}">Sign up</a></div>
+              <br>
+            </div>
+          </div>
+        @endif
+      @endauth
+    @endif
+
+        <!-- <form method="POST" action="{{ route('login') }}">
+          @csrf
+
+          @if ($message = Session::get('error'))
+            <div class="alert-fail">
+              <p>{{ $message }}</p>
+            </div>
+            <br>
+          @endif
+
+          <label for="email">{{ __('Email Address') }}</label>
+
+          <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="Enter Email" required autocomplete="email" autofocus>
+
+          @error('email')
+            <span role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+
+          <br><br>
+
+          <label for="password">{{ __('Password') }}</label>
+
+          <input id="password" type="password" name="password" placeholder="Enter Password" required autocomplete="current-password">
+
+          @error('password')
+            <span role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+          @enderror -->
+
+          <!-- <div class="checkbox-with-label">
+          <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} style="width: 5%">
+
+          <label for="remember" style="width: 45%">
+            {{ __('Remember Me') }}
+          </label>
+          
+          @if (Route::has('password.request'))
+            <a href="{{ route('password.request') }}">
+              <div style="text-align: right;">{{ __('Forgot Your Password?') }}</div>
+            </a>
+          @endif
+          </div> -->
+
+          <!-- <br><br>
+
+          <div class="button">
+            <center>
+              <button type="submit">
+                {{ __('Log in') }}
+              </button><br>
+            </center>
+          </div>
+        </form> -->
       </div>
     </div>
   </body>
