@@ -19,6 +19,7 @@
     <title>Desktiny</title>
   </head>
   <body>
+  <script id="6284ca190d8c86492be82cbf" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
     <div class="sidebar close">
       <div class="logo-details">
         <div class="logo-d">
