@@ -14,6 +14,7 @@
           <th>Desk Map</th>
         </tr>
         <center><p style="color: red">Under Construction</p></center>
+        {{ $todaysBookings }}
         @foreach ($desks as $desk)
         <tr>
           <td>{{ ++$i }}</td>

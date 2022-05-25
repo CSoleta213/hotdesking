@@ -22,7 +22,7 @@
     <div class="content">
       <div style="display: flex; flex-direction: column;">
         <div class="content">
-          <div class="cards" >
+          <div class="cards" ><a href="/admin/available-desks" style="color: #3d3d42">
             <div class="card" style=" background: rgba(6, 187, 135, 0.44);">
               <div class="icon-case dot" >
                 <h1>{{ $availableDesks }}</h1>
@@ -32,8 +32,8 @@
                 <strong>Available Desks</strong>
               </div>
             </div>
-          </div>
-          <div class="cards" >
+          </a></div>
+          <div class="cards" ><a href="/admin/bookings" style="color: #3d3d42">
             <div class="card" style=" background: rgba(242, 166, 69, 0.44);">
               <div class="icon-case dot" style="  background: rgba(242, 166, 69, 0.72);">
                 <h1>{{ $occupiedDesks }}</h1>
@@ -43,8 +43,8 @@
                 <strong>Occupied &nbsp; Desks</strong>
               </div>
             </div>
-          </div>
-          <div class="cards" >
+          </a></div>
+          <div class="cards" ><a href="/admin/bookings" style="color: #3d3d42">
             <div class="card" style="background: rgba(242, 104, 73, 0.44);">
               <div class="icon-case dot" style="background: rgba(242, 104, 73, 0.72);">
                 <h1>{{ $number_of_bookings }}</h1>
@@ -54,7 +54,7 @@
                 <strong>Number of Bookings</strong>
               </div>
             </div>
-          </div>
+          </a></div>
         </div>
       <br><br>
         <center>

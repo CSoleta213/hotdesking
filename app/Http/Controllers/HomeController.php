@@ -116,9 +116,11 @@ class HomeController extends Controller
 
     public function adminAvailableDesks()
     {
-        $bookings = \App\Models\Book::all();
+        $dateToday = Carbon::now();
+        $stringDateToday=$dateToday->toDateString();
+        $todaysBookings = DB::table('books')->where('date','=', $stringDateToday)->get('desk_number');
         $desks = \App\Models\Desk::all();
-        return view('admin.available_desks', compact('desks', 'bookings'))
+        return view('admin.available_desks', compact('desks', 'todaysBookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }
