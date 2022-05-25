@@ -1242,6 +1242,7 @@ tr:nth-child(odd) {
   line-height: 70px;
   display: none;
 }
+
 #toggle {
   display: none;
 }
