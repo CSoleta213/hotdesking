@@ -18,6 +18,7 @@
       </div>
     </div> -->
 
+  <div style="display: flex; flex-direction: row; flex: 1;">
     <div class="content">
       <div style="display: flex; flex-direction: column;">
         <div class="content">
@@ -55,19 +56,7 @@
             </div>
           </div>
         </div>
-        <div class="cards">
-          <div class="card" style="background: rgba(242, 104, 73, 0.44);">
-            <div class="icon-case dot" style="background: rgba(242, 104, 73, 0.72);">
-              <h1>{{ $number_of_books }}</h1>
-            </div>
-            <div class="box1">
-              <h3>Number of Bookings</h3>
-            </div>
-          </div>
-        </div>
-      </div>
       <br><br>
-      <div>
         <center>
           <div style="display: block;">
             <span style="display: inline-block; font-weight: bold; font-size: larger;"> Calendar </span>
