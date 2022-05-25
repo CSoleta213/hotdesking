@@ -28,7 +28,7 @@
             <th>Date</th>
           </tr>
           @foreach ($bookings as $booking)
-          @if($dateToday < $booking->date)
+          @if($stringDateToday <= $booking->date)
           <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $booking->name }}</td>

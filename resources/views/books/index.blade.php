@@ -11,7 +11,7 @@
         <div style="display: flex; flex-direction: row; align-items: center">
           <div><a class="btn btn-primary go-to" href="/office-map">Go to Office Map</a></div>
           <!-- Trigger/Open The Modal -->
-          <div><button class="add-new-book-modal add" href="#addNewBookFormModal"><i class="fas fa-light fa-plus"></i> Add Book</button></div>
+          <div class="booking-modal add" href="#addNewBookFormModal"><i class="fas fa-light fa-plus"></i> Add Booking</div>
         </div>
       </div>
      
@@ -29,33 +29,53 @@
      
       <table class="list-table">
         <tr>
-          <th>No</th>
+          <th width="100px">No</th>
           <th>Name</th>
-          <th>Desk Number</th>
+          <th width="200px">Desk Number</th>
           <th>Date</th>
-          <th width="280px">Action</th>
+          <th width="100px">Action</th>
         </tr>
-        @forelse ($books as $key => $value)
-              @if ($value->name === Auth::user()->firstname." ".Auth::user()->lastname && $dateToday < $value->date)
-              <tr>
-                  <td>{{ ++$i }}</td>
-                  <td>{{ $value->name }}</td>
-                  <td style="text-transform:uppercase">{{ $value->desk_number }}</td>
-                  <td>{{ $value->date }}</td>
-                  <td >
-                    <form action="{{ route('books.destroy',$value->id) }}" method="POST" class="action">
-                      <a class="read" href="{{ route('books.show',$value->id) }}"> Show</a>
-                      <a class="update" href="{{ route('books.edit',$value->id) }}">Edit</a>   
-                      @csrf
-                      @method('DELETE')      
-                      <button type="submit" class="destroy">Delete</button>
+        @forelse ($books as $book)
+          @if ($book->name === Auth::user()->firstname." ".Auth::user()->lastname && $stringDateToday <= $book->date)
+            <tr>
+              <td>{{ ++$i }}</td>
+              <td>{{ $book->name }}</td>
+              <td style="text-transform:uppercase">
+                {{ $book->desk_number }}
+                <a class="update" href="{{ route('books.edit',$book->id) }}"><i class="bx bx-edit"></i></a></div>
+              </td>
+              <td>{{ $book->date }}</td>
+              <td style="display: flex;">
+                <a class="read" href="{{ route('books.show',$book->id) }}"> Show</a></div>
+      
+                <!-- Trigger/Open The Modal -->
+                <div class="booking-modal destroy" href="#deleteBookingModal"><i class="bx bx-trash"></i></div>
+                <!-- The Add New Book Form Modal -->
+                <div id="deleteBookingModal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h3>Are you sure?</h3>
+                    </div>
+                    <form action="{{ route('books.destroy',$book->id) }}" method="POST" class="action">
+                    @csrf
+                    @method('DELETE')
+                      <div class="modal-body">
+                        <div style="display: flex;">
+                          <a href="/books"><div class="cancel">No</div></a>
+                          <button type="submit" class="destroy">Yes</button>
+                        </div>
+                      </div>
                     </form>
-                  </td>
-              </tr>
-              @endif
-              @empty
-              <center><h1 style="color: #551A8B">You haven't book yet!</h1></center>
-            @endforelse
+                  </div>
+                </div>
+              </td>
+            </tr>
+          @endif
+        @empty
+          <center><h1 style="color: #551A8B">You haven't book yet!</h1></center>
+        @endforelse
       </table>
       <div style="display: flex; flex-direction: row; width: 100px">
         {!! $books->links() !!}
@@ -98,8 +118,8 @@
   </div>
 
   <script>
-    // Get the button that opens the modal
-    var btn = document.querySelectorAll("button.add-new-book-modal");
+    // Get the div that opens the modal
+    var div = document.querySelectorAll("div.booking-modal");
     
     // All page modals
     var modals = document.querySelectorAll('.modal');
@@ -107,9 +127,9 @@
     // Get the <span> element that closes the modal
     var spans = document.getElementsByClassName("close");
     
-    // When the user clicks the button, open the modal
-    for (var i = 0; i < btn.length; i++) {
-    btn[i].onclick = function(e) {
+    // When the user clicks the div, open the modal
+    for (var i = 0; i < div.length; i++) {
+    div[i].onclick = function(e) {
         e.preventDefault();
         modal = document.querySelector(e.target.getAttribute("href"));
         modal.style.display = "block";
