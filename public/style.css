@@ -1285,33 +1285,36 @@ tr:nth-child(odd) {
   }
 }
 @media screen and (max-width: 905px) {
-  iframe.my-cal-frame{
+  iframe.my-cal-frame, iframe.adm-cal{
     width: 650px;
     height: 420px;
   }
 }
+.cards {
+  width: 100px;
+}
 @media screen and (max-width: 856px) {
-  iframe.my-cal-frame{
+  iframe.my-cal-frame, iframe.adm-cal{
     margin-top: 50px;
     width: 650px;
     height: 420px;
   }
 }
 @media screen and (max-width: 790px) {
-  iframe.my-cal-frame{
+  iframe.my-cal-frame, iframe.adm-cal{
     margin-top: 50px;
     width: 550px;
     height: 550px;
   }
 }
 @media screen and (max-width: 615px) {
-  iframe.my-cal-frame{
+  iframe.my-cal-frame, iframe.adm-cal{
     width: 450px;
     height: 550px;
   }
 }
 @media screen and (max-width: 490px) {
-  iframe.my-cal-frame{
+  iframe.my-cal-frame, iframe.adm-cal{
     width: 350px;
     height: 450px;
   }
@@ -1604,9 +1607,19 @@ li:hover{
   width: 950px;
 }
 
+/* Admin */
+.team-mob{
+  display: none;
+}
 @media screen and (max-width: 1120px) {
   .profile-tab{
     width: 850px;
+  }
+  .team-web {
+    display: none;
+  }
+  .team-mob {
+    display: flex;
   }
 }
 @media screen and (max-width: 990px) {
