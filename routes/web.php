@@ -55,6 +55,8 @@ Route::get('/demo', [App\Http\Controllers\HomeController::class, 'demo'])->name(
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+Route::get('/admin/my-profile', [App\Http\Controllers\HomeController::class, 'adminMyProfile'])->name('admin.my_profile_admin')->middleware('is_admin');
+
 Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'adminUsersList'])->name('admin.users_list')->middleware('is_admin');
 
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'adminBookings'])->name('admin.bookings')->middleware('is_admin');

@@ -17,7 +17,7 @@
 
 <body>
   @yield('content')
-
+  @section('footer')
   <footer>
     <div class="center">
       <p>
@@ -36,5 +36,6 @@
       </div>
     </div>
   </footer>
+  @endsection
 </body>
 </html>

@@ -1,7 +1,6 @@
 @extends('layouts.sidebar')
 
 @section('content')
-<section class="body-section">
   <div class="body-header">
     <h1 class="content-title">Demo</h1>
     <p class="title-desc">Taking a look at these tutorials might give you knowledge on how to navigate necessary features.</p>
@@ -38,12 +37,10 @@
             }
           }
         </script>
-
         <div class="Cancel-Reservation">
           <!-- embed -->
           <h3>How to change your booked desk?</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/MHJVchth_HM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
           <!-- <p>How about canceling reservations?</p>
           <p id="extra-content2" class="extra-content">Since you can add a reservation you can cancel it anytime as well.
             In canceling your reservation, you just need to go to the reservation details where you can also change
@@ -52,12 +49,10 @@
         </div>
         <script>
           document.getElementById("read-more2").addEventListener('click', changeClass);
-
           function changeClass() {
             var content = document.getElementById("extra-content2");
             var btn = document.getElementById("read-more2");
             content.classList.toggle('show');
-
             if (content.classList.contains("show")) {
               btn.innerHTML = "Show Less";
             } else {
@@ -65,12 +60,10 @@
             }
           }
         </script>
-
         <div class="View-Dashboard">
           <!-- embed -->
           <h3>How to delete a booking?</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc_uD8VmNAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
           <!-- <p>We have a clear, interactive and user-friendly dashboard.</p>
           <p id="extra-content3" class="extra-content">It gives an efficient glance through
             to data visualizations. It is where you can sneak a peek at the overall website. You can always
@@ -79,12 +72,10 @@
         </div>
         <script>
           document.getElementById("read-more3").addEventListener('click', changeClass);
-
           function changeClass() {
             var content = document.getElementById("extra-content3");
             var btn = document.getElementById("read-more3");
             content.classList.toggle('show');
-
             if (content.classList.contains("show")) {
               btn.innerHTML = "Show Less";
             } else {
@@ -92,12 +83,10 @@
             }
           }
         </script>
-
         <!-- <div class="Manage-Schedule"> -->
         <!-- embed -->
         <!-- <h3>How to delete a booking?</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc_uD8VmNAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
         <!-- <p>Scheduling is the art of preparing your activities.</p>
           <p id="extra-content4" class="extra-content">So that you may accomplish your goals and
             prioritize your priorities in the time you have available. In having so, you will likely be effective
@@ -108,12 +97,10 @@
         </div> -->
         <script>
           document.getElementById("read-more4").addEventListener('click', changeClass);
-
           function changeClass() {
             var content = document.getElementById("extra-content4");
             var btn = document.getElementById("read-more4");
             content.classList.toggle('show');
-
             if (content.classList.contains("show")) {
               btn.innerHTML = "Show Less";
             } else {
@@ -124,6 +111,4 @@
       </div>
     </div>
   </div>
-</section>
-
 @endsection

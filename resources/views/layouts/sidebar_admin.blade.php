@@ -80,14 +80,14 @@
           <div class="profile-details">
             <div class="profile-content">
               @if(Auth::user()->gender === "Male")
-                <a href="/my-profile"><img src="{{ asset('/avatar-for-male.png') }}" alt="profileImg"></a>
+                <a href="/admin/my-profile"><img src="{{ asset('/avatar-for-male.png') }}" alt="profileImg"></a>
               @else
-                <a href="/my-profile"><img src="{{ asset('/avatar-for-female.png') }}" alt="profileImg"></a>
+                <a href="/admin/my-profile"><img src="{{ asset('/avatar-for-female.png') }}" alt="profileImg"></a>
               @endif
             </div>
             <div class="name-job">
-              <a href="/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>
-              <a href="/my-profile"><div class="job">{{ Auth::user()->position }}</div></a>
+              <a href="/admin/my-profile"><div class="profile_name">Hi, {{ Auth::user()->firstname }}!</div></a>
+              <a href="/admin/my-profile"><div class="job">{{ Auth::user()->position }}</div></a>
             </div>
             <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
@@ -102,7 +102,27 @@
         </li>
       </ul>
     </div>
-    @yield('content')
+    <section class="body-section">
+      @yield('content')
+      <footer>
+        <div class="center">
+          <p>
+            &#169; 2022 eMachines' Desktiny. All rights reserved.
+          </p>
+          <div class="privacy-terms">
+            <div>
+              <a href="/privacy">Privacy Statement</a>
+            </div>
+            <div>
+              &nbsp;and&nbsp;
+            </div>
+            <div>
+              <a href="/terms">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
     <script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {

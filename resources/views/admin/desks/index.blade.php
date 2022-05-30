@@ -1,68 +1,63 @@
 @extends('layouts.sidebar_admin')
 
 @section('content')
-  <section class="body-section">
-    <div class="body-header">
-      <h1 class="content-title">DESKS MANAGEMENT</h1>
-      <p class="title-desc">Add and Manage office desks and meeting rooms according to the social distancing policy.  </p>
-    </div>
-    <div class="body-content desk">
-      <!-- Trigger/Open The Modal -->
-      <div class="desk-modal add" href="#myModal1">Add New Desk</div>
-      @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-          <p>{{ $message }}</p>
-        </div>
-      @endif
-     
-      <table class="list-table">
-        <tr>
-          <th>No</th>
-          <th>Desk</th>
-          <th>Desk Map</th>
-          <th width="50px">Action</th>
-        </tr>
-        @foreach ($desks as $desk)
-        <tr>
-          <td>{{ ++$i }}</td>
-          <td style="text-transform:uppercase">{{ $desk->desk_number }}</td>
-          <td><img src="/desks/{{ $desk->desk_map }}" width="100px"></td>
-          <td>
-            <div style="display: flex;">
-            <a href="{{ route('desks.show',$desk->id) }}"><div class="read"><i class="bx bx-show"></i></div></a>
-            <a href="{{ route('desks.edit',$desk->id) }}"><div class="updateIcon"><i class="bx bx-edit"></i></div></a>
-
-            <!-- Trigger/Open The Modal -->
-            <div class="desk-modal destroy" href="#deleteBookingModal"><i class="bx bx-trash"></i></div>
-            <!-- The Add New Book Form Modal -->
-            <div id="deleteBookingModal" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <span class="close">&times;</span>
-                  <h3>Are you sure?</h3>
-                </div>
-                <form action="{{ route('desks.destroy',$desk->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                  <div class="modal-body">
-                    <div style="display: flex; justify-content: center">
-                      <a href="/admin/desks"><div class="cancel">No</div></a>
-                      <button type="submit" class="destroy">Yes</button>
-                    </div>
-                  </div>
-                </form>
+  <div class="body-header">
+    <h1 class="content-title">DESKS MANAGEMENT</h1>
+    <p class="title-desc">Add and Manage office desks and meeting rooms according to the social distancing policy.  </p>
+  </div>
+  <div class="body-content desk">
+    <!-- Trigger/Open The Modal -->
+    <div class="desk-modal add" href="#myModal1">Add New Desk</div>
+    @if ($message = Session::get('success'))
+      <div class="alert alert-success">
+        <p>{{ $message }}</p>
+      </div>
+    @endif
+    <table class="list-table">
+      <tr>
+        <th>No</th>
+        <th>Desk</th>
+        <th>Desk Map</th>
+        <th width="50px">Action</th>
+      </tr>
+      @foreach ($desks as $desk)
+      <tr>
+        <td>{{ ++$i }}</td>
+        <td style="text-transform:uppercase">{{ $desk->desk_number }}</td>
+        <td><img src="/desks/{{ $desk->desk_map }}" width="100px"></td>
+        <td>
+          <div style="display: flex;">
+          <a href="{{ route('desks.show',$desk->id) }}"><div class="read"><i class="bx bx-show"></i></div></a>
+          <a href="{{ route('desks.edit',$desk->id) }}"><div class="updateIcon"><i class="bx bx-edit"></i></div></a>
+          <!-- Trigger/Open The Modal -->
+          <div class="desk-modal destroy" href="#deleteBookingModal"><i class="bx bx-trash"></i></div>
+          <!-- The Add New Book Form Modal -->
+          <div id="deleteBookingModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h3>Are you sure?</h3>
               </div>
+              <form action="{{ route('desks.destroy',$desk->id) }}" method="POST">
+              @csrf
+              @method('DELETE')
+                <div class="modal-body">
+                  <div style="display: flex; justify-content: center">
+                    <a href="/admin/desks"><div class="cancel">No</div></a>
+                    <button type="submit" class="destroy">Yes</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            </div>
-          </td>
-        </tr>
-        @endforeach
-      </table>
-    
-      {!! $desks->links() !!}
-    </div>
-  </section>
+          </div>
+          </div>
+        </td>
+      </tr>
+      @endforeach
+    </table>
+    {!! $desks->links() !!}
+  </div>
   <!-- The Modal -->
   <div id="myModal1" class="modal">
     <!-- Modal content -->

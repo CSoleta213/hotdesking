@@ -127,7 +127,27 @@
         </li>
       </ul>
     </div>
-    @yield('content')
+    <section class="body-section">
+      @yield('content')
+      <footer>
+        <div class="center">
+          <p>
+            &#169; 2022 eMachines' Desktiny. All rights reserved.
+          </p>
+          <div class="privacy-terms">
+            <div>
+              <a href="/privacy">Privacy Statement</a>
+            </div>
+            <div>
+              &nbsp;and&nbsp;
+            </div>
+            <div>
+              <a href="/terms">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
     <script>
     let arrow = document.querySelectorAll(".arrow");
     for (var i = 0; i < arrow.length; i++) {

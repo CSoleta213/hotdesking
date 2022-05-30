@@ -1,7 +1,7 @@
 @extends('layouts.sidebar_admin')
    
 @section('content')
-  <section class="body-section">
+  <div class="body-content">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <!-- <div class="pull-left"> -->
@@ -19,7 +19,6 @@
             <!-- </div> -->
         </div>
     </div>
-   
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -30,12 +29,10 @@
             </ul>
         </div>
     @endif
-  
     <form action="{{ route('users.update',$user->id) }}" method="POST">
         @csrf
         @method('PUT')
-   
-         <div class="row">
+        <div class="row">
             <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>First Name:</strong>
@@ -56,7 +53,6 @@
               <a class="btn btn-primary" href="{{ route('users.index') }}"> Cancel</a>
             </div>
         </div>
-   
     </form>
-  </section>
+</div>
 @endsection
