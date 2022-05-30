@@ -901,7 +901,7 @@ footer a:hover{
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
-  padding-top: 50px;
+
 }
 .sidebar.close ~ .body-section{
   left: 78px;
