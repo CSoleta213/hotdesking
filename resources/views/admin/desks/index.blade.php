@@ -8,7 +8,7 @@
     </div>
     <div class="body-content desk">
       <!-- Trigger/Open The Modal -->
-      <button class="add-new-desk-modal add" href="#myModal1">Add New Desk</button>
+      <div class="desk-modal add" href="#myModal1">Add New Desk</div>
       @if ($message = Session::get('success'))
         <div class="alert alert-success">
           <p>{{ $message }}</p>
@@ -20,7 +20,7 @@
           <th>No</th>
           <th>Desk</th>
           <th>Desk Map</th>
-          <th width="280px">Action</th>
+          <th width="50px">Action</th>
         </tr>
         @foreach ($desks as $desk)
         <tr>
@@ -28,17 +28,33 @@
           <td style="text-transform:uppercase">{{ $desk->desk_number }}</td>
           <td><img src="/desks/{{ $desk->desk_map }}" width="100px"></td>
           <td>
-            <form action="{{ route('desks.destroy',$desk->id) }}" method="POST">
-     
-              <a class="read" href="{{ route('desks.show',$desk->id) }}">Show</a>
-      
-              <a class="update" href="{{ route('desks.edit',$desk->id) }}">Edit</a>
-     
-              @csrf
-              @method('DELETE')
-        
-              <button type="submit" class="destroy">Delete</button>
-            </form>
+            <div style="display: flex;">
+            <a href="{{ route('desks.show',$desk->id) }}"><div class="read"><i class="bx bx-show"></i></div></a>
+            <a href="{{ route('desks.edit',$desk->id) }}"><div class="updateIcon"><i class="bx bx-edit"></i></div></a>
+
+            <!-- Trigger/Open The Modal -->
+            <div class="desk-modal destroy" href="#deleteBookingModal"><i class="bx bx-trash"></i></div>
+            <!-- The Add New Book Form Modal -->
+            <div id="deleteBookingModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h3>Are you sure?</h3>
+                </div>
+                <form action="{{ route('desks.destroy',$desk->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                  <div class="modal-body">
+                    <div style="display: flex; justify-content: center">
+                      <a href="/admin/desks"><div class="cancel">No</div></a>
+                      <button type="submit" class="destroy">Yes</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            </div>
           </td>
         </tr>
         @endforeach
@@ -68,8 +84,8 @@
     </div>
   </div>
   <script>
-    // Get the button that opens the modal
-    var btn = document.querySelectorAll("button.add-new-desk-modal");
+    // Get the div that opens the modal
+    var div = document.querySelectorAll("div.desk-modal");
     
     // All page modals
     var modals = document.querySelectorAll('.modal');
@@ -77,9 +93,9 @@
     // Get the <span> element that closes the modal
     var spans = document.getElementsByClassName("close");
     
-    // When the user clicks the button, open the modal
-    for (var i = 0; i < btn.length; i++) {
-    btn[i].onclick = function(e) {
+    // When the user clicks the div, open the modal
+    for (var i = 0; i < div.length; i++) {
+    div[i].onclick = function(e) {
         e.preventDefault();
         modal = document.querySelector(e.target.getAttribute("href"));
         modal.style.display = "block";

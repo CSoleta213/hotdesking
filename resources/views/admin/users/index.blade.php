@@ -42,51 +42,79 @@
           @else
           <td>No</td>
           @endif
-          @if ($user->is_admin === 1)
           <td>
-            <form action="{{ route('users.destroy',$user->id) }}" method="POST">
             <div style="display: flex;">
-            <div>
-   
-              <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
-    
-              <a href="{{ route('users.edit',$user->id) }}"><div class="update">Remove as Admin</div></a>
-
-</div>
-   
-              @csrf
-              @method('DELETE')
-              <div>
-              <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
+            <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
+            @if ($user->is_admin === 1)
+            <a href="{{ route('users.edit',$user->id) }}"><div class="update">Remove as Admin</div></a>
+            @else
+            <a href="{{ route('users.edit',$user->id) }}"><div class="update">Add as Admin</div></a>
+            @endif
+            <!-- Trigger/Open The Modal -->
+            <div class="desk-modal destroy" href="#deleteBookingModal"><i class="bx bx-trash"></i></div>
+            <!-- The Add New Book Form Modal -->
+            <div id="deleteBookingModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h3>Are you sure?</h3>
+                </div>
+                <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                  <div class="modal-body">
+                    <div style="display: flex; justify-content: center">
+                      <a href="/admin/users"><div class="cancel">No</div></a>
+                      <button type="submit" class="destroy">Yes</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              </div>
-            </form>
+            </div>
+            </div>
           </td>
-          @else
-          <td>
-          <form action="{{ route('users.destroy',$user->id) }}" method="POST">
-            <div style="display: flex;">
-            <div>
-   
-              <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
-    
-              <a href="{{ route('users.edit',$user->id) }}"><div class="update">Add as Admin</div></a>
-
-</div>
-   
-              @csrf
-              @method('DELETE')
-              <div>
-              <button type="submit" class="destroy"><i class="bx bx-trash"></i></button>
-              </div>
-              </div>
-            </form>
-          </td>
-          @endif
         </tr>
         @endforeach
     </table>
   
     {!! $users->links() !!}
-      
+
+  <script>
+    // Get the div that opens the modal
+    var div = document.querySelectorAll("div.desk-modal");
+    
+    // All page modals
+    var modals = document.querySelectorAll('.modal');
+    
+    // Get the <span> element that closes the modal
+    var spans = document.getElementsByClassName("close");
+    
+    // When the user clicks the div, open the modal
+    for (var i = 0; i < div.length; i++) {
+      div[i].onclick = function(e) {
+        e.preventDefault();
+        modal = document.querySelector(e.target.getAttribute("href"));
+        modal.style.display = "block";
+      }
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    for (var i = 0; i < spans.length; i++) {
+      spans[i].onclick = function() {
+        for (var index in modals) {
+          if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+      }
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        for (var index in modals) {
+          if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+        }
+      }
+    }
+  </script>
 @endsection

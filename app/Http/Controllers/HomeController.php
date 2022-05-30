@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\Book;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -80,10 +81,16 @@ class HomeController extends Controller
 
     public function adminHome()
     {
+        $dateToday = Carbon::now();
+        $stringDateToday=$dateToday->toDateString();
+        $number_of_desks = DB::table('desks')->count();
+
         $users = DB::table('users')->orderBy('lastname')->paginate(100);
-        $number_of_book = DB::table('books')->count();
-        $number_of_books = DB::table('books')->count();
-        return view('admin.admin',compact('users','number_of_books','number_of_book'));
+        $number_of_bookings = DB::table('books')->where('date','>=', $stringDateToday)->count();
+        $occupiedDesks = DB::table('books')->where('date','=', $stringDateToday)->count();
+        $availableDesks = $number_of_desks - $occupiedDesks;
+        
+        return view('admin.admin',compact('users','number_of_bookings', 'occupiedDesks', 'availableDesks'));
     }
 
     public function adminUsersList()
@@ -95,9 +102,10 @@ class HomeController extends Controller
 
     public function adminBookings()
     {
-        $dateToday = now();
+        $dateToday = Carbon::now();
+        $stringDateToday=$dateToday->toDateString();
         $bookings = DB::table('books')->orderBy('date')->paginate(100);
-        return view('admin.bookings',compact('bookings', 'dateToday'))
+        return view('admin.bookings',compact('bookings', 'stringDateToday'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -108,9 +116,11 @@ class HomeController extends Controller
 
     public function adminAvailableDesks()
     {
-        $bookings = \App\Models\Book::all();
+        $dateToday = Carbon::now();
+        $stringDateToday=$dateToday->toDateString();
+        $todaysBookings = DB::table('books')->where('date','=', $stringDateToday)->get('desk_number');
         $desks = \App\Models\Desk::all();
-        return view('admin.available_desks', compact('desks', 'bookings'))
+        return view('admin.available_desks', compact('desks', 'todaysBookings'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

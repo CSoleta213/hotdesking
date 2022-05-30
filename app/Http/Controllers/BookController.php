@@ -17,11 +17,13 @@ class BookController extends Controller
      */
     public function index()
     {
-        $dateToday = now();
+        $dateToday = Carbon::now();
+        $stringDateToday=$dateToday->toDateString();
         $books = DB::table('books')->orderBy('date')->paginate(100);
         $desks = \App\Models\Desk::all();
+        $events = Event::get();
     
-        return view('books.index',compact('books', 'desks', 'dateToday'))
+        return view('books.index',compact('books', 'desks', 'stringDateToday', 'events'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -43,80 +45,60 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //  $request->validate([
-        //     // 'name' => 'required',
-        //     // 'office_name' => 'required',
-        //     // 'desk_number' => 'required',
-        //     // 'date' => 'required',
-        //     'code' => 'required|unique',
-        // ]);
-
-        // if(true === $code) {
-        //     return back()->with('error','Duplicated');
-        // }
-    
-        // Book::create($request->all());
-
         $dateToday = now();
         $codeNameDate = $request->input('name').$request->input('date');
         $codeNumDate = $request->input('desk_number').$request->input('date');
 
-            $book = new Book;
+        $book = new Book;
 
-            $book->name = request('name');
-            $book->office_name = request('office_name');
-            $book->desk_number = request('desk_number');
-            $book->date = request('date');
-            $book->codeNameDate = $codeNameDate;
-            $book->codeNumDate = $codeNumDate;
+        $book->name = request('name');
+        $book->office_name = request('office_name');
+        $book->desk_number = request('desk_number');
+        $book->date = request('date');
+        $book->codeNameDate = $codeNameDate;
+        $book->codeNumDate = $codeNumDate;
 
 
-            $check1 = Book::where([
-                ['codeNameDate', "=", $codeNameDate],
-            ])->first();
+        $check1 = Book::where([
+            ['codeNameDate', "=", $codeNameDate],
+        ])->first();
 
-            $check2 = Book::where([
-                ['codeNumDate', "=", $codeNumDate],
-            ])->first();
+        $check2 = Book::where([
+            ['codeNumDate', "=", $codeNumDate],
+        ])->first();
 
-            $check3 = $dateToday > $request->input('date');
+        $check3 = $dateToday > $request->input('date');
     
-            if($check1)
-            {
-                $request->session()->flash('error', 'You cannot book two desks with the same date!');
-                return redirect()->route('books.index');
-            } elseif($check2)
-            {
-                $request->session()->flash('error', 'The desk is already taken!');
-                return redirect()->route('books.index');
-            } elseif($check3)
-            {
-                $request->session()->flash('error', 'The date is already passed!');
-                return redirect()->route('books.index');
-            } else{
-                $book->save();
+        if($check1)
+        {
+            $request->session()->flash('error', 'You cannot book two desks with the same date!');
+            return redirect()->route('books.index');
+        } elseif($check2)
+        {
+            $request->session()->flash('error', 'The desk is already taken!');
+            return redirect()->route('books.index');
+        } elseif($check3)
+        {
+            $request->session()->flash('error', 'You must book a desk one day advanced!');
+            return redirect()->route('books.index');
+        } else{
+            $book->save();
 
-                $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
-                $endTime = (clone $startTime)->addHour(9);
+            $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
+            $endTime = (clone $startTime)->addHour(9);
 
-                // Event::create([
-                //     'name' => $request->input('name').' - '.$request->input('desk_number'),
-                //     'startDateTime' => $startTime,
-                //     'endDateTime' => $endTime,
-                // ]);
-
-                //create a new event
-                $event = new Event;
-                
-                $event->name = $request->input('name').' - '.$request->input('desk_number');
-                $event->description = 'Event description';
-                $event->startDateTime = $startTime;
-                $event->endDateTime = $endTime;
-                
-                $event->save();
+            //create a new event
+            $event = new Event;
             
-                return redirect()->route('books.index',compact('book'))
-                            ->with('success','Booked successfully.');
+            $event->name = $request->input('name').' - '.$request->input('desk_number');
+            $event->description = 'Event description';
+            $event->startDateTime = $startTime;
+            $event->endDateTime = $endTime;
+                
+            $event->save();
+        
+            return redirect()->route('books.index',compact('book'))
+                        ->with('success','Booked successfully.');
             }
     }
 
@@ -151,17 +133,8 @@ class BookController extends Controller
      * @param  \App\Models\Book  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Book $book, Event $event)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'office_name' => 'required',
-        //     'desk_number' => 'required',
-        //     'date' => 'required',
-        //     'codeNameDate' => 'required',
-        //     'codeNumDate' => 'required',
-        // ]);
-        
         $dateToday = now();
         $codeNameDate = $request->input('name').$request->input('date');
         $codeNumDate = $request->input('desk_number').$request->input('date');
@@ -172,10 +145,6 @@ class BookController extends Controller
         $book->date = request('date');
         $book->codeNameDate = $codeNameDate;
         $book->codeNumDate = $codeNumDate;
-
-        // $check1 = Book::where([
-        //     ['codeNameDate', "=", $codeNameDate],
-        // ])->first();
 
         $check2 = Book::where([
             ['codeNumDate', "=", $codeNumDate],
@@ -189,30 +158,22 @@ class BookController extends Controller
             return redirect()->route('books.index');
         }  elseif($check3)
         {
-            $request->session()->flash('error', 'The date is already passed!');
+            $request->session()->flash('error', 'You must book a desk one day advanced!');
             return redirect()->route('books.index');
         }
         else{
     
             $book->save();
 
-            $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
-            $endTime = (clone $startTime)->addHour(9);
-            
-            // get all future events on a calendar
-            $events = Event::get();
+            // $startTime = Carbon::parse($request->input('date').' ' . $request->input('time'));
+            // $endTime = (clone $startTime)->addHour(9);
 
-            // update existing event
-            $firstEvent = $events->first();
-            $firstEvent->name = $request->input('name').' - '.$request->input('desk_number');
-            $firstEvent->startDateTime = $startTime;
-            $firstEvent->endDateTime = $endTime;
-            $firstEvent->save();
-            
-            $firstEvent->update([
+            $eventId = Event::get()->first()->id;
+            $event = Event::find($eventId);
+            $event->update([
                 'name' => $request->input('name').' - '.$request->input('desk_number'),
-                'startDateTime' => $startTime,
-                'endDateTime' => $endTime,
+                // 'startDateTime' => $startTime,
+                // 'endDateTime' => $endTime,
             ]);
     
         return redirect()->route('books.index')
@@ -229,6 +190,12 @@ class BookController extends Controller
     public function destroy(Book $book)
     {
         $book->delete();
+
+        $events = Event::get();
+        $event = $events->first();
+
+        // delete an event
+        $event->delete();
     
         return redirect()->route('books.index')
                         ->with('success','Book deleted successfully');
@@ -236,5 +203,3 @@ class BookController extends Controller
 
     
 }
-// Check the duplicate entry via two criteria: desk_number and date
-// SELECT * FROM `books` WHERE name="Carlo Soleta" && date="2022-04-03";

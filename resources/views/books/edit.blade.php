@@ -12,7 +12,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <a class="btn btn-primary" href="{{ route('books.index') }}"><span class="close">&times;</span></a>
-            <h3>Your Current Booking</h3>
+            <h3>Change Desk</h3>
           </div>
      
           @if ($errors->any())
@@ -43,9 +43,7 @@
                 @endforeach
               </select><br><br>
 
-              <label for="date">Date:</label>
-              <input type="date" name="date" value="{{ $book->date }}" class="form-control" placeholder="Date"><br><br>
-
+              <input type="date" name="date" value="{{ $book->date }}" placeholder="Date" hidden>
               <input type="text" name="codeNameDate" value="{{ $book->name }}{{ $book->date }}" hidden>
               <input type="text" name="codeNumDate" value="{{ $book->desk_number }}{{ $book->date }}" hidden>
 

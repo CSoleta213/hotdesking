@@ -1,6 +1,7 @@
-@extends('admin.users.layout')
+@extends('layouts.sidebar_admin')
    
 @section('content')
+  <section class="body-section">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <!-- <div class="pull-left"> -->
@@ -57,4 +58,5 @@
         </div>
    
     </form>
+  </section>
 @endsection
