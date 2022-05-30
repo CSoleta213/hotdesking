@@ -6,7 +6,7 @@
     <p class="title-desc">"Bookings" is where you can view the list of booked desks for the next few days, weeks, and months. </p>
   </div>
   <div class="body-content">
-    <div class="features">
+    <div class="booking-admin">
         <!-- <label for="">Select an Office:</label>
         <select name="office" id="office" required style="margin-top: 50px">
           <option value="">--- All Offices ---</option>

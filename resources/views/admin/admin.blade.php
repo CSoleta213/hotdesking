@@ -54,16 +54,37 @@
           </a></div>
         </div>
       <br><br>
-        <center>
+      <div >
+        <center class="adm-cal-con">
           <div style="display: block;">
             <span style="display: inline-block; font-weight: bold; font-size: larger;"> Calendar </span>
             <a href="/admin/calendar-view"> <span style="margin-left: 620px;">View More </span></a>
           </div>
-          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>
+          <iframe class="adm-cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=Asia%2FManila&title=Hot%20Desking&src=Y18yNmFsNXV2NnViOGptbGxkbTAybHJraXZlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>
         </center>
       </div>
+      <div class="list-wrapper team-mob">
+      <ul class="list">
+        <h2> Team Members </h2>
+        @foreach($users as $user)
+        <li class="list-item">
+          <div>
+            @if($user->gender === "Male")
+            <img src="{{ asset('/avatar-for-male.png') }}" alt="profileImg" class="list-item-image">
+            @else
+            <img src="{{ asset('/avatar-for-female.png') }}" alt="profileImg" class="list-item-image">
+            @endif
+          </div>
+          <div class="list-item-content">
+            <h4 style="text-align: left">{{ $user->firstname }} {{ $user->lastname }}</h4>
+            <p style="text-align: left">{{ $user->position }}</p>
+          </div>
+        </li>
+        @endforeach
+      </ul>
     </div>
-    <div class="list-wrapper">
+    </div>
+    <div class="list-wrapper team-web">
       <ul class="list">
         <h2> Team Members </h2>
         @foreach($users as $user)
