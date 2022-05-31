@@ -93,6 +93,11 @@ class HomeController extends Controller
         return view('admin.admin',compact('users','number_of_bookings', 'occupiedDesks', 'availableDesks'));
     }
 
+    public function adminMyProfile()
+    {
+        return view('admin.my_profile_admin');
+    }
+
     public function adminUsersList()
     {
         $users = \App\Models\User::all();
