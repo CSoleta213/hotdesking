@@ -12,6 +12,7 @@
           <th>No</th>
           <th>Desk Number</th>
           <th>Desk Map</th>
+          <th>Action</th>
         </tr>
         <center><p style="color: red">Under Construction</p></center>
         {{ $todaysBookings }}
@@ -20,6 +21,7 @@
           <td>{{ ++$i }}</td>
           <td style="text-transform:uppercase">{{ $desk->desk_number }}</td>
           <td><img src="/desks/{{ $desk->desk_map }}" width="100px"></td>
+          <td><button class="disable">Disable desk</button></td>
         </tr>
         @endforeach
       </table>
